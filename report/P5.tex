@@ -1,0 +1,63 @@
+\input{setup/Preamble.tex}
+\input{setup/hyphenations.tex}
+\input{setup/macros.tex}
+
+\begin{document}
+\sloppy
+\pagenumbering{roman}
+
+\input{sections/frontpage.tex}
+\cleardoublepage
+\input{sections/titlepage.tex}
+\date{\today}
+\cleardoublepage
+
+\tableofcontents
+
+\cleardoublepage
+
+\input{sections/preface.tex}
+
+\pagenumbering{arabic}
+%Chapter 1  ------------
+\chapter{Introduction}\label{ch:introduction}
+\input{sections/introduction.tex}
+\clearpage
+
+\chapter{Problem Description}\label{ch:problemdesc}
+\input{sections/problemdescription.tex}
+
+\clearpage
+
+\chapter{Physical Setup}\label{ch:setup}
+\input{sections/setup.tex}
+
+\clearpage
+
+\chapter{Mathematical Modelling}\label{ch:mathematicalmodelling}
+\input{sections/mathm.tex}
+\clearpage
+
+\chapter{Experiments}\label{ch:lab}
+\input{sections/experiments.tex}
+
+\clearpage
+\chapter{Discussion}
+\input{sections/discussion.tex}
+
+\clearpage
+\chapter{Conclusion}
+\input{sections/conclusion.tex}
+
+\clearpage
+\Urlmuskip=0mu plus 1mu\relax
+\sloppy
+\bibliographystyle{unsrt}
+\bibliography{citations}{}
+
+%Other chapters ------------
+\chapter{Appendix}\label{ch:appendix}
+\input{sections/appendix.tex}
+
+
+\end{document}
