@@ -3,12 +3,16 @@
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 3
 \BOOKMARK [1][-]{section.1.1}{1.1 Introduction}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{2 Problem Description}{}% 5
-\BOOKMARK [1][-]{section.2.1}{2.1 Quadcopter Flight Dynamics}{chapter.2}% 6
-\BOOKMARK [0][-]{chapter.3}{3 Physical Setup}{}% 7
-\BOOKMARK [1][-]{section.3.1}{3.1 Electronic Speed Controllers}{chapter.3}% 8
-\BOOKMARK [0][-]{chapter.4}{4 Mathematical Modelling}{}% 9
-\BOOKMARK [0][-]{chapter.5}{5 Experiments}{}% 10
-\BOOKMARK [0][-]{chapter.6}{6 Discussion}{}% 11
-\BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 12
-\BOOKMARK [0][-]{chapter.8}{8 Appendix}{}% 13
-\BOOKMARK [1][-]{section.8.1}{8.1 Appendix code}{chapter.8}% 14
+\BOOKMARK [1][-]{section.2.1}{2.1 Physical Setup}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{2.2 Flight Dynamics}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.3}{3 Physical Setup}{}% 8
+\BOOKMARK [1][-]{section.3.1}{3.1 Motors}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{3.2 Ardupilot}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.3}{3.3 Infrared sensors}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.4}{3.4 Electronic Speed Controllers}{chapter.3}% 12
+\BOOKMARK [0][-]{chapter.4}{4 Mathematical Modelling}{}% 13
+\BOOKMARK [0][-]{chapter.5}{5 Experiments}{}% 14
+\BOOKMARK [0][-]{chapter.6}{6 Discussion}{}% 15
+\BOOKMARK [0][-]{chapter.7}{7 Conclusion}{}% 16
+\BOOKMARK [0][-]{chapter.8}{8 Appendix}{}% 17
+\BOOKMARK [1][-]{section.8.1}{8.1 Appendix code}{chapter.8}% 18

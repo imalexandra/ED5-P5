@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.30)  25 OCT 2016 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.30)  28 OCT 2016 04:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1255,7 +1255,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 \openout4 = `P5.out'.
 
  (./sections/frontpage.tex
-<images/aau_logo_en.pdf, id=63, 115.43124pt x 77.28876pt>
+<images/aau_logo_en.pdf, id=79, 115.43124pt x 77.28876pt>
 File: images/aau_logo_en.pdf Graphic file (type pdf)
 
 <use images/aau_logo_en.pdf>
@@ -1368,12 +1368,7 @@ Chapter 1.
 
 ]
 Chapter 2.
-(./sections/problemdescription.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--19
-
- []
-
-[3
+(./sections/problemdescription.tex [3
 
 
 ])
@@ -1425,17 +1420,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `P5.out' has not changed.
-(rerunfilecheck)             Checksum: AAFB245675CF4F7D8A9E03E5D64D7F03;793.
+(rerunfilecheck)             Checksum: 9716F28CCD4133185EFCBB9808725BD7;1031.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 22187 strings out of 493089
- 399908 string characters out of 6134842
- 583315 words of memory out of 5000000
- 25103 multiletter control sequences out of 15000+600000
+ 22195 strings out of 493089
+ 400004 string characters out of 6134842
+ 580314 words of memory out of 5000000
+ 25107 multiletter control sequences out of 15000+600000
  71157 words of font info for 52 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 64i,14n,56p,439b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,14n,56p,817b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
 texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2015/texmf-
@@ -1444,10 +1439,10 @@ type1/public/lm/lmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
 c/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri1
 2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss10.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on P5.pdf (16 pages, 200224 bytes).
+Output written on P5.pdf (16 pages, 203698 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 186 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
