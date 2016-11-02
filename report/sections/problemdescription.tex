@@ -1,15 +1,40 @@
-This chapter will present how our scopes - hovering and manouvering can be achieved by designing and implementing a control system. A solution will be identified by analyzing which control system component can be represened by which piece of technical equipment. We will also explain the basic working principle of a quadcopter - flight dynamics.
+Quadcopter control is a complex, yet interesting problem. One of the reasons why this control problem is challenging is the fact that a quadcopter has six degrees of freedom, but only four inputs which affects the linearity of the dynamics and makes the quadcopter underactuated. One other important thing to mention is that quadcopters, unlike ground vehicles, have very little friction that prevents their motion, so they have to provide their own damping in order to be able to stop or mentain stability.
+
+This chapter will give a general overview on the pieces of technical equipement which we are using and show what the purpose of each one is. It will also present how our scopes - hovering and manouvering can be achieved by designing and implementing a control system. A solution in terms of the structure of our control system will be identified. We will also delve into the basic working principle of a quadcopter/flight dynamics.
 
 \section{Physical Setup}
-motors
+\subsection{Motors}
+Controlling a quadcopter can be done efficiently by using high-quality motors with fast response, which will ensure more of a stable flight. The motors must also be powerful enough to be able to lift the quadcopter and perform the required aerial movements. 
 
-speedcontrollers
+The motor that we are using is the xx Brushless DC Motor. -more on this later after looking at specs-
 
-ardupilot - features: barometer, compass 
+-insert figure
 
-control approach diagram + explain role of each
+\subsection{Propellers}
+The propellers don't have such strict requirements as the motors. They are needed to be light and have a size and lift potential in order for the quadcopter to hover at less than 50\% of the motor capacity. For our quadcopter, we are using plasting -insert size- propellers with light weight. The length is given by the first measurement - x, while the pitch by the second one - x.
 
-infrared sensors
+-insert figure-
+
+\subsection{Electric Speed Controller}
+The purpose of an electric speed controller (ESC) is to vary the electric motor's speed. We need the ESC to have a fast response, for the same reasons mentioned for the motors in -section-. The ESC that we are using is the TURNIGY PLUSH-30A.
+
++more from datasheet
+
+-insert figure-
+
+\subsection{Ardupilot}
+
+ardupilot - features: accelerometer, gyroscope, magnetometer 3 axis
+
+\subsection{Power Distribution Board}
+To reduce the number of connections straight to the battery, we used the xx Power distribution board from xx. A board like is an easy solution since all we have to do is connect the four ESCs to the board and then connect the board to the battery.
+
+-insert figure-
+
+\subsection{Battery}
+specs.
+
+-insert figure-
 
 \section{Flight Dynamics}
 Before we begin doing any work, it is important to understand how quadcopter works. A quadcopter, as the name suggest, runs on four motors usually placed at equal distances from each other (figure here)
