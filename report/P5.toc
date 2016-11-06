@@ -10,12 +10,12 @@
 \contentsline {subsection}{\numberline {2.1.4}Ardupilot}{5}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Power Distribution Board}{5}{subsection.2.1.5}
 \contentsline {subsection}{\numberline {2.1.6}Battery}{5}{subsection.2.1.6}
-\contentsline {section}{\numberline {2.2}Flight Dynamics}{6}{section.2.2}
-\contentsline {chapter}{\numberline {3}Mathematical Modelling}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Motor Dynamics}{10}{section.3.1}
-\contentsline {chapter}{\numberline {4}Experiments}{12}{chapter.4}
-\contentsline {chapter}{\numberline {5}Discussion}{13}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{14}{chapter.6}
-\contentsline {chapter}{Bibliography}{15}{chapter*.8}
-\contentsline {chapter}{\numberline {7}Appendix}{16}{chapter.7}
-\contentsline {section}{\numberline {7.1}Appendix code}{16}{section.7.1}
+\contentsline {section}{\numberline {2.2}Flight Dynamics}{5}{section.2.2}
+\contentsline {chapter}{\numberline {3}Mathematical Modelling}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Motor Dynamics}{11}{section.3.1}
+\contentsline {chapter}{\numberline {4}Experiments}{13}{chapter.4}
+\contentsline {chapter}{\numberline {5}Discussion}{14}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{15}{chapter.6}
+\contentsline {chapter}{Bibliography}{16}{chapter*.10}
+\contentsline {chapter}{\numberline {7}Appendix}{17}{chapter.7}
+\contentsline {section}{\numberline {7.1}Appendix code}{17}{section.7.1}

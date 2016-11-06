@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.1)  3 NOV 2016 00:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.1)  6 NOV 2016 02:59
 entering extended mode
 **./P5.tex
 (P5.tex
@@ -1262,7 +1262,7 @@ LaTeX Info: Redefining \nameref on input line 5.
 \openout4 = `P5.out'.
 
  (sections/frontpage.tex
-<images/aau_logo_en.pdf, id=86, 115.43124pt x 77.28876pt>
+<images/aau_logo_en.pdf, id=90, 115.43124pt x 77.28876pt>
 File: images/aau_logo_en.pdf Graphic file (type pdf)
 
 <use images/aau_logo_en.pdf>
@@ -1365,9 +1365,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6
+[6] (sections/preface.tex) [1
 
-] (sections/preface.tex) [1
 
 ]
 Chapter 1.
@@ -1386,12 +1385,18 @@ Chapter 2.
 
 
 ]
-<images/droneIdle.png, id=163, 372.64218pt x 280.04625pt>
-File: images/droneIdle.png Graphic file (type png)
+<images/droneForces.png, id=168, 711.65875pt x 533.995pt>
+File: images/droneForces.png Graphic file (type png)
 
-<use images/droneIdle.png>
-Package pdftex.def Info: images/droneIdle.png used on input line 43.
-(pdftex.def)             Requested size: 298.75264pt x 224.52443pt.
+<use images/droneForces.png>
+Package pdftex.def Info: images/droneForces.png used on input line 45.
+(pdftex.def)             Requested size: 298.75264pt x 224.1623pt.
+
+
+LaTeX Warning: Citation `dForces' on page 5 undefined on input line 46.
+
+
+LaTeX Warning: Citation `dForces' on page 5 undefined on input line 46.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1399,11 +1404,39 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5] <images/droneDirections.png, id=170, 380.17032pt x 279.29344pt>
+[5]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./images/droneForces.png>]
+<images/droneMotions.png, id=185, 702.625pt x 250.9375pt>
+File: images/droneMotions.png Graphic file (type png)
+
+<use images/droneMotions.png>
+Package pdftex.def Info: images/droneMotions.png used on input line 70.
+(pdftex.def)             Requested size: 298.75264pt x 106.6987pt.
+
+
+LaTeX Warning: Citation `dMotions' on page 7 undefined on input line 71.
+
+
+LaTeX Warning: Citation `dMotions' on page 7 undefined on input line 71.
+
+<images/droneIdle.png, id=187, 372.64218pt x 280.04625pt>
+File: images/droneIdle.png Graphic file (type png)
+
+<use images/droneIdle.png>
+Package pdftex.def Info: images/droneIdle.png used on input line 78.
+(pdftex.def)             Requested size: 298.75264pt x 224.52443pt.
+
+<images/droneDirections.png, id=190, 380.17032pt x 279.29344pt>
 File: images/droneDirections.png Graphic file (type png)
 
 <use images/droneDirections.png>
-Package pdftex.def Info: images/droneDirections.png used on input line 51.
+Package pdftex.def Info: images/droneDirections.png used on input line 86.
 (pdftex.def)             Requested size: 298.75264pt x 219.48448pt.
 
 
@@ -1412,51 +1445,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./images/droneIdle.png> <./images/droneDirections.png>]
-<images/dronePitch.png, id=181, 368.87813pt x 276.28218pt>
+[7 <./images/droneMotions.png> <./images/droneIdle.png>]
+<images/dronePitch.png, id=203, 368.87813pt x 276.28218pt>
 File: images/dronePitch.png Graphic file (type png)
 
 <use images/dronePitch.png>
-Package pdftex.def Info: images/dronePitch.png used on input line 62.
+Package pdftex.def Info: images/dronePitch.png used on input line 97.
 (pdftex.def)             Requested size: 298.75264pt x 223.75781pt.
 
-<images/droneRoll.png, id=183, 380.17032pt x 277.035pt>
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <./images/droneDirections.png>]
+<images/droneRoll.png, id=211, 380.17032pt x 277.035pt>
 File: images/droneRoll.png Graphic file (type png)
 
 <use images/droneRoll.png>
-Package pdftex.def Info: images/droneRoll.png used on input line 69.
+Package pdftex.def Info: images/droneRoll.png used on input line 104.
 (pdftex.def)             Requested size: 298.75264pt x 217.70967pt.
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[7 <./images/dronePitch.png>]
-<images/droneYaw.png, id=193, 380.17032pt x 278.54062pt>
+<images/droneYaw.png, id=213, 380.17032pt x 278.54062pt>
 File: images/droneYaw.png Graphic file (type png)
 
 <use images/droneYaw.png>
-Package pdftex.def Info: images/droneYaw.png used on input line 76.
+Package pdftex.def Info: images/droneYaw.png used on input line 111.
 (pdftex.def)             Requested size: 298.75264pt x 218.89287pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8 <./images/droneRoll.png> <./images/droneYaw.png>])
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
+[9 <./images/dronePitch.png> <./images/droneRoll.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <./images/droneYaw.png>]
 Chapter 3.
-(sections/mathm.tex [10
+(sections/mathm.tex [11
 
 
 ])
@@ -1466,31 +1499,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
+[12]
 Chapter 4.
-(sections/experiments.tex) [12
+(sections/experiments.tex) [13
 
 
 ]
 Chapter 5.
-(sections/discussion.tex) [13
+(sections/discussion.tex) [14
 
 
 ]
 Chapter 6.
-(sections/conclusion.tex) [14
+(sections/conclusion.tex) [15
 
 
 ] (P5.bbl
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 6.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [15
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) [16
 
 
 ]
 Chapter 7.
-(sections/appendix.tex [16
+(sections/appendix.tex [17
 
 ]) 
 AED: lastpage setting LastPage
@@ -1502,50 +1536,45 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 58.
 (P5.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 58.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 58.
+Package rerunfilecheck Info: File `P5.out' has not changed.
+(rerunfilecheck)             Checksum: 95F8DC89E321A386615A33103B55E9D5;1293.
 
 
-Package rerunfilecheck Warning: File `P5.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `P5.out':
-(rerunfilecheck)             Before: 96E334F25B4C75E0B99A0CD860111B8A;1242
-(rerunfilecheck)             After:  AC94A037B89D91C20302A2B2832558D0;1292.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 58.
  ) 
 Here is how much of TeX's memory you used:
- 22409 strings out of 493634
- 401457 string characters out of 3143748
- 584362 words of memory out of 3000000
- 25191 multiletter control sequences out of 15000+200000
- 77150 words of font info for 54 fonts, out of 3000000 for 9000
+ 22472 strings out of 493634
+ 402484 string characters out of 3143748
+ 584363 words of memory out of 3000000
+ 25241 multiletter control sequences out of 15000+200000
+ 77468 words of font info for 55 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
- 64i,14n,77p,1346b,404s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{page.17} has been referenced but does not exist, 
-replaced by a fixed one
-
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
-it.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/l
-m/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on P5.pdf (22 pages, 379776 bytes).
+ 64i,14n,77p,1346b,415s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex
+.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/lm/lmtt12.pfb>
+Output written on P5.pdf (23 pages, 462681 bytes).
 PDF statistics:
- 319 PDF objects out of 1000 (max. 8388607)
- 58 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 347 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

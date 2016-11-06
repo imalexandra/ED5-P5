@@ -1,3 +1,15 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{dForces}
+Nancy Hall.
+\newblock Simplified airplane motion.
+\newblock \url{https://www.grc.nasa.gov/www/k-12/airplane/smotion.html}.
+\newblock (Accessed 06/11/16).
+
+\bibitem{dMotions}
+Alex.
+\newblock The quadcopter : control the orientation.
+\newblock \url{http://theboredengineers.com/2012/05/the-quadcopter-basics/}.
+\newblock (Accessed 06/11/16).
 
 \end{thebibliography}
