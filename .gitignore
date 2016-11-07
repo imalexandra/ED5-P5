@@ -168,3 +168,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+report/P5.synctex.gz
+report/P5.log
+report/P5.pdf
