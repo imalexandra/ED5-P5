@@ -14,8 +14,11 @@
 \contentsline {chapter}{\numberline {3}Mathematical Modelling}{13}{chapter.3}
 \contentsline {section}{\numberline {3.1}Motor Dynamics}{13}{section.3.1}
 \contentsline {chapter}{\numberline {4}Experiments}{15}{chapter.4}
-\contentsline {chapter}{\numberline {5}Discussion}{16}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{17}{chapter.6}
-\contentsline {chapter}{Bibliography}{18}{chapter*.15}
-\contentsline {chapter}{\numberline {7}Appendix}{19}{chapter.7}
-\contentsline {section}{\numberline {7.1}Appendix code}{19}{section.7.1}
+\contentsline {section}{\numberline {4.1}Initial Experiments}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}APM Frequency}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Expected and Real Motor Performance}{16}{subsection.4.1.2}
+\contentsline {chapter}{\numberline {5}Discussion}{18}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{19}{chapter.6}
+\contentsline {chapter}{Bibliography}{20}{chapter*.18}
+\contentsline {chapter}{\numberline {7}Appendix}{21}{chapter.7}
+\contentsline {section}{\numberline {7.1}Appendix code}{21}{section.7.1}
