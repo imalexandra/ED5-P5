@@ -115,24 +115,26 @@ Here, the yellow arrows indicate the direction of rotation, the blue arrows show
 
 By controlling the speed at which the motors rotate, it is possible to change how quadcopter moves. Movement can be broken down in 3 separate sets of motor speeds:
 
-1) If the two back motors rotate faster than the two frontal motors, the quadcopter will pitch forward. Switching the speeds will result in aft pitch. The required change in speeds for a pitch forward can be seen in figure \ref{dronePitch}.
+\begin{enumerate}
+\item If the two back motors rotate faster than the two frontal motors, the quadcopter will pitch forward. Switching the speeds will result in aft pitch. The required change in speeds for a pitch forward can be seen in figure \ref{dronePitch}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.7\textwidth]{images/dronePitch.png}
 	\caption{Motor RPM requirements for a pitch forward}
 	\label{dronePitch}
 \end{figure}
-2) If the two left motors have higher RPM than the two motors on the right side, the vehicle will roll to the right. Swapping the speeds differences will result in a roll to the left. See figure \ref{droneRoll} for an example of a roll to the right.
+\item If the two left motors have higher RPM than the two motors on the right side, the vehicle will roll to the right. Swapping the speeds differences will result in a roll to the left. See figure \ref{droneRoll} for an example of a roll to the right.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.7\textwidth]{images/droneRoll.png}
 	\caption{RPM requirements for a roll to the right}
 	\label{droneRoll}
 \end{figure}
-3) Increasing the speed of one of the diagonal pair of the motors will result in yaw to the direction of the torque of the motors. The copter will then spin around its axis. Motor speed changes causing a yaw to the right can be seen in figure \ref{droneYaw}.
+\item Increasing the speed of one of the diagonal pair of the motors will result in yaw to the direction of the torque of the motors. The copter will then spin around its axis. Motor speed changes causing a yaw to the right can be seen in figure \ref{droneYaw}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.7\textwidth]{images/droneYaw.png}
 	\caption{The two diagonal motors with increased RPM cause yaw to the right}
 	\label{droneYaw}
 \end{figure}
+\end{enumerate}
