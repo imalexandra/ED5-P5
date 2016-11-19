@@ -1,35 +1,3 @@
-#include <Servo.h>
-
-#define MAX_SIGNAL 2000
-#define MIN_SIGNAL 700
-#define MOTOR_PIN1 12 //pin 1
-#define MOTOR_PIN2 11 //pin 1
-
-Servo motor1;
-Servo motor2;
-void setup() {
-  Serial.begin(9600);
-  Serial.println("Program begin...");
-  Serial.println("This program will calibrate the ESC.");
-  //pinMode(12, OUTPUT);
-  motor1.attach(MOTOR_PIN1);
-  motor2.attach(MOTOR_PIN2);
-  
-  Serial.println("Now writing maximum output.");
-  Serial.println("Turn on power source, then wait 2 seconds and press any key.");
-  motor1.writeMicroseconds(MAX_SIGNAL);
-  motor2.writeMicroseconds(MAX_SIGNAL);
-  //analogWrite(12, 255);
-  // Wait for input
-  while (!Serial.available());
-  Serial.read();
-
-  // Send min output
-  Serial.println("Sending minimum output");
-  motor1.writeMicroseconds(MIN_SIGNAL);
-  motor2.writeMicroseconds(MIN_SIGNAL);
-  
-  Serial.println("Calibrated");
   while (!Serial.available());
   Serial.read();
   //analogWrite(12, 255);
@@ -96,8 +64,3 @@ Serial.println("1900");
   //analogWrite(12, 255);
   motor1.writeMicroseconds(2000);
 Serial.println("2000");
-}
-
-void loop() {  
-  
-}
