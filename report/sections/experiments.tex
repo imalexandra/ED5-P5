@@ -22,6 +22,10 @@ Then, by changing the length of the signals, two results were observed:
 \item Since the board runs at the frequency of 50$Hz$ and has a period of 20$ms$, this leaves $\frac{20}{8} = 2.5ms$ maximum length for each output signal. The servo library is hard-capped at 2.4$ms$ and thus is well within the limits of the board.
 \end{enumerate}
 
+\subsection{Output Operating Range}
+
+USE TRIAL AND ERROR TO FIND COMPLETE OUTPUT OPERATING RANGE
+
 \subsection{Expected and Real Motor Performance}
 The motors used in the prototype specify to be rated at $K_v$ of 980. $K_v$ is a constant describing the ration between RPM and the applied voltage and is expressed as $K_v = \frac{RPM}{V}$. Derived from this, voltage's effect on the RPM can be seen in figure \ref{KvPlot}.
 \begin{figure}[H]
@@ -33,3 +37,12 @@ The motors used in the prototype specify to be rated at $K_v$ of 980. $K_v$ is a
 With a fully charged battery, the RPM is expected to be $980*11.1V = 10878 RPM$.
 
 In order to confirm this, the actual RPM was measured using SHIMPO DT-205 digital tachometer. EXPAND WHEN WE GET THE VOLTAGE
+
+\subsection{Estimating Motor Coefficients}
+Kt
+KT
+Ke
+
+\subsection{APM Output and ESC Output Relationship}
+
+MEASURE THE FREQUENCIES ON BOTH ENDS AND CREATE A MAP
