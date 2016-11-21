@@ -83,51 +83,106 @@ First, an equation has been found that describes the relationship between motor'
 \label{voltage1}
 	RPM = \frac{120*f}{n}
 \end{equation}
-Here, $f$ is the frequency and $n$ is the number of poles (in this case - 14).
+Here, $f$ is the frequency and $n$ is the number of poles (in the case of this project - 14).
 
 Therefore, it is possible to measure the frequency at various output values, which can then be used to define an equation that uses the board's signal length as an input value and results in an RPM.
 
-INPUT AND FREQUENCY TABLE, TRANSLATED INTO RPM FOR EASIER COMPARISON
-
-To verify these values, RPM was manually measured using the tachometer at same output values, as seen in table \ref{RPMTable}.
+The frequency was measured using an (NAME) oscilloscope and by connecting the probe's ground clip to the ground of the battery and the probe tip to any one of the wires between motor and the ESC. Then, by providing different output signals from the flight controller, the frequency was measured on the oscilloscope screen. An on-board filter was used to filter out some noise, especially at lower output signals. The recorded frequency was later converted into RPM using equation \ref{voltage1}, for later comparison. The output signal lengths and the corresponding frequencies converted into RPM can be seen in table \ref{FreqTable}.
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|c|c|}
 \hline
-$Output value$ 	& $RPM$ \\ \hline
-762 			& 2700	\\ \hline
-800 			& 4640  \\ \hline
-810 			& 5167	\\ \hline
-820 			& 5638  \\ \hline
-830				& 6000 	\\ \hline
-840				& 6314	\\ \hline
-850 			& 6580	\\ \hline
-860 			& 6890	\\ \hline
-870 			& 7134	\\ \hline
+$Output,\mu s$ 	& $RPM$ \\ \hline
+762 			& 2825  \\ \hline
+770				& 3189	\\ \hline
+780				& 3689	\\ \hline
+790				& 4211	\\ \hline
+800 			& 4683  \\ \hline
+810 			& 5161	\\ \hline
+820 			& 5546  \\ \hline
+830				& 5874 	\\ \hline
+840				& 6223	\\ \hline
+850 			& 6532	\\ \hline
+860 			& 6795	\\ \hline
+870 			& 7008	\\ \hline
+880 			& 7301	\\ \hline
+890 			& 7534	\\ \hline
+900 			& 7730	\\ \hline
+925 			& 8233	\\ \hline
+950 			& 8552	\\ \hline
+975 			& 8786	\\ \hline
+1000 			& 9129	\\ \hline
+1050 			& 9566	\\ \hline
+1100 			& 9814	\\ \hline
+1150 			& 10071	\\ \hline
+1200			& 10260	\\ \hline
+\end{tabular}
+\caption{Frequency measured at ESC output, converted into RPM}
+\label{FreqTable}
+\end{table}
+
+While measuring, it was observed that the frequency would never reach a steady-state and therefore, a sizeable error is possible between measurements. Because of that, RPM was manually measured using the tachometer at same output values, as seen in table \ref{RPMTable}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+$Output,\mu s$ 	& $RPM$ \\ \hline
+762 			& 2754	\\ \hline
+770				& 3170	\\ \hline
+780				& 3664	\\ \hline
+790				& 4210	\\ \hline
+800 			& 4715  \\ \hline
+810 			& 5223	\\ \hline
+820 			& 5617  \\ \hline
+830				& 5965 	\\ \hline
+840				& 6285	\\ \hline
+850 			& 6578	\\ \hline
+860 			& 6846	\\ \hline
+870 			& 7100	\\ \hline
 880 			& 7368	\\ \hline
-890 			& 7582	\\ \hline
-900 			& 7777	\\ \hline
-925 			& 8305	\\ \hline
-950 			& 8635	\\ \hline
-975 			& 8955	\\ \hline
-1000 			& 9190	\\ \hline
-1050 			& 9611	\\ \hline
-1100 			& 9896	\\ \hline
-1150 			& 10120	\\ \hline
-1200			& 10100	\\ \hline
+890 			& 7555	\\ \hline
+900 			& 7790	\\ \hline
+925 			& 8265	\\ \hline
+950 			& 8614	\\ \hline
+975 			& 8910	\\ \hline
+1000 			& 9160	\\ \hline
+1050 			& 9576	\\ \hline
+1100 			& 9860	\\ \hline
+1150 			& 10089	\\ \hline
+1200			& 10261	\\ \hline
 \end{tabular}
 \caption{RPM measured at different values}
 \label{RPMTable}
 \end{table}
 
-The two tables \ref{RPMTable} and \ref{FreqTable} were then plotted to see the difference, which are seen in figure \ref{RPMvsFreq}.
-PLACEHOLDER FIGURE
+While measuring with tachometer, the error appeared to be less significant.
+
+The two tables \ref{RPMTable} and \ref{FreqTable} were then plotted to see the difference, which is seen in figure \ref{RPMvsFreq}.
+
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.8\textwidth]{images/RPMvsFreq.png}
+    \includegraphics[width=1\textwidth]{images/RPMvsFreq.png}
 	\caption{Plotted values of manually measured and frequency-based RPM}
 	\label{RPMvsFreq}
 \end{figure}
 
-TALK ABOUT COMPARISON, DERIVE AN EQUATION
+From the plotted graphs, it can be seen that the difference is very much noticeable, especially at certain points. Due to the fact that measurements with tachometer provided smaller errors than measurements with an oscilloscope, it was decided to use the values measured with the tachometer for later calculations.
+
+In order to make use of these findings, the RPM values have to be converted into $rad/s$ for use as angular rate. The conversion equation is:
+\begin{equation}
+\label{RPMConvert}
+	\omega = \frac{2*\pi * RPM}{60}
+\end{equation}
+
+The values measured with tachometer were then converted into $rad/s$ and plotted on a Microsoft Excel 2010. Then, by utilising the "Format Trendline" function, a 4\textsuperscript{th} order polynomial equation fitting the original graph was obtained. The values and graphs can be seen in figure \ref{RadsTrendline}.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/RadsTrendline.png}
+	\caption{Converted and plotted RPM values and the trendline}
+	\label{RadsTrendline}
+\end{figure}
+
+This equation, $y = -0.0000000355255899575109x^4 + 0.000154393052552121x^3 - 0.252970851547635x^2 + 185.821111008258x - 50759.3409352418$, can then be used to approximately convert the signal sent out by the flight controller in $\mu s$ into angular rate.

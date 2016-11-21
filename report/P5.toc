@@ -21,8 +21,8 @@
 \contentsline {subsection}{\numberline {4.1.4}APM Frequency}{18}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Estimating Motor Coefficients}{19}{subsection.4.1.5}
 \contentsline {subsection}{\numberline {4.1.6}APM Output and ESC Output Relationship}{19}{subsection.4.1.6}
-\contentsline {chapter}{\numberline {5}Discussion}{22}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}
-\contentsline {chapter}{Bibliography}{24}{chapter*.22}
-\contentsline {chapter}{\numberline {7}Appendix}{25}{chapter.7}
-\contentsline {section}{\numberline {7.1}Appendix code}{25}{section.7.1}
+\contentsline {chapter}{\numberline {5}Discussion}{24}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}
+\contentsline {chapter}{Bibliography}{26}{chapter*.24}
+\contentsline {chapter}{\numberline {7}Appendix}{27}{chapter.7}
+\contentsline {section}{\numberline {7.1}Appendix code}{27}{section.7.1}
