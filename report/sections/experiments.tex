@@ -19,7 +19,7 @@ The motors used in the prototype specify to be rated at $K_v$ of 980. $K_v$ is a
 	\caption{Expected motor performance}
 	\label{KvPlot}
 \end{figure}
-With a fully charged battery, the RPM is expected to be $980*11.1V = 10878 RPM$.
+With a fully charged battery, the RPM is expected to be $980\times 11.1V = 10878 RPM$.
 
 In order to confirm this, the actual RPM was measured using SHIMPO DT-205 digital tachometer. A piece of reflective paper was taped to one of the motors so that the tachometer would have something to lock onto, as seen in figure \ref{tachometer}.
 
@@ -70,18 +70,13 @@ From this, two conclusions can be made:
 \item Since the board runs at the frequency of 50$Hz$ and has a period of 20$ms$, this leaves $\frac{20}{8} = 2.5ms$ maximum length for each output signal. The servo library is hard-capped at 2.4$ms$ and thus is well within the limits of the board.
 \end{enumerate}
 
-\subsection{Estimating Motor Coefficients}
-Kt
-KT
-Ke
-
 \subsection{APM Output and ESC Output Relationship}
 
 In order to use the board's output signal as an input in a mathematical model, it is necessary to find an equation to translate it into an angular rate.
 First, an equation has been found that describes the relationship between motor's RPM, ESC's output signal frequency and number of motor poles \cite{RPMEq}:
 \begin{equation}
 \label{voltage1}
-	RPM = \frac{120*f}{n}
+	RPM = \frac{120\times f}{n}
 \end{equation}
 Here, $f$ is the frequency and $n$ is the number of poles (in the case of this project - 14).
 
@@ -173,7 +168,7 @@ From the plotted graphs, it can be seen that the difference is very much noticea
 In order to make use of these findings, the RPM values have to be converted into $rad/s$ for use as angular rate. The conversion equation is:
 \begin{equation}
 \label{RPMConvert}
-	\omega = \frac{2*\pi * RPM}{60}
+	\omega = \frac{2\pi \times RPM}{60}
 \end{equation}
 
 The values measured with tachometer were then converted into $rad/s$ and plotted on a Microsoft Excel 2010. Then, by utilising the "Format Trendline" function, a 4\textsuperscript{th} order polynomial equation fitting the original graph was obtained. The values and graphs can be seen in figure \ref{RadsTrendline}.
