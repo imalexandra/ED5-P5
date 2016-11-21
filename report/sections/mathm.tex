@@ -183,7 +183,23 @@ A relationship between $k_{e}$ - electrical torque and $k_{t}$ - torque constant
 
 The next step in coming up with a final transfer function for our motor is to find $\tau_{m}$ and $\tau_{e}$, which are functions of $k_{e}$, $k_{t}$, $R_{\phi}$, J and L. 
 
+A numerical value for $k_{e}$ can be obtained using equation \ref{24}:
 
+\begin{equation}
+\label{26}
+	k_{e}=\frac{11.1}{1.73}=6.416
+\end{equation}
+
+Since $k_{t}$ is a function of $k_{e}$, its numerical value can also be found using equation \ref{25}:
+
+\begin{equation}
+\label{27}
+	k_{t}=6.416\times0.0605=0.388
+\end{equation}
+
+For $R_{\phi}$, we have to measure the line-to-line resistance (between any two wires of the motor) and divide the result by 2 in order to get its value.
+
+experiments on J and L / take them from other reports 
 
 \clearpage
 
