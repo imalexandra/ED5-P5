@@ -19,24 +19,24 @@ void setup() {
   Serial.println("Program begin...");
   Serial.println("This program will calibrate the ESC.");
   motor1.attach(MOTOR_PIN1);
-  motor2.attach(MOTOR_PIN2);
-  motor3.attach(MOTOR_PIN3);
-  motor4.attach(MOTOR_PIN4);
+  //motor2.attach(MOTOR_PIN2);
+  //motor3.attach(MOTOR_PIN3);
+  //motor4.attach(MOTOR_PIN4);
   
   Serial.println("Now writing maximum output.");
   Serial.println("Turn on power source, then wait 2 seconds and press any key.");
-  motor1.writeMicroseconds(MAX_SIGNAL);
-  motor2.writeMicroseconds(MAX_SIGNAL);
-  motor3.writeMicroseconds(MAX_SIGNAL);
-  motor4.writeMicroseconds(MAX_SIGNAL);
-  while (!Serial.available());
-  Serial.read();
+  //motor1.writeMicroseconds(MAX_SIGNAL);
+  //motor2.writeMicroseconds(MAX_SIGNAL);
+  //motor3.writeMicroseconds(MAX_SIGNAL);
+  //motor4.writeMicroseconds(MAX_SIGNAL);
+  //while (!Serial.available());
+  //Serial.read();
 
   Serial.println("Sending minimum output");
   motor1.writeMicroseconds(MIN_SIGNAL);
-  motor2.writeMicroseconds(MIN_SIGNAL);
-  motor3.writeMicroseconds(MIN_SIGNAL);
-  motor4.writeMicroseconds(MIN_SIGNAL);
+  //motor2.writeMicroseconds(MIN_SIGNAL);
+  //motor3.writeMicroseconds(MIN_SIGNAL);
+  //motor4.writeMicroseconds(MIN_SIGNAL);
   while (!Serial.available());
   Serial.read();
   Serial.println("Calibrated");
@@ -45,9 +45,9 @@ void setup() {
     while (!Serial.available());
     incomingByte = Serial.parseInt();
     motor1.writeMicroseconds(incomingByte);
-    motor2.writeMicroseconds(incomingByte);
-    motor3.writeMicroseconds(incomingByte);
-    motor4.writeMicroseconds(incomingByte);
+    //motor2.writeMicroseconds(incomingByte);
+    //motor3.writeMicroseconds(incomingByte);
+    //motor4.writeMicroseconds(incomingByte);
     Serial.println(incomingByte);
   }
 }
