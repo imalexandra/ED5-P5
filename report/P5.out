@@ -19,15 +19,16 @@
 \BOOKMARK [1][-]{section.3.5}{3.5 Forces}{chapter.3}% 19
 \BOOKMARK [1][-]{section.3.6}{3.6 Torques}{chapter.3}% 20
 \BOOKMARK [1][-]{section.3.7}{3.7 Equations of Motion}{chapter.3}% 21
-\BOOKMARK [0][-]{chapter.4}{4 Experiments}{}% 22
-\BOOKMARK [1][-]{section.4.1}{4.1 Initial Experiments}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Calibrating and Programming ESCs}{section.4.1}% 24
-\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Expected and Real Motor Performance}{section.4.1}% 25
-\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Output Operating Range}{section.4.1}% 26
-\BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 APM Frequency}{section.4.1}% 27
-\BOOKMARK [2][-]{subsection.4.1.5}{4.1.5 APM Output and ESC Output Relationship}{section.4.1}% 28
-\BOOKMARK [0][-]{chapter.5}{5 Discussion}{}% 29
-\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 30
-\BOOKMARK [0][-]{chapter*.26}{Bibliography}{}% 31
-\BOOKMARK [0][-]{chapter.7}{7 Appendix}{}% 32
-\BOOKMARK [1][-]{section.7.1}{7.1 Appendix code}{chapter.7}% 33
+\BOOKMARK [1][-]{section.3.8}{3.8 Control}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{4 Experiments}{}% 23
+\BOOKMARK [1][-]{section.4.1}{4.1 Initial Experiments}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Calibrating and Programming ESCs}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Expected and Real Motor Performance}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Output Operating Range}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 APM Frequency}{section.4.1}% 28
+\BOOKMARK [2][-]{subsection.4.1.5}{4.1.5 APM Output and ESC Output Relationship}{section.4.1}% 29
+\BOOKMARK [0][-]{chapter.5}{5 Discussion}{}% 30
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion}{}% 31
+\BOOKMARK [0][-]{chapter*.26}{Bibliography}{}% 32
+\BOOKMARK [0][-]{chapter.7}{7 Appendix}{}% 33
+\BOOKMARK [1][-]{section.7.1}{7.1 Appendix code}{chapter.7}% 34

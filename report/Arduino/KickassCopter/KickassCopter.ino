@@ -54,7 +54,7 @@ Servo motor4;
 long prevTimer = 0; //initial timer
 long currTimer = 100; //initial timer
 const long initTime = 4000; //4 seconds to turn on ESCs
-const long runTime = 10000; //10 seconds to run program
+const long runTime = 10000000000000; //10 seconds to run program
 bool escCalibrate = false; //have we calibrated ESCs yet?
 bool programStarted = false; //check when connected to PC over USB
 

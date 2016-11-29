@@ -236,7 +236,7 @@ Both frames can be related using a rotation matrix $R$, which goes from one fram
 R = \begin{bmatrix}
        	c_\phi c_\psi - c_\theta s_\phi s_\psi		& -c_\psi s_\phi - c_\phi c_\theta s_\psi 	& s_\theta s_\psi			\\
        	c_\theta c_\psi s_\phi + c_\phi s_\psi 		& c_\phi c_\theta c_\psi - s_\phi s_\psi 	& -c_\psi s_\theta 			\\
-      	s_phi s_theta       						& c_\phi s_\theta 								& c_\theta 					\\
+      	s_\phi s_\theta       						& c_\phi s_\theta 								& c_\theta 					\\
 \end{bmatrix}
 \end{equation}
 Therefore, a vector $\overrightarrow{v}$ in the body frame can be defined as $R\overrightarrow{v}$ in the inertial frame.
@@ -432,3 +432,40 @@ Taking everything into consideration, a final result for the rotational equation
  	\frac{I_{xx}-I{yy}}{I_{zz}}\omega _x\omega _y	\\ 
  	\end{bmatrix}
 \end{equation}
+
+\section{Control}
+Having a mathematical model of the system makes the development of controller easier. With only input being the angular velocities of each motor, we can write the system as a first order differential equation in state space.
+
+\begin{equation}
+\label{mmControl1}
+	\dot{x_1} = x_2	\\
+\end{equation}
+\begin{equation}
+\label{mmControl2}
+	\dot{x_2} = \begin{bmatrix}
+ 	0	\\
+ 	0	\\
+ 	-g 	\\
+ 	\end{bmatrix} + \frac{1}{m}RT_B + \frac{1}{m}F_D \\
+\end{equation}
+\begin{equation}
+\label{mmControl3} 	
+ 	\dot{x_3} = \begin{bmatrix}
+       	1		& 0 		& -s_\theta			\\
+       	0 		& c_\phi 	& c_\theta s_\phi 	\\
+      	0       & -s_\phi 	& c_\theta c_\phi 	\\
+	\end{bmatrix}^{-1}x_4 \\
+\end{equation}
+\begin{equation}
+\label{mmControl4}	
+	\dot{x_4} = \begin{bmatrix}
+ 	\tau _\phi I_{xx}^{-1}		\\
+ 	\tau _\theta I_{yy}^{-1}	\\
+ 	\tau _\psi I_{zz}^{-1}		\\ 
+ 	\end{bmatrix} - \begin{bmatrix}
+ 	\frac{I_{yy}-I{zz}}{I_{xx}}\omega _y\omega _z	\\
+ 	\frac{I_{zz}-I{xx}}{I_{yy}}\omega _x\omega _z	\\
+ 	\frac{I_{xx}-I{yy}}{I_{zz}}\omega _x\omega _y	\\ 
+ 	\end{bmatrix}
+ \end{equation}
+Here, $x_1$ is the position of the vehicle in space, $x_2$ is the drone's linear velocity, $x_3$ denotes the angles of pitch, roll and yaw and $x_4$ shows the angular velocity vector.
