@@ -51,23 +51,26 @@ void loop() {
       prevTimer = millis();
       Serial.println("Program will now start");
     }else{
-            Serial.print("Acc X ");
-            Serial.print(AcceDeg(ChipSelPin1, 0));
+            float pitch;
+            float roll;
+            float yaw;
+            
+            int dt=GyroDeg(ChipSelPin1, 3);
+            
+            double a=0.04;
+            
+            pitch=a*(GyroDeg(ChipSelPin1, 0))+(1-a)*AcceDeg(ChipSelPin1, 0);
+            roll=a*(GyroDeg(ChipSelPin1, 1))+(1-a)*AcceDeg(ChipSelPin1, 1);
+            yaw=a*(GyroDeg(ChipSelPin1, 2))+(1-a)*AcceDeg(ChipSelPin1, 2);
+      
+            Serial.print("Pitch ");
+            Serial.print(pitch);
             Serial.print("   ");
-            Serial.print("Acc Y ");
-            Serial.print(AcceDeg(ChipSelPin1, 1));
+            Serial.print("Roll ");
+            Serial.print(roll);
             Serial.print("   ");
-            Serial.print("Acc Z ");  
-            Serial.print(AcceDeg(ChipSelPin1, 2));
-            Serial.print("   ");  
-            Serial.print("Gyro X ");  
-            Serial.print(GyroDeg(ChipSelPin1, 0));
-            Serial.print("   ");  
-            Serial.print("Gyro Y ");  
-            Serial.print(GyroDeg(ChipSelPin1, 1)); 
-            Serial.print("   "); 
-            Serial.print("Gyro Z ");  
-            Serial.println(GyroDeg(ChipSelPin1, 2));          
+            Serial.print("Yaw ");  
+            Serial.println(yaw);      
           }
       }
 
@@ -188,6 +191,8 @@ float GyroDeg(int ChipSelPin, int AxisSelect) {
     break;
     case 2:
     return angleZ;
+    case 3:
+    return dt;
     break;
   }
 }

@@ -33,6 +33,31 @@ In order to confirm this, the actual RPM was measured using SHIMPO DT-205 digita
 By sending the maximum signal from the board, the RPM was measured to be 10812, with a small possible error.
 In conclusion, the motors' $K_v$ coefficient found in the datasheet is in fact correct.
 
+\clearpage
+
+\subsection{Programming Accelerometer and Gyroscope}
+The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot and they are 3-axis. The accelerometer works by detecting a force that is actually the opposite of the accelaration vector. This force is not always caused by acceleration, but it can be. It just happens that accelaration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
+
+It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analog and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. 
+
+//insert lines of code that makes the spi communication possible
+
+Before getting into the calculations of the angles, we need to get the raw values from both accelerometer and gyroscope and that is done by accessing their registers.
+
+//insert lines of code that read the raw values from acc and gyro
+
+If we want to calculate the inclination of a device relative to the ground for example, we can calculate the angle between the force vector and one of the z-axis. We can do that by manipulating the raw values and by degree conversion. The functions that take care of converting the raw values from both accelerometer and gyroscope are the following:
+
+//insert lines of code for the math part
+
+We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the acceleromter output is because accelerometers are more sensitive to noise and vibrations. The figure below shows the printed outputs at steady state, that is when the quadcopter is parallel to the ground.
+
+//insert printscreen of the values
+
+
+//mention sensitivity 
+\clearpage
+
 \subsection{Output Operating Range}
 
 Since there is no direct translation between the output signal from the board and the speed of the motor and the ESC allows more current than the motor can recognise, it is necessary to find the operating range for the board output that has the most noticeable effect on the RPM of the motor. Through trial and error and by measuring the RPM using SHIMPO DT-205 digital tachometer. The lowest operating point was found to be 762$\mu s$, at which the motor finally begins to spin. The highest point was defined at 1200$\mu s$. Higher values were found to have very small effect on the RPM.
