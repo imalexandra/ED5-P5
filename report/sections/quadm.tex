@@ -52,8 +52,44 @@ gives the rotation matrix - \textit{S}, which expresses a vector from the inerti
  	\end{bmatrix}
  	 \end{equation}
  	 
+We can notice that if we were to have $\theta=\Pi/2$, the rotation matrix brings out a singularity by turning into:
+
+  \begin{equation}
+\label{S3}
+ S=\begin{bmatrix}
+ 	0 & 0 & -1 \\
+ 	sin(\phi-\psi) & cos(\phi-\psi) & 0 \\
+ 	cos(\phi-\psi) & -sin(\phi-\psi) & 0 \\
+ 	\end{bmatrix}
+ 	 \end{equation}
  	 
+As a result, one degree of freedom in the three dimensional space is lost. In addition, a change in either $\phi$ or $\psi$ will now have the same effect, which causes confusion. In order to be able to avoid this problem, a quaternion-based method can be applied instead. 
+
+A quaternion can be expressed as $q=[q_{0}, q_{1}, q_{2}, q_{3}]^{T}$, which yields:
+
+  \begin{equation}
+\label{S4}
+ q=\begin{bmatrix}
+ 	cos(\phi/2) cos(\theta/2) cos(\psi/2) + sin(\phi/2) sin(\theta/2) sin(\psi/2) \\
+ 	sin(\phi/2) cos(\theta/2) cos(\psi/2) - cos(\phi/2) sin(\theta/2) sin(\psi/2) \\
+ 	cos(\phi/2) sin(\theta/2) cos(\psi/2) + sin(\phi/2) cos(\theta/2) sin(\psi/2) \\
+ 	cos(\phi/2) cos(\theta/2) sin(\psi/2) - sin(\phi/2) sin(\theta/2) cos(\psi/2)
+ 	\end{bmatrix}
+ 	 \end{equation}
  	 
- 	 
+The quaternion and Euler angles are equivalent in terms of attitude, therefore we can convert from one representation to the other. The rotation matrix can be then rewritten as:
+
+  \begin{equation}
+\label{S5}
+ S_{q}=\begin{bmatrix}
+ 	1-2(q_{2}^{2}+q_{3}^{2}) & 2(q_{1}q_{2}+q_{3}q_{0}) & 2(q_{1}q_{3}-q_{2}q_{0}) \\
+ 	2(q_{1}q_{2}-q_{3}q_{0}) & 1-2(q_{1}^{2}+q_{3}^{2}) & 2(q_{2}q_{3}+q_{1}q_{0})  \\
+ 	2(q_{1}q_{3}+q_{2}q_{0}) & 2(q_{2}q_{3}-q_{1}q_{0}) & 1-2(q_{1}^{2}+q_{2}^{2}) \\
+ 	\end{bmatrix}
+ 	 \end{equation}
+
+\section{Quaternions Representation}
+
+\section{Euler Representation}
  	 
  	 
