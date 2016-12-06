@@ -132,16 +132,14 @@ In order to make use of these findings, the RPM values have to be converted into
 	\omega = \frac{2\pi \times RPM}{60}
 \end{equation}
 
-The values measured with tachometer were then converted into $rad/s$ and plotted on a Microsoft Excel 2010. Then, by utilising the "Format Trendline" function, a 4\textsuperscript{th} order polynomial equation fitting the original graph was obtained. The values and graphs can be seen in figure \ref{RadsTrendline}.
+The values measured with tachometer were then converted into $rad/s$ and plotted in Matlab. Then, by utilising the \textit{polyfit} function, a 2\textsuperscript{nd} order polynomial equation fitting the original graph was obtained. The equation seen in Figure \label{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=1\textwidth]{images/RadsTrendline.png}
+    \includegraphics[width=1\textwidth]{images/mstorpm.jpg}
 	\caption{Converted and plotted RPM values and the trendline}
 	\label{RadsTrendline}
 \end{figure}
-
-This equation, $y = -0.0000000355255899575109x^4 + 0.000154393052552121x^3 - 0.252970851547635x^2 + 185.821111008258x - 50759.3409352418$, can then be used to approximately convert the signal sent out by the flight controller in $\mu s$ into angular rate.
 
 \section{Electronic Speed Controllers}
 
