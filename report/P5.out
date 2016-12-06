@@ -20,17 +20,19 @@
 \BOOKMARK [0][-]{chapter.6}{6 Actuators}{}% 20
 \BOOKMARK [1][-]{section.6.1}{6.1 Propeller model}{chapter.6}% 21
 \BOOKMARK [1][-]{section.6.2}{6.2 Motor model}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{6.3 Motor Identification}{chapter.6}% 23
-\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Expected and Real Motor Performance}{section.6.3}% 24
-\BOOKMARK [2][-]{subsection.6.3.2}{6.3.2 APM Output and Motor Speed Relationship}{section.6.3}% 25
-\BOOKMARK [1][-]{section.6.4}{6.4 Electronic Speed Controllers}{chapter.6}% 26
-\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Calibrating and Programming ESCs}{section.6.4}% 27
-\BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 28
-\BOOKMARK [0][-]{chapter.8}{8 Experiments}{}% 29
-\BOOKMARK [1][-]{subsection.8.0.1}{8.0.1 Output Operating Range}{chapter.8}% 30
-\BOOKMARK [2][-]{subsection.8.0.2}{8.0.2 APM Frequency}{subsection.8.0.1}% 31
-\BOOKMARK [0][-]{chapter.9}{9 Discussion}{}% 32
-\BOOKMARK [0][-]{chapter.10}{10 Conclusion}{}% 33
-\BOOKMARK [0][-]{chapter*.31}{Bibliography}{}% 34
-\BOOKMARK [0][-]{chapter.11}{11 Appendix}{}% 35
-\BOOKMARK [1][-]{section.11.1}{11.1 Appendix code}{chapter.11}% 36
+\BOOKMARK [1][-]{section.6.3}{6.3 Motor and Ardupilot Identification}{chapter.6}% 23
+\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 APM Frequency}{section.6.3}% 24
+\BOOKMARK [2][-]{subsection.6.3.2}{6.3.2 Output Operating Range}{section.6.3}% 25
+\BOOKMARK [2][-]{subsection.6.3.3}{6.3.3 Expected and Real Motor Performance}{section.6.3}% 26
+\BOOKMARK [2][-]{subsection.6.3.4}{6.3.4 APM Output and Motor Speed Relationship}{section.6.3}% 27
+\BOOKMARK [1][-]{section.6.4}{6.4 Electronic Speed Controllers}{chapter.6}% 28
+\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Calibrating and Programming ESCs}{section.6.4}% 29
+\BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 30
+\BOOKMARK [0][-]{chapter.8}{8 Experiments}{}% 31
+\BOOKMARK [1][-]{subsection.8.0.1}{8.0.1 Output Operating Range}{chapter.8}% 32
+\BOOKMARK [2][-]{subsection.8.0.2}{8.0.2 APM Frequency}{subsection.8.0.1}% 33
+\BOOKMARK [0][-]{chapter.9}{9 Discussion}{}% 34
+\BOOKMARK [0][-]{chapter.10}{10 Conclusion}{}% 35
+\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 36
+\BOOKMARK [0][-]{chapter.11}{11 Appendix}{}% 37
+\BOOKMARK [1][-]{section.11.1}{11.1 Appendix code}{chapter.11}% 38

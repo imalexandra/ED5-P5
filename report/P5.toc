@@ -28,17 +28,19 @@
 \contentsline {chapter}{\numberline {6}Actuators}{19}{chapter.6}
 \contentsline {section}{\numberline {6.1}Propeller model}{19}{section.6.1}
 \contentsline {section}{\numberline {6.2}Motor model}{21}{section.6.2}
-\contentsline {section}{\numberline {6.3}Motor Identification}{22}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Expected and Real Motor Performance}{22}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}APM Output and Motor Speed Relationship}{23}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{27}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Calibrating and Programming ESCs}{27}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {7}State space model}{29}{chapter.7}
-\contentsline {chapter}{\numberline {8}Experiments}{30}{chapter.8}
-\contentsline {subsection}{\numberline {8.0.1}Output Operating Range}{30}{subsection.8.0.1}
-\contentsline {subsection}{\numberline {8.0.2}APM Frequency}{30}{subsection.8.0.2}
-\contentsline {chapter}{\numberline {9}Discussion}{33}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusion}{34}{chapter.10}
-\contentsline {chapter}{Bibliography}{35}{chapter*.31}
-\contentsline {chapter}{\numberline {11}Appendix}{36}{chapter.11}
-\contentsline {section}{\numberline {11.1}Appendix code}{36}{section.11.1}
+\contentsline {section}{\numberline {6.3}Motor and Ardupilot Identification}{22}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}APM Frequency}{22}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Output Operating Range}{23}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Expected and Real Motor Performance}{24}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}APM Output and Motor Speed Relationship}{25}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{29}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Calibrating and Programming ESCs}{29}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {7}State space model}{31}{chapter.7}
+\contentsline {chapter}{\numberline {8}Experiments}{32}{chapter.8}
+\contentsline {subsection}{\numberline {8.0.1}Output Operating Range}{32}{subsection.8.0.1}
+\contentsline {subsection}{\numberline {8.0.2}APM Frequency}{32}{subsection.8.0.2}
+\contentsline {chapter}{\numberline {9}Discussion}{35}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusion}{36}{chapter.10}
+\contentsline {chapter}{Bibliography}{37}{chapter*.34}
+\contentsline {chapter}{\numberline {11}Appendix}{38}{chapter.11}
+\contentsline {section}{\numberline {11.1}Appendix code}{38}{section.11.1}
