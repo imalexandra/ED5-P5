@@ -2,40 +2,46 @@
 \contentsline {chapter}{Preface}{1}{chapter*.2}
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}
-\contentsline {chapter}{\numberline {2}General characteristics of a quadcopter}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Systems of coordinates}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}Working principle}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Quadcopter manouvering}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Assumptions}{8}{section.2.4}
-\contentsline {chapter}{\numberline {3}Physical setup}{9}{chapter.3}
-\contentsline {subsubsection}{Motors}{9}{subsubsection*.6}
-\contentsline {subsubsection}{Propellers}{9}{subsubsection*.8}
-\contentsline {subsubsection}{Electric Speed Controller}{10}{subsubsection*.10}
-\contentsline {subsubsection}{APM Flight Controller}{10}{subsubsection*.12}
-\contentsline {subsubsection}{Power Distribution Board}{11}{subsubsection*.14}
-\contentsline {subsubsection}{Battery}{11}{subsubsection*.15}
-\contentsline {chapter}{\numberline {4}Quadcopter Model}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}Quaternions and Euler angles}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}Quaternions Representation}{14}{section.4.2}
-\contentsline {section}{\numberline {4.3}Euler Representation}{15}{section.4.3}
-\contentsline {chapter}{\numberline {5}Sensors}{16}{chapter.5}
-\contentsline {section}{\numberline {5.1}Model of the sensors}{16}{section.5.1}
-\contentsline {subsubsection}{Accelerometer}{16}{subsubsection*.18}
-\contentsline {subsubsection}{Gyroscope}{16}{subsubsection*.19}
-\contentsline {subsection}{\numberline {5.1.1}Programming Accelerometer and Gyroscope}{16}{subsection.5.1.1}
-\contentsline {chapter}{\numberline {6}Actuators}{18}{chapter.6}
-\contentsline {section}{\numberline {6.1}Propeller model}{18}{section.6.1}
-\contentsline {section}{\numberline {6.2}Motor model}{18}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Expected and Real Motor Performance}{18}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}APM Output and Motor Speed Relationship}{20}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Electronic Speed Controllers}{24}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Calibrating and Programming ESCs}{24}{subsection.6.3.1}
-\contentsline {chapter}{\numberline {7}State space model}{26}{chapter.7}
-\contentsline {chapter}{\numberline {8}Experiments}{27}{chapter.8}
-\contentsline {subsection}{\numberline {8.0.1}Output Operating Range}{27}{subsection.8.0.1}
-\contentsline {subsection}{\numberline {8.0.2}APM Frequency}{27}{subsection.8.0.2}
-\contentsline {chapter}{\numberline {9}Discussion}{30}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusion}{31}{chapter.10}
-\contentsline {chapter}{Bibliography}{32}{chapter*.29}
-\contentsline {chapter}{\numberline {11}Appendix}{33}{chapter.11}
-\contentsline {section}{\numberline {11.1}Appendix code}{33}{section.11.1}
+\contentsline {chapter}{\numberline {2}Prototype}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Prototype Hardware}{4}{section.2.1}
+\contentsline {subsubsection}{Motors}{4}{subsubsection*.3}
+\contentsline {subsubsection}{Propellers}{5}{subsubsection*.5}
+\contentsline {subsubsection}{Electric Speed Controller}{5}{subsubsection*.7}
+\contentsline {subsubsection}{APM Flight Controller}{6}{subsubsection*.9}
+\contentsline {subsubsection}{Power Distribution Board}{6}{subsubsection*.11}
+\contentsline {subsubsection}{Battery}{6}{subsubsection*.12}
+\contentsline {section}{\numberline {2.2}Prototype Measurements}{7}{section.2.2}
+\contentsline {chapter}{\numberline {3}Quadcopter Model}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Quaternions and Euler angles}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}Quaternions Representation}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Euler Representation}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}BLDC Motor}{12}{section.3.4}
+\contentsline {section}{\numberline {3.5}Quadcopter Dynamics}{16}{section.3.5}
+\contentsline {section}{\numberline {3.6}Kinematics}{16}{section.3.6}
+\contentsline {section}{\numberline {3.7}Motor Dynamics}{17}{section.3.7}
+\contentsline {section}{\numberline {3.8}Forces}{18}{section.3.8}
+\contentsline {section}{\numberline {3.9}Torques}{19}{section.3.9}
+\contentsline {section}{\numberline {3.10}Equations of Motion}{20}{section.3.10}
+\contentsline {section}{\numberline {3.11}Control}{20}{section.3.11}
+\contentsline {chapter}{\numberline {4}Sensors}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Model of the sensors}{22}{section.4.1}
+\contentsline {subsubsection}{Accelerometer}{22}{subsubsection*.17}
+\contentsline {subsubsection}{Gyroscope}{22}{subsubsection*.18}
+\contentsline {subsection}{\numberline {4.1.1}Programming Accelerometer and Gyroscope}{22}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {5}Actuators}{24}{chapter.5}
+\contentsline {section}{\numberline {5.1}Propeller model}{24}{section.5.1}
+\contentsline {section}{\numberline {5.2}Motor model}{26}{section.5.2}
+\contentsline {section}{\numberline {5.3}Motor Identification}{27}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Expected and Real Motor Performance}{27}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}APM Output and Motor Speed Relationship}{28}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Electronic Speed Controllers}{32}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Calibrating and Programming ESCs}{32}{subsection.5.4.1}
+\contentsline {chapter}{\numberline {6}State space model}{34}{chapter.6}
+\contentsline {chapter}{\numberline {7}Experiments}{35}{chapter.7}
+\contentsline {subsection}{\numberline {7.0.1}Output Operating Range}{35}{subsection.7.0.1}
+\contentsline {subsection}{\numberline {7.0.2}APM Frequency}{35}{subsection.7.0.2}
+\contentsline {chapter}{\numberline {8}Discussion}{38}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusion}{39}{chapter.9}
+\contentsline {chapter}{Bibliography}{40}{chapter*.30}
+\contentsline {chapter}{\numberline {10}Appendix}{41}{chapter.10}
+\contentsline {section}{\numberline {10.1}Appendix code}{41}{section.10.1}

@@ -1,14 +1,119 @@
--intro-
+Actuators are an important part of any control system because they are the ones responsible for bringing it to the desired state. They do this by applying forces on the system. In our case, the actuators are the motor and the propellers. Figure x displays the actuators' configuration. Ardupilot, which is the ''brain'' of our control system and has the controller implemented on it is connected to the speed controller, which is in charge of controlling the motor through a PWM signal. 
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/ablockd.png}
+	\caption{Actuators Block Diagram.}
+	\label{ablockd}
+\end{figure}
+
+Each motor produces an angular velocity $\omega$, therefore the propeller spins at that defined angular velocity. In this chapter, we will be introducing more comprehensible models for both motor and propeller as well as some experiements regarding the PWM signal - motor speed relationship.
 
 \section{Propeller model}
+For this part of the report, we have decided not to take into account the aerodynamic forces that act on the propeller, therefore neglecting the air friction, the flapping of the blased and the ground effect. This enables us to create a simpler model, which is easy to understand and implement.
 
-...
+The thrust $F_{i}$ and the moment across the $M_{i}$ along the $u_{z}$ axis can be written as functions of angular velocities such as:
+
+\begin{equation}
+	F_{i}=K_{T}\omega_{i}^{2}
+\end{equation}
+
+\begin{equation}
+	M_{i}=K_{M}\omega_{i}^{2}
+\end{equation}
+
+where the constant related to thrust $K_{T}$ and the constant related to the moment $K_{M}$ can be describes as:
+
+\begin{equation}
+	K_{T}=c_{T}\frac{\rho D^{4}}{4\Pi^{2}}
+\end{equation}
+
+\begin{equation}
+	K_{M}=c_{P}\frac{\rho D^{5}}{8\Pi^{2}}
+\end{equation}
+
+with D= being the diameter of the propeller, $\rho$ being the air density, $ c_{T} $ and $ c_{P} $ being the thrust and power coefficient. We are considering these values to have small values (<0.2) based on what we have read from other projects.
+
+Therefore:
+
+\begin{equation}
+	K_{T}\approx 1.45\times10^{-5}
+\end{equation}
+
+\begin{equation}
+	K_{M} \approx 3.5\times10^{-7}
+\end{equation}
+
+%reference
+
+We can write $K \approx K_{M}/K_{T}=4.1\times10^{-7}=0.024$. The forces and moments can now be expressed as:
+
+\begin{equation}
+	F_{i}=K_{T}\omega_{i}^{2}
+\end{equation}
+
+\begin{equation}
+	M_{x}=(\omega_{2}^{2}-\omega_{4}^{2})K_{T}D=(F_{2}-F_{4})D
+\end{equation}
+
+\begin{equation}
+	M_{y}=(\omega_{1}^{2}-\omega_{3}^{2})K_{T}D=(F_{1}-F_{3})D
+\end{equation}
+
+\begin{equation}
+	M_{z}=(\omega_{1}^{2}+\omega_{3}^{2}-\omega_{2}^{2}-\omega_{4}^{2})K_{M}=(F_{1}+F_{3}-F_{2}-F_{4})K
+\end{equation}
+
+where D is expressed in centimeters.
 
 \section{Motor model}
+Providing a signal to the motor is done through Ardupilot, using PWM, which enables providing an analog singal by digital means.  In order to create a PWM signal, we have used the \textit{write.Microseconds()} function from the\textit{Servo.h} library withing the Arduino IDE environment. The role of the speed controllers is to turn the PWM singal into a three-phase signal to feed the BLDC motors.
 
-Andy
+Each motor receives a three-phase signal that is proportional with the angular velocity $\omega$. In general, the behaviour of a motor can be analysed by looking at the electrical and mechanical part of its structure. These parts are represented in Figure \label{dc}. 
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/dc.png}
+	\caption{Electrical and Mechanical part of the motor.}
+	\label{dc}
+\end{figure}
+
+%http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Simulink/Modeling/figures/motor.png
+
+A second order system can be obtained by writing the equations that describe the electrical and mechanical part as:
+
+\begin{equation}
+	V=RI+L\frac{dI}{dt}+K_{e}\dot{\theta}
+\end{equation}
+
+\begin{equation}
+   K_{e}I = J \ddot{\theta}+b\dot{\theta}
+\end{equation}
+
+The transfer function can be taking the Laplace transform of each equation and manipulating it into:
+
+\begin{equation}
+\label{modelm} 
+   \frac{\omega}{PWM}=\frac{K_{e}}{(Js+b)(Ls+R)+K_{e}^{2}}
+\end{equation}
+
+where $\omega$ is the angular velocity of the motor, PWM is the signal to the motor, $K_{e}$ is the electromotive constant, J is the rotor's moment of inertia, b is the damping ratio of the mechanical system, L is the inductance, R is the resistance and I is the measuremement of the current.
+
+Equation \label{modelm} can be further simplified and written as a first order system, since it is difficult to measure all the motor parameters:
+
+\begin{equation}
+   \frac{\omega}{PWM}=\frac{k_{i}}{\tau s+1}
+\end{equation}
+
+%reference!! 
+
+where $\tau$ is the time constant of the system and $k_{i}$ is the DC gain. 
+
+\section{Motor Identification}
+This section will show the experiements that we have carried out in regards to the motor.
 
 \subsection{Expected and Real Motor Performance}
+
 The motors used in the prototype specify to be rated at $K_v$ of 980. $K_v$ is a constant describing the ration between RPM and the applied voltage and is expressed as $K_v = \frac{RPM}{V}$. Derived from this, voltage's effect on the RPM can be seen in figure \ref{KvPlot}.
 \begin{figure}[H]
   \centering
