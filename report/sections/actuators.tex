@@ -284,12 +284,9 @@ The values measured with tachometer were then converted into $rad/s$ and plotted
 \end{figure}
 
 \section{Electronic Speed Controllers}
-
-...
-
-\subsection{Calibrating and Programming ESCs}
 ESCs have 5 input pins, 3 of which come from the flight controller. These 3 wires supply the signal for the ESC to translate into the angle of the shaft for the motor. Before ESCs can be used, they need to be properly calibrated. Programming additional settings is optional, but in most cases necessary too. Normally, the calibration for UAVs is done by setting the throttle to full on the radio controller before powering the ESCs. However, since the board translates the throttle signal into a PWM signal, it is possible to calibrate and run the motors directly from the flight controller by sending a PWM signal using software.
 
+\subsection{Calibration and Programming}
 The calibration is done by first sending the maximum length of signal the user wishes to use. The ESC emits sounds that are brand-specific and indicate whether the signal was successfully recognised or not. Once the maximum signal is accepted, the user the emits the minimum signal and waits for approval. Additional sound is then emitted, indicating that the calibration was successful.
 
 Using Arduino's Servo library, a self-explanatory built-in function \textit{servo.writeMicroseconds(int value)} is used to send the signal. By default, the library has the minimum signal set to 544$\mu s$ and the maximum - to 2400$\mu s$. For this project, we shortened the range down to 700$\mu s$ and 2000$\mu s$ for both signals respectively. A commented code used to calibrate the ESC connected to the first pin of the board can be seen in listing \ref{code:calib}.

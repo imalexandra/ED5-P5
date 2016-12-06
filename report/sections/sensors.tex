@@ -22,19 +22,30 @@ The gyroscope has some similar functionality as the accelerometer, being able to
 
 It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analogue and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. 
 
-//spi lines
-
 Before getting into the calculations of the angles, we need to get the raw values from both accelerometer and gyroscope and that is done by accessing their registers.
-
-//insert lines of code that read the raw values from acc and gyro
 
 If we want to calculate the inclination of a device relative to the ground for example, we can calculate the angle between the force vector and one of the z-axis. We can do that by manipulating the raw values and by degree conversion. The functions that take care of converting the raw values from both accelerometer and gyroscope are the following:
 
-//insert lines of code for the math part
-
 We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the accelerometer output is because accelerometers are more sensitive to noise and vibrations. The figure below shows the printed outputs at steady state, that is when the quadcopter is parallel to the ground.
 
-//insert printscreen of the values
+We have made separate functions that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. An example of one of the functions is shown Code \label{c1}.
 
+\lstinputlisting[language=C++, firstline=95, lastline=100, caption={Function that accesses registers and returns a raw value}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-//mention sensitivity 
+\clearpage
+
+The raw values are then converted into angles by using the functions
+
+\lstinputlisting[language=C++, firstline=144, lastline=163, caption={Function to obtain angles based on the raw values of the accelerometer}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+
+\lstinputlisting[language=C++, firstline=167, lastline=193, caption={Function to obtain angles based on the raw values of the accelerometer}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+
+The serial monitor was used to print out the the angles. At steady state, it yielded:
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/accgy.png}
+	\caption{Angles obtained from Accelerometer and Gyroscope}
+\end{figure}
+
+//insert prinscreen for tilting 

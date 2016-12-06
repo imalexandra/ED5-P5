@@ -26,13 +26,10 @@
 \BOOKMARK [2][-]{subsection.6.3.3}{6.3.3 Expected and Real Motor Performance}{section.6.3}% 26
 \BOOKMARK [2][-]{subsection.6.3.4}{6.3.4 APM Output and Motor Speed Relationship}{section.6.3}% 27
 \BOOKMARK [1][-]{section.6.4}{6.4 Electronic Speed Controllers}{chapter.6}% 28
-\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Calibrating and Programming ESCs}{section.6.4}% 29
+\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 Calibration and Programming}{section.6.4}% 29
 \BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 30
-\BOOKMARK [0][-]{chapter.8}{8 Experiments}{}% 31
-\BOOKMARK [1][-]{subsection.8.0.1}{8.0.1 Output Operating Range}{chapter.8}% 32
-\BOOKMARK [2][-]{subsection.8.0.2}{8.0.2 APM Frequency}{subsection.8.0.1}% 33
-\BOOKMARK [0][-]{chapter.9}{9 Discussion}{}% 34
-\BOOKMARK [0][-]{chapter.10}{10 Conclusion}{}% 35
-\BOOKMARK [0][-]{chapter*.34}{Bibliography}{}% 36
-\BOOKMARK [0][-]{chapter.11}{11 Appendix}{}% 37
-\BOOKMARK [1][-]{section.11.1}{11.1 Appendix code}{chapter.11}% 38
+\BOOKMARK [0][-]{chapter.8}{8 Discussion}{}% 31
+\BOOKMARK [0][-]{chapter.9}{9 Conclusion}{}% 32
+\BOOKMARK [0][-]{chapter*.32}{Bibliography}{}% 33
+\BOOKMARK [0][-]{chapter.10}{10 Appendix}{}% 34
+\BOOKMARK [1][-]{section.10.1}{10.1 Appendix code}{chapter.10}% 35
