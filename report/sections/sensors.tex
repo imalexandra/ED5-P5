@@ -1,15 +1,26 @@
-...
-
 \section{Model of the sensors}
+
+This chapter will, step by step, introduce the sensors, describe how they function and define the methods used to extract the data from them. The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot, fitted on 6-axis MPU6000 14-bit chip. The accelerometer works by detecting a force that is actually the opposite of the acceleration vector. This force is not always caused by acceleration, but it can be. It just happens that acceleration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
 
 \subsubsection{Accelerometer}
 
+To measure the direction of the gravity vector and define the pitch and roll angles, an accelerometer is an easy to use solution.
+The raw ADC values obtained from the accelerometer first have to be converted into some acceleration $m/s^2$. To make this happen, a resolution equation is defined that will describe the relationship between the raw values and the acceleration.
+For this particular accelerometer, some general acceleration $a_\theta $ along some axis $\theta$ can be found using equation \ref{sensors1}.
+\begin{equation}
+\label{sensors1}	
+ 	a_\theta = \frac{ADC_\theta * g}{bits-1}
+\end{equation}
+where $ADC_\theta $ is the raw value measured by the sensor, $g$ is the gravitational force and $bits$ is the number of bits the module is running at.
+The values measured by the accelerometer will be stored in vector $\bar{a}^B = [\bar{a}_x, \bar{a}_y, \bar{a}_z]^T$. Additionally, these values will be converted into degrees. This process will be discussed in the programming section.
+
 \subsubsection{Gyroscope}
 
-\subsection{Programming Accelerometer and Gyroscope}
-The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot and they are 3-axis. The accelerometer works by detecting a force that is actually the opposite of the accelaration vector. This force is not always caused by acceleration, but it can be. It just happens that accelaration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
+The gyroscope has some similar functionality as the accelerometer, being able to measure the angular velocities expressed as $^{\circ}/s$. The equation to convert raw gyroscope values into angular velocity will be covered in the programming section as well. The measured values of gyroscope will be stored in vector $\bar{\Omega}^B = [\bar{g}_x, \bar{g}_y, \bar{g}]_z^T$.
 
-It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analog and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. 
+\section{Programming Accelerometer and Gyroscope}
+
+It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analogue and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. 
 
 //insert lines of code that makes the spi communication possible
 
@@ -21,7 +32,7 @@ If we want to calculate the inclination of a device relative to the ground for e
 
 //insert lines of code for the math part
 
-We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the acceleromter output is because accelerometers are more sensitive to noise and vibrations. The figure below shows the printed outputs at steady state, that is when the quadcopter is parallel to the ground.
+We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the accelerometer output is because accelerometers are more sensitive to noise and vibrations. The figure below shows the printed outputs at steady state, that is when the quadcopter is parallel to the ground.
 
 //insert printscreen of the values
 
