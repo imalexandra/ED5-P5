@@ -2,7 +2,6 @@
 \BOOKMARK [0][-]{chapter*.2}{Preface}{}% 2
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 3
 \BOOKMARK [1][-]{section.1.1}{1.1 Introduction}{chapter.1}% 4
-<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.2}{2 Prototype}{}% 5
 \BOOKMARK [1][-]{section.2.1}{2.1 Prototype Hardware}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{2.2 Prototype Measurements}{chapter.2}% 7
@@ -20,7 +19,7 @@
 \BOOKMARK [1][-]{section.3.11}{3.11 Control}{chapter.3}% 19
 \BOOKMARK [0][-]{chapter.4}{4 Sensors}{}% 20
 \BOOKMARK [1][-]{section.4.1}{4.1 Model of the sensors}{chapter.4}% 21
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Programming Accelerometer and Gyroscope}{section.4.1}% 22
+\BOOKMARK [1][-]{section.4.2}{4.2 Programming Accelerometer and Gyroscope}{chapter.4}% 22
 \BOOKMARK [0][-]{chapter.5}{5 Actuators}{}% 23
 \BOOKMARK [1][-]{section.5.1}{5.1 Propeller model}{chapter.5}% 24
 \BOOKMARK [1][-]{section.5.2}{5.2 Motor model}{chapter.5}% 25
@@ -38,34 +37,3 @@
 \BOOKMARK [0][-]{chapter*.30}{Bibliography}{}% 37
 \BOOKMARK [0][-]{chapter.10}{10 Appendix}{}% 38
 \BOOKMARK [1][-]{section.10.1}{10.1 Appendix code}{chapter.10}% 39
-=======
-\BOOKMARK [0][-]{chapter.2}{2 General characteristics of a quadcopter}{}% 5
-\BOOKMARK [1][-]{section.2.1}{2.1 Systems of coordinates}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{2.2 Working principle}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{2.3 Quadcopter manouvering}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.4}{2.4 Assumptions}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{3 Physical setup}{}% 10
-\BOOKMARK [0][-]{chapter.4}{4 Quadcopter Model}{}% 11
-\BOOKMARK [1][-]{section.4.1}{4.1 Quaternions and Euler angles}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{4.2 Quaternions Representation}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.3}{4.3 Euler Representation}{chapter.4}% 14
-\BOOKMARK [0][-]{chapter.5}{5 Sensors}{}% 15
-\BOOKMARK [1][-]{section.5.1}{5.1 Model of the sensors}{chapter.5}% 16
-\BOOKMARK [1][-]{section.5.2}{5.2 Programming Accelerometer and Gyroscope}{chapter.5}% 17
-\BOOKMARK [0][-]{chapter.6}{6 Actuators}{}% 18
-\BOOKMARK [1][-]{section.6.1}{6.1 Propeller model}{chapter.6}% 19
-\BOOKMARK [1][-]{section.6.2}{6.2 Motor model}{chapter.6}% 20
-\BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Expected and Real Motor Performance}{section.6.2}% 21
-\BOOKMARK [2][-]{subsection.6.2.2}{6.2.2 APM Output and Motor Speed Relationship}{section.6.2}% 22
-\BOOKMARK [1][-]{section.6.3}{6.3 Electronic Speed Controllers}{chapter.6}% 23
-\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Calibrating and Programming ESCs}{section.6.3}% 24
-\BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 25
-\BOOKMARK [0][-]{chapter.8}{8 Experiments}{}% 26
-\BOOKMARK [1][-]{subsection.8.0.1}{8.0.1 Output Operating Range}{chapter.8}% 27
-\BOOKMARK [2][-]{subsection.8.0.2}{8.0.2 APM Frequency}{subsection.8.0.1}% 28
-\BOOKMARK [0][-]{chapter.9}{9 Discussion}{}% 29
-\BOOKMARK [0][-]{chapter.10}{10 Conclusion}{}% 30
-\BOOKMARK [0][-]{chapter*.29}{Bibliography}{}% 31
-\BOOKMARK [0][-]{chapter.11}{11 Appendix}{}% 32
-\BOOKMARK [1][-]{section.11.1}{11.1 Appendix code}{chapter.11}% 33
->>>>>>> origin/master
