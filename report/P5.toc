@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{Electric Speed Controller}{10}{subsubsection*.10}
 \contentsline {subsubsection}{APM Flight Controller}{11}{subsubsection*.12}
 \contentsline {subsubsection}{Power Distribution Board}{11}{subsubsection*.14}
-\contentsline {subsubsection}{Battery}{11}{subsubsection*.15}
+\contentsline {subsubsection}{Battery}{12}{subsubsection*.15}
 \contentsline {section}{\numberline {3.2}Prototype Measurements}{12}{section.3.2}
 \contentsline {chapter}{\numberline {4}Quadcopter Model}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Quaternions and Euler angles}{13}{section.4.1}
@@ -25,22 +25,22 @@
 \contentsline {subsubsection}{Accelerometer}{17}{subsubsection*.18}
 \contentsline {subsubsection}{Gyroscope}{18}{subsubsection*.19}
 \contentsline {section}{\numberline {5.2}Programming Accelerometer and Gyroscope}{18}{section.5.2}
-\contentsline {chapter}{\numberline {6}Actuators}{19}{chapter.6}
-\contentsline {section}{\numberline {6.1}Propeller model}{19}{section.6.1}
-\contentsline {section}{\numberline {6.2}Motor model}{21}{section.6.2}
-\contentsline {section}{\numberline {6.3}Motor and Ardupilot Identification}{22}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}APM Frequency}{22}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Output Operating Range}{23}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Expected and Real Motor Performance}{24}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}APM Output and Motor Speed Relationship}{25}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{29}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Calibrating and Programming ESCs}{29}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {7}State space model}{31}{chapter.7}
-\contentsline {chapter}{\numberline {8}Experiments}{32}{chapter.8}
-\contentsline {subsection}{\numberline {8.0.1}Output Operating Range}{32}{subsection.8.0.1}
-\contentsline {subsection}{\numberline {8.0.2}APM Frequency}{32}{subsection.8.0.2}
-\contentsline {chapter}{\numberline {9}Discussion}{35}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusion}{36}{chapter.10}
-\contentsline {chapter}{Bibliography}{37}{chapter*.34}
-\contentsline {chapter}{\numberline {11}Appendix}{38}{chapter.11}
-\contentsline {section}{\numberline {11.1}Appendix code}{38}{section.11.1}
+\contentsline {chapter}{\numberline {6}Actuators}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Propeller model}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Motor model}{25}{section.6.2}
+\contentsline {section}{\numberline {6.3}Motor and Ardupilot Identification}{26}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}APM Frequency}{26}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Output Operating Range}{27}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Expected and Real Motor Performance}{28}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}APM Output and Motor Speed Relationship}{29}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{33}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Calibrating and Programming ESCs}{33}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {7}State space model}{35}{chapter.7}
+\contentsline {chapter}{\numberline {8}Experiments}{36}{chapter.8}
+\contentsline {subsection}{\numberline {8.0.1}Output Operating Range}{36}{subsection.8.0.1}
+\contentsline {subsection}{\numberline {8.0.2}APM Frequency}{36}{subsection.8.0.2}
+\contentsline {chapter}{\numberline {9}Discussion}{39}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusion}{40}{chapter.10}
+\contentsline {chapter}{Bibliography}{41}{chapter*.34}
+\contentsline {chapter}{\numberline {11}Appendix}{42}{chapter.11}
+\contentsline {section}{\numberline {11.1}Appendix code}{42}{section.11.1}
