@@ -14,7 +14,7 @@
 \BOOKMARK [1][-]{section.4.3}{4.3 Euler Representation}{chapter.4}% 14
 \BOOKMARK [0][-]{chapter.5}{5 Sensors}{}% 15
 \BOOKMARK [1][-]{section.5.1}{5.1 Model of the sensors}{chapter.5}% 16
-\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Programming Accelerometer and Gyroscope}{section.5.1}% 17
+\BOOKMARK [1][-]{section.5.2}{5.2 Programming Accelerometer and Gyroscope}{chapter.5}% 17
 \BOOKMARK [0][-]{chapter.6}{6 Actuators}{}% 18
 \BOOKMARK [1][-]{section.6.1}{6.1 Propeller model}{chapter.6}% 19
 \BOOKMARK [1][-]{section.6.2}{6.2 Motor model}{chapter.6}% 20
