@@ -7,10 +7,12 @@ This chapter will, step by step, introduce the sensors, describe how they functi
 To measure the direction of the gravity vector and define the pitch and roll angles, an accelerometer is an easy to use solution.
 The raw ADC values obtained from the accelerometer first have to be converted into some acceleration $m/s^2$. To make this happen, a resolution equation is defined that will describe the relationship between the raw values and the acceleration.
 For this particular accelerometer, some general acceleration $a_\theta $ along some axis $\theta$ can be found using equation \ref{sensors1}.
+
 \begin{equation}
 \label{sensors1}	
  	a_\theta = \frac{ADC_\theta * g}{bits-1}
 \end{equation}
+
 where $ADC_\theta $ is the raw value measured by the sensor, $g$ is the gravitational force and $bits$ is the number of bits the module is running at.
 The values measured by the accelerometer will be stored in vector $\bar{a}^B = [\bar{a}_x, \bar{a}_y, \bar{a}_z]^T$. Additionally, these values will be converted into degrees. This process will be discussed in the programming section.
 
@@ -28,7 +30,7 @@ If we want to calculate the inclination of a device relative to the ground for e
 
 We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the accelerometer output is because accelerometers are more sensitive to noise and vibrations. The figure below shows the printed outputs at steady state, that is when the quadcopter is parallel to the ground.
 
-We have made separate functions that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. An example of one of the functions is shown Code \label{c1}.
+We have made separate functions that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. An example of one of the functions is shown Code \ref{c1}.
 
 \lstinputlisting[language=C++, firstline=95, lastline=100, caption={Function that accesses registers and returns a raw value}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 

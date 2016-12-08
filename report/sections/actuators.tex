@@ -3,14 +3,14 @@ Actuators are an important part of any control system because they are the ones 
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/ablockd.png}
-	\caption{Actuators Block Diagram.}
+	\caption{Actuators Block Diagram}
 	\label{ablockd}
 \end{figure}
 
-Each motor produces an angular velocity $\omega$, therefore the propeller spins at that defined angular velocity. In this chapter, we will be introducing more comprehensible models for both motor and propeller as well as some experiements regarding the PWM signal - motor speed relationship.
+Each motor produces an angular velocity $\omega$, therefore the propeller spins at that defined angular velocity. In this chapter, we will be introducing more comprehensible models for both motor and propeller as well as some experiments regarding the PWM signal - motor speed relationship.
 
 \section{Propeller model}
-For this part of the report, we have decided not to take into account the aerodynamic forces that act on the propeller, therefore neglecting the air friction, the flapping of the blased and the ground effect. This enables us to create a simpler model, which is easy to understand and implement.
+For this part of the report, we have decided not to take into account the aerodynamic forces that act on the propeller, therefore neglecting the air friction, the flapping of the biased and the ground effect. This enables us to create a simpler model, which is easy to understand and implement.
 
 The thrust $F_{i}$ and the moment across the $M_{i}$ along the $u_{z}$ axis can be written as functions of angular velocities such as:
 
@@ -64,17 +64,17 @@ We can write $K \approx K_{M}/K_{T}=4.1\times10^{-7}=0.024$. The forces and mome
 	M_{z}=(\omega_{1}^{2}+\omega_{3}^{2}-\omega_{2}^{2}-\omega_{4}^{2})K_{M}=(F_{1}+F_{3}-F_{2}-F_{4})K
 \end{equation}
 
-where D is expressed in centimeters.
+where D is expressed in centimetres.
 
 \section{Motor model}
-Providing a signal to the motor is done through Ardupilot, using PWM, which enables providing an analog singal by digital means.  In order to create a PWM signal, we have used the \textit{write.Microseconds()} function from the\textit{Servo.h} library withing the Arduino IDE environment. The role of the speed controllers is to turn the PWM singal into a three-phase signal to feed the BLDC motors.
+Providing a signal to the motor is done through Ardupilot, using PWM, which enables providing an analogue signal by digital means.  In order to create a PWM signal, we have used the \textit{write.Microseconds()} function from the\textit{Servo.h} library within the Arduino IDE environment. The role of the speed controllers is to turn the PWM signal into a three-phase signal to feed the BLDC motors.
 
-Each motor receives a three-phase signal that is proportional with the angular velocity $\omega$. In general, the behaviour of a motor can be analysed by looking at the electrical and mechanical part of its structure. These parts are represented in Figure \label{dc}. 
+Each motor receives a three-phase signal that is proportional with the angular velocity $\omega$. In general, the behaviour of a motor can be analysed by looking at the electrical and mechanical part of its structure. These parts are represented in Figure \ref{dc}. 
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.6\textwidth]{images/dc.png}
-	\caption{Electrical and Mechanical part of the motor.}
+	\caption{Electrical and Mechanical part of the motor}\cite{MotorFig}
 	\label{dc}
 \end{figure}
 
@@ -97,9 +97,9 @@ The transfer function can be taking the Laplace transform of each equation and m
    \frac{\omega}{PWM}=\frac{K_{e}}{(Js+b)(Ls+R)+K_{e}^{2}}
 \end{equation}
 
-where $\omega$ is the angular velocity of the motor, PWM is the signal to the motor, $K_{e}$ is the electromotive constant, J is the rotor's moment of inertia, b is the damping ratio of the mechanical system, L is the inductance, R is the resistance and I is the measuremement of the current.
+where $\omega$ is the angular velocity of the motor, PWM is the signal to the motor, $K_{e}$ is the electromotive constant, J is the rotor's moment of inertia, b is the damping ratio of the mechanical system, L is the inductance, R is the resistance and I is the measurement of the current.
 
-Equation \label{modelm} can be further simplified and written as a first order system, since it is difficult to measure all the motor parameters:
+Equation \ref{modelm} can be further simplified and written as a first order system, since it is difficult to measure all the motor parameters:\cite{Report1}
 
 \begin{equation}
    \frac{\omega}{PWM}=\frac{k_{i}}{\tau s+1}
@@ -110,14 +110,14 @@ Equation \label{modelm} can be further simplified and written as a first order s
 where $\tau$ is the time constant of the system and $k_{i}$ is the DC gain. 
 
 \section{Motor and Ardupilot Identification}
-This section will show the experiements that we have carried out in regards to the motor as well as Ardupilot frequency analysis.
+This section will show the experiments that we have carried out in regards to the motor as well as Ardupilot frequency analysis.
 
 \subsection{APM Frequency}
 Due to lack of proper documentation, it was necessary to do measure the frequency of the signals sent out by the flight controller. To do so, an oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in figure \ref{oscillo1}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/oscillo1.jpg}
-	\caption{Oscilloscope measuring APM's frequency.}
+	\caption{Oscilloscope measuring APM's frequency}
 	\label{oscillo1}
 \end{figure}
 
@@ -125,7 +125,7 @@ The second experiment on the board was then made to determine how the flight con
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/oscillo2.jpg}
-	\caption{Readings of the two output signals.}
+	\caption{Readings of the two output signals}
 	\label{oscillo2}
 \end{figure}
 

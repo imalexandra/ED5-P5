@@ -1,9 +1,7 @@
 Before delving into the mathematical modelling of the quadcopter, it is important to understand a few basic concepts in regards to the working principles of a quadcopter and the frames in which the final model will be defined.
 
 \section{Systems of coordinates} \label{2.1} 
-Describing the movement of the quadcopter in a three dimensional space can be done by using two frames, which can be seen in Figure \label{frames1}. The NED frame is the one that we refer to in our daily life. It points towards North, East and Downwards normal to the surface of Earth. The origin of the NED coordinate system is fixed in O. The frame can also be referred to as inertial and the vectors expressed in it will be marked with $^{I}$. The other frame is fixed on the quadcopter, therefore it is called Boxy-fixed frame. It has the center in $O_{C}$, which is the center of mass of the quadcopter. Its' three axis are x,y and z. The x axis points towards one of the motors, the z axis points to the ground and the y axis completes the orthogonal coordinate system. The vectors described in this frame will be market with $^{B}$. 
-
-%(ref: thesis5.pdf and masters.pdf from my computer)
+Describing the movement of the quadcopter in a three dimensional space can be done by using two frames, which can be seen in figure \ref{frames1}. The NED frame is the one that we refer to in our daily life. It points towards North, East and Downwards normal to the surface of Earth. The origin of the NED coordinate system is fixed in O. The frame can also be referred to as inertial and the vectors expressed in it will be marked with $^{I}$. The other frame is fixed on the quadcopter, therefore it is called Boxy-fixed frame. It has the center in $O_{C}$, which is the center of mass of the quadcopter. Its' three axis are x,y and z. The x axis points towards one of the motors, the z axis points to the ground and the y axis completes the orthogonal coordinate system. The vectors described in this frame will be market with $^{B}$.\cite{Report1} \cite{Report2} 
 
 \begin{figure}[H]
   \centering
@@ -12,7 +10,7 @@ Describing the movement of the quadcopter in a three dimensional space can be do
 	\label{frames1}
 \end{figure}
 
-Besides the coordinate system, Figure \label{frames1} also shows the hexagonal placement of the four motors, the spinning direction of each of them and the roll - $\phi$, pitch - $\theta$ and yaw - $\psi$ angles. 
+Besides the coordinate system, figure \ref{frames1} also shows the hexagonal placement of the four motors, the spinning direction of each of them and the roll - $\phi$, pitch - $\theta$ and yaw - $\psi$ angles. 
 
 The quadcoter's position represents the O to $O_{C}$ displacement:
 
@@ -40,12 +38,12 @@ The quadcopter's angular velocity can be expressed using the angular velocity ab
 
 \section{Working principle}
 
-To have an understanding of how a quadcopter actually works like, it is important to know the forces affecting it. See figure \label{droneForces}.
+To have an understanding of how a quadcopter actually works like, it is important to know the forces affecting it. See figure \ref{droneForces}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.75\textwidth]{images/forces.png}
-	\caption{Forces affecting an aerial vehicle.}
+	\caption{Forces affecting an aerial vehicle} \cite{ForcesFig}
 	\label{droneForces}
 \end{figure}
 
@@ -76,25 +74,25 @@ Quadcopters are made with four identical motors, each of them having an attached
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.9\textwidth]{images/rollpitchyaw.png}
-	\caption{Quadcopter Rotation System.}
+	\caption{Quadcopter Rotation System} \cite{RPYFig}
 	\label{rollpitchyaw}
 \end{figure}
 
 %(ref: http://e-collection.library.ethz.ch/eserv/eth:7849/eth-7849-01.pdf)
 
-The arrows in Figure \label{rollpitchyaw} represent the angular speeds of the motors and they can be written as:
+The arrows in Figure \ref{rollpitchyaw} represent the angular speeds of the motors and they can be written as:
 
 \begin{equation}
 	\omega=[\omega_{1}, \omega_{2}, \omega_{3}, \omega_{4}] ^{T}
 \end{equation} 
 
-The quadcopter's possible motions can be splitted into four categories:
+The quadcopter's possible motions can be split into four categories:
 
 \begin{itemize}
   \item \textbf{Rolling motion }is represented by the rotation of the quadcopter about the $u_{x}$ axis and it can be obtained when $\omega_{2}$ and $\omega_{4}$ are manipulated. In order to obtain a positive rolling, $\omega_{4}$ is decreased while $\omega_{2}$ is increased. The opposite will result in a negative rolling motion. Both movements can be seen in cases (a) and (b).
   \item \textbf{Pitch motion} is represented by the rotation of the quadcopter about the $u_{y}$ axis and it can be obtained when $\omega_{1}$ and $\omega_{3}$ are manipulated. In order to obtain a positive pitch, $\omega_{3}$ is decreased while $\omega_{1}$ is increased. The opposite will result in a negative pitch motion. Both movements can be seen in cases (c) and (d).
   \item \textbf{Yaw motion} is represented by the rotation of the quadcopter about the $u_{z}$ axis and it can be obtained by having a difference in the torque developed by each pair of propellers. The torque can be changed by having a bigger angular speed on one of the propeller pairs over the other. Both negative and positive yaw motions can be seen in cases (e) and (f).
-  \item \textbf{Translational motion} or vertical movement can be obtained by equally increasind or decreasing the angular speeds of all motors as seen in cases (g) and (h).
+  \item \textbf{Translational motion} or vertical movement can be obtained by equally increasind or decreasing the angular speeds of all motors as seen in cases (g) and (h). \cite{Report1}
 \end{itemize} 
 
 %(ref: thesis.pdf)

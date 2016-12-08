@@ -1,6 +1,6 @@
-Quadcopter control is a complex, yet interesting problem. One of the reasons why this control problem is challenging is the fact that a quadcopter has six degrees of freedom, but only four inputs which affects the linearity of the dynamics and makes the quadcopter underactuated. 
+Quadcopter control is a complex, yet interesting problem. One of the reasons why this control problem is challenging is the fact that a quadcopter has six degrees of freedom, but only four inputs which affects the linearity of the dynamics and makes the quadcopter under-actuated. 
 
-In this chapter we will take a look at the kinematics and dynamics equations that describe our quadcopter system for which we have drawn the block diagram shown in Figure \label{dk} .
+In this chapter we will take a look at the kinematics and dynamics equations that describe our quadcopter system for which we have drawn the block diagram shown in figure \ref{dk}.
 
 \begin{figure}[H]
   \centering
@@ -10,9 +10,9 @@ In this chapter we will take a look at the kinematics and dynamics equations tha
 \end{figure}
 
 \section{Quaternions and Euler angles}
-In Section \label{2.1}, we have explained how the position of the quadcopter is expressed in the inertial frame and how the  velocity of the quadcopter is express in the body-fixed frame. Therefore, we need to be able to find a relationship between the two, so that we can move from one to the other.
+In Section \ref{2.1}, we have explained how the position of the quadcopter is expressed in the inertial frame and how the  velocity of the quadcopter is express in the body-fixed frame. Therefore, we need to be able to find a relationship between the two, so that we can move from one to the other.
 
-Euler angles have to be applied as a sequence of rotations. This report will use the \textit{roll, pitch, yaw} convention. Therefore, the roll rotation will be $(R(\phi)^{T})$, the pitch rotation will be $(R(\theta)^{T})$ and the yaw rotation will be $(R(\psi)^{T})$. Equations \label{rollrotation}, \label{pitchrotation} and \label{yawrotation}  describe the quadcopter's orientation relative to the inertial frame in matrix form:
+Euler angles have to be applied as a sequence of rotations. This report will use the \textit{roll, pitch, yaw} convention. Therefore, the roll rotation will be $(R(\phi)^{T})$, the pitch rotation will be $(R(\theta)^{T})$ and the yaw rotation will be $(R(\psi)^{T})$. Equations \ref{rollrotation}, \ref{pitchrotation} and \ref{yawrotation}  describe the quadcopter's orientation relative to the inertial frame in matrix form:
 
 \begin{equation}
 \label{rollrotation}	

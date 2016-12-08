@@ -1,16 +1,32 @@
 \begin{thebibliography}{1}
 
-\bibitem{dForces}
-Nancy Hall.
-\newblock Simplified airplane motion.
-\newblock \url{https://www.grc.nasa.gov/www/k-12/airplane/smotion.html}.
-\newblock (Accessed 06/11/16).
+\bibitem{Report1}
+Bernardo Sousa~Machado Henriques.
+\newblock Estimation and control of a quadrotor attitude.
+\newblock Master's thesis, Universidade Tecnica de Lisboa, 2011.
 
-\bibitem{dMotions}
-Alex.
-\newblock The quadcopter : control the orientation.
-\newblock \url{http://theboredengineers.com/2012/05/the-quadcopter-basics/}.
-\newblock (Accessed 06/11/16).
+\bibitem{Report2}
+C~BALAS.
+\newblock Modelling and linear control of a quadrotor.
+\newblock Master's thesis, CRANFIELD UNIVERSITY, 2006-2007.
+
+\bibitem{ForcesFig}
+Tradeoffs for locomotion in air and water.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Tradeoffs_for_locomotion_in_air_and_water/}.
+\newblock (Accessed 08/12/16).
+
+\bibitem{RPYFig}
+Toward obstacle avoidance on quadrotors.
+\newblock
+  \url{http://e-collection.library.ethz.ch/eserv/eth:7849/eth-7849-01.pdf}.
+\newblock (Accessed 08/12/16).
+
+\bibitem{MotorFig}
+Dc motor speed: System modeling.
+\newblock
+  \url{http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling}.
+\newblock (Accessed 08/12/16).
 
 \bibitem{RPMEq}
 Vfds how do i calculate rpm for three phase induction motors?
