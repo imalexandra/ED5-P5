@@ -15,27 +15,27 @@ Servo motorBR;
 Servo motorBL;
 void setup() {
   Serial.begin(9600);
-  Serial.setTimeout(500) ;
+  Serial.setTimeout(50) ;
   Serial.println("Program begin...");
   Serial.println("This program will calibrate the ESC.");
-  motorFL.attach(MOTOR_PIN1);
-  //motorFR.attach(MOTOR_PIN2);
-  //motorBR.attach(MOTOR_PIN3);
-  motorBL.attach(MOTOR_PIN4);
+  motorFR.attach(MOTOR_PIN1);
+  motorBR.attach(MOTOR_PIN2);
+  motorBL.attach(MOTOR_PIN3);
+  motorFL.attach(MOTOR_PIN4);
   
   Serial.println("Now writing maximum output.");
   Serial.println("Turn on power source, then wait 2 seconds and press any key.");
-  motorFL.writeMicroseconds(MAX_SIGNAL);
+  //motorFL.writeMicroseconds(MAX_SIGNAL);
   //motorFR.writeMicroseconds(MAX_SIGNAL);
   //motorBR.writeMicroseconds(MAX_SIGNAL);
   //motorBL.writeMicroseconds(MAX_SIGNAL);
-  while (!Serial.available());
-  Serial.read();
+  //while (!Serial.available());
+  //Serial.read();
 
   Serial.println("Sending minimum output");
   motorFL.writeMicroseconds(MIN_SIGNAL);
-  //motorFR.writeMicroseconds(MIN_SIGNAL);
-  //motorBR.writeMicroseconds(MIN_SIGNAL);
+  motorFR.writeMicroseconds(MIN_SIGNAL);
+  motorBR.writeMicroseconds(MIN_SIGNAL);
   motorBL.writeMicroseconds(MIN_SIGNAL);
   while (!Serial.available());
   Serial.read();
@@ -46,8 +46,8 @@ void setup() {
     incomingByte = Serial.parseInt();
     motorFL.writeMicroseconds(incomingByte);
     motorFR.writeMicroseconds(incomingByte);
-    motorBR.writeMicroseconds(incomingByte);
-    motorBL.writeMicroseconds(incomingByte);
+    motorBR.writeMicroseconds(incomingByte-700);
+    motorBL.writeMicroseconds(incomingByte-700);
     Serial.println(incomingByte);
   }
 }
