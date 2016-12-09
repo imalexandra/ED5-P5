@@ -44,10 +44,10 @@ void setup() {
   while(loopVar == 0){
     while (!Serial.available());
     incomingByte = Serial.parseInt();
-    motorFL.writeMicroseconds(incomingByte);
-    motorFR.writeMicroseconds(incomingByte);
-    motorBR.writeMicroseconds(incomingByte-700);
-    motorBL.writeMicroseconds(incomingByte-700);
+    //motorFL.writeMicroseconds(incomingByte);
+    //motorFR.writeMicroseconds(incomingByte);
+    //motorBR.writeMicroseconds(incomingByte);
+    motorBL.writeMicroseconds(incomingByte);
     Serial.println(incomingByte);
   }
 }
