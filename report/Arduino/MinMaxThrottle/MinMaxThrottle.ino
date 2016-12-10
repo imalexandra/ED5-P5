@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-#define MAX_SIGNAL 2000
+#define MAX_SIGNAL 2400
 #define MIN_SIGNAL 700
 #define MOTOR_PIN1 12 //pin 1
 #define MOTOR_PIN2 11 //pin 1
