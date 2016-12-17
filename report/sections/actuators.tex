@@ -3,7 +3,7 @@ Actuators are an important part of any control system because they are the ones 
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/ablockd.png}
-	\caption{Actuators Block Diagram}
+	\caption{Actuators Block Diagram.}
 	\label{ablockd}
 \end{figure}
 
@@ -74,11 +74,9 @@ Each motor receives a three-phase signal that is proportional with the angular v
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.6\textwidth]{images/dc.png}
-	\caption{Electrical and Mechanical part of the motor}\cite{MotorFig}
+	\caption{Electrical and Mechanical part of the motor.\cite{MotorFig}}
 	\label{dc}
 \end{figure}
-
-%http://ctms.engin.umich.edu/CTMS/Content/MotorSpeed/Simulink/Modeling/figures/motor.png
 
 A second order system can be obtained by writing the equations that describe the electrical and mechanical part as:
 
@@ -105,36 +103,46 @@ Equation \ref{modelm} can be further simplified and written as a first order sys
    \frac{\omega}{PWM}=\frac{k_{i}}{\tau s+1}
 \end{equation}
 
-%reference!! 
-
 where $\tau$ is the time constant of the system and $k_{i}$ is the DC gain. 
 
-\section{Motor and Ardupilot Identification}
+\section{Electronic Speed Controllers}
+ESCs have 5 input pins, 3 of which come from the flight controller. These 3 wires supply the signal for the ESC to translate into the angle of the shaft for the motor. Before ESCs can be used, they need to be properly calibrated. Programming additional settings is optional, but in most cases necessary too. Normally, the calibration for UAVs is done by setting the throttle to full on the radio controller before powering the ESCs. However, since the board translates the throttle signal into a PWM signal, it is possible to calibrate and run the motors directly from the flight controller by sending a PWM signal using software.
+
+\subsection{Calibration and Programming}
+The calibration is done by first sending the maximum length of signal the user wishes to use. The ESC emits sounds that are brand-specific and indicate whether the signal was successfully recognised or not. Once the maximum signal is accepted, the user the emits the minimum signal and waits for approval. Additional sound is then emitted, indicating that the calibration was successful.
+
+Using Arduino's Servo library, a self-explanatory built-in function \textit{servo.writeMicroseconds(int value)} is used to send the signal. By default, the library has the minimum signal set to 544$\mu s$ and the maximum - to 2400$\mu s$. For this project, we shortened the range down to 700$\mu s$ and 2000$\mu s$ for both signals respectively. A commented code used to calibrate the ESC connected to the first pin of the board can be seen in Listing \ref{code:calib}.
+
+\lstinputlisting[language=C++, caption={Calibrating the ESC.}, label={code:calib}]{Arduino/ESCCalib/ESCCalib.ino}
+
+Programming additional settings of the ESC is done in a similar manner - by sending minimum and maximum signals after the ESC emits particular sounds, indicating wanted selections. The programmable features and selections are brand-specific and can be found in the datasheets. For the purposes of this project, the ESCs have been programmed to include two features - brake mode off and selection of li-ion battery.
+
+\section{Ardupilot and Motor Identification}
 This section will show the experiments that we have carried out in regards to the motor as well as Ardupilot frequency analysis.
 
 \subsection{APM Frequency}
-Due to lack of proper documentation, it was necessary to do measure the frequency of the signals sent out by the flight controller. To do so, an oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in figure \ref{oscillo1}.
+Due to lack of proper documentation, it was necessary to measure the frequency of the signals sent out by the flight controller. To do so, an oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in Figure \ref{oscillo1}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/oscillo1.jpg}
-	\caption{Oscilloscope measuring APM's frequency}
+	\caption{Oscilloscope Measuring APM's Frequency.}
 	\label{oscillo1}
 \end{figure}
 
-The second experiment on the board was then made to determine how the flight controller handles the output signals during those 20$ms$. First two outputs of the APM were connected to the oscilloscope, both utilizing the Servo library to send signals of length of 2000$\mu s$. Results can be seen in figure \ref{oscillo2}.
+The second experiment on the board was then made to determine how the flight controller handles the output signals during those 20$ms$. First two outputs of the APM were connected to the oscilloscope, both utilizing the Servo library to send signals of length of 2000$\mu s$. Results can be seen in Figure \ref{oscillo2}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/oscillo2.jpg}
-	\caption{Readings of the two output signals}
+	\caption{Readings of the Two Output Signals.}
 	\label{oscillo2}
 \end{figure}
 
-Then, for further testing purposes, both outputs were given different values in two scenarios, as seen in figure \ref{oscillo3}.
+Then, for further testing purposes, both outputs were given different values in two scenarios, as seen in Figure \ref{oscillo3}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/oscillo3.png}
-	\caption{Left - signals running at 2000$\mu s$; Right - 700$\mu s$.}
+	\caption{Left - Signals Running at 2000$\mu s$; Right - 700$\mu s$.}
 	\label{oscillo3}
 \end{figure}
 
@@ -144,36 +152,28 @@ From this, two conclusions can be made:
 \item Since the board runs at the frequency of 50$Hz$ and has a period of 20$ms$, this leaves $\frac{20}{8} = 2.5ms$ maximum length for each output signal. The servo library is hard-capped at 2.4$ms$ and thus is well within the limits of the board.
 \end{enumerate}
 
-\subsection{Output Operating Range}
-
-Since there is no direct translation between the output signal from the board and the speed of the motor and the ESC allows more current than the motor can recognise, it is necessary to find the operating range for the board output that has the most noticeable effect on the RPM of the motor. Through trial and error and by measuring the RPM using SHIMPO DT-205 digital tachometer. The lowest operating point was found to be 762$\mu s$, at which the motor finally begins to spin. The highest point was defined at 1200$\mu s$. Higher values were found to have very small effect on the RPM.
-Therefore, despite the ESC recognising the values between 700 and 2000$\mu s$, the most noticeable effect will be between 762 and 1200$\mu s$ and will be primarily used in the project.
-
 \subsection{Expected and Real Motor Performance}
-
-The motors used in the prototype specify to be rated at $K_v$ of 980. $K_v$ is a constant describing the ration between RPM and the applied voltage and is expressed as $K_v = \frac{RPM}{V}$. Derived from this, voltage's effect on the RPM can be seen in figure \ref{KvPlot}.
+The motors used in the prototype specify to be rated at $K_v$ of 980. $K_v$ is a constant describing the ratio between RPM and the applied voltage and is expressed as $K_v = \frac{RPM}{V}$. Derived from this, voltage's effect on the RPM can be seen in Figure \ref{KvPlot}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/KvPlot.png}
-	\caption{Expected motor performance}
+	\caption{Expected Motor Performance.}
 	\label{KvPlot}
 \end{figure}
-With a fully charged battery, the RPM is expected to be $980\times 11.1V = 10878 RPM$.
-
-In order to confirm this, the actual RPM was measured using SHIMPO DT-205 digital tachometer. A piece of reflective paper was taped to one of the motors so that the tachometer would have something to lock onto, as seen in figure \ref{tachometer}.
+With a fully charged battery, the RPM is expected to be $980\times 12.6V = 12348 RPM$.
+In order to confirm this, the actual RPM was measured using SHIMPO DT-205 digital tachometer. A piece of reflective paper was taped to one of the motors so that the tachometer would have something to lock onto, as seen in Figure \ref{tachometer}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/tachometer.jpg}
-	\caption{Reflective paper on the motor}
+	\caption{Reflective Paper on the Motor.}
 	\label{tachometer}
 \end{figure}
 
-By sending the maximum signal from the board, the RPM was measured to be 10812, with a small possible error.
-In conclusion, the motors' $K_v$ coefficient found in the datasheet is in fact correct.
+While it is possible that the mounted propeller could affect the speed of the motor, the measurements had to be done with no propeller on the motor, as it would not only make it difficult to detect the reflective paper, but also be dangerous, since the thrust generated by the fully operational motor is unknown.
+By sending the maximum signal from the board, the RPM was measured to be 11468, with a small possible error. The measured number does not match the $K_v$ given in the datasheet and there are many possible causes. However, it the result is not too far off the expected value, so the there are no major problems.
 
-\subsection{APM Output and Motor Speed Relationship}
-
+\subsection{Measuring Motor Speed}
 In order to use the board's output signal as an input in a mathematical model, it is necessary to find an equation to translate it into an angular rate.
 First, an equation has been found that describes the relationship between motor's RPM, ESC's output signal frequency and number of motor poles \cite{RPMEq}:
 
@@ -185,88 +185,21 @@ Here, $f$ is the frequency and $n$ is the number of poles (in the case of this p
 
 Therefore, it is possible to measure the frequency at various output values, which can then be used to define an equation that uses the board's signal length as an input value and results in an RPM.
 
-The frequency was measured using an (NAME) oscilloscope and by connecting the probe's ground clip to the ground of the battery and the probe tip to any one of the wires between motor and the ESC. Then, by providing different output signals from the flight controller, the frequency was measured on the oscilloscope screen. An on-board filter was used to filter out some noise, especially at lower output signals. The recorded frequency was later converted into RPM using equation \ref{voltage1}, for later comparison. The output signal lengths and the corresponding frequencies converted into RPM can be seen in table \ref{FreqTable}.
+The frequency was measured using an (NAME) oscilloscope and by connecting the probe's ground clip to the ground of the battery and the probe tip to any one of the wires between motor and the ESC. Then, by providing different output signals in some arbitrary range from the flight controller, the frequency was measured on the oscilloscope screen. An on-board filter was used to filter out some noise, especially at lower output signals. The recorded frequency was later converted into RPM using Equation \ref{voltage1}, for later comparison. The output signal lengths and the corresponding frequencies converted into RPM can be seen in Table \ref{FreqTable}.
 
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-$Output,\mu s$ 	& $RPM$ \\ \hline
-762 			& 2825  \\ \hline
-770				& 3189	\\ \hline
-780				& 3689	\\ \hline
-790				& 4211	\\ \hline
-800 			& 4683  \\ \hline
-810 			& 5161	\\ \hline
-820 			& 5546  \\ \hline
-830				& 5874 	\\ \hline
-840				& 6223	\\ \hline
-850 			& 6532	\\ \hline
-860 			& 6795	\\ \hline
-870 			& 7008	\\ \hline
-880 			& 7301	\\ \hline
-890 			& 7534	\\ \hline
-900 			& 7730	\\ \hline
-925 			& 8233	\\ \hline
-950 			& 8552	\\ \hline
-975 			& 8786	\\ \hline
-1000 			& 9129	\\ \hline
-1050 			& 9566	\\ \hline
-1100 			& 9814	\\ \hline
-1150 			& 10071	\\ \hline
-1200			& 10260	\\ \hline
-\end{tabular}
-\caption{Frequency measured at ESC output, converted into RPM}
-\label{FreqTable}
-\end{table}
-
-While measuring, it was observed that the frequency would never reach a steady-state and therefore, a sizeable error is possible between measurements. Because of that, RPM was manually measured using the tachometer at same output values, as seen in table \ref{RPMTable}.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-$Output,\mu s$ 	& $RPM$ \\ \hline
-762 			& 2754	\\ \hline
-770				& 3170	\\ \hline
-780				& 3664	\\ \hline
-790				& 4210	\\ \hline
-800 			& 4715  \\ \hline
-810 			& 5223	\\ \hline
-820 			& 5617  \\ \hline
-830				& 5965 	\\ \hline
-840				& 6285	\\ \hline
-850 			& 6578	\\ \hline
-860 			& 6846	\\ \hline
-870 			& 7100	\\ \hline
-880 			& 7368	\\ \hline
-890 			& 7555	\\ \hline
-900 			& 7790	\\ \hline
-925 			& 8265	\\ \hline
-950 			& 8614	\\ \hline
-975 			& 8910	\\ \hline
-1000 			& 9160	\\ \hline
-1050 			& 9576	\\ \hline
-1100 			& 9860	\\ \hline
-1150 			& 10089	\\ \hline
-1200			& 10261	\\ \hline
-\end{tabular}
-\caption{RPM measured at different values}
-\label{RPMTable}
-\end{table}
+While measuring, it was observed that the frequency would never reach stable readings and therefore, a sizeable error is possible between measurements. Because of that, RPM was manually measured using the tachometer at same output values, as seen in Table \ref{RPMTable}.
 
 While measuring with tachometer, the error appeared to be less significant.
-
-The two tables \ref{RPMTable} and \ref{FreqTable} were then plotted to see the difference, which is seen in figure \ref{RPMvsFreq}.
+The two Tables \ref{RPMTable} and \ref{FreqTable} were then plotted to see the difference, which is seen in Figure \ref{RPMvsFreq}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/rpm66.jpg}
-	\caption{Plotted values of manually measured and frequency-based RPM}
+	\caption{Plotted Values of Manually Measured and Frequency-based RPM.}
 	\label{RPMvsFreq}
 \end{figure}
 
-From the plotted graphs, it can be seen that the difference is very much noticeable, especially at certain points. Due to the fact that measurements with tachometer provided smaller errors than measurements with an oscilloscope, it was decided to use the values measured with the tachometer for later calculations.
+The graphs show some difference between the two measuring methods. The frequency method gives more or less linearly downscaled values. Due to lack of accurate way of determining which readings are correct, it was chosen to go with the tachometer measurements. The process of obtaining measurements with an oscilloscope took more time and was, therefore, deemed inefficient.
 
 In order to make use of these findings, the RPM values have to be converted into $rad/s$ for use as angular rate. The conversion equation is:
 \begin{equation}
@@ -274,25 +207,75 @@ In order to make use of these findings, the RPM values have to be converted into
 	\omega = \frac{2\pi \times RPM}{60}
 \end{equation}
 
-The values measured with tachometer were then converted into $rad/s$ and plotted in Matlab. Then, by utilising the \textit{polyfit} function, a 2\textsuperscript{nd} order polynomial equation fitting the original graph was obtained. The equation seen in Figure \label{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
+\subsection{Measuring Speed in Desired Range}
+Once it was decided how to measure angular velocity, an output range of 1500 to 2400 $\mu s$ was chosen. The RPM was measured at certain microseconds signal, with increments of 100 across all four motors and converted into $rad/s$. The measured values have been put into Table \ref{speedTable}.
+The plots of the angular velocity (see Figure \ref{radsPlots}) have revealed interesting discoveries - all four motors run at different speeds. Moreover, there seems to be no linear relationship between them throughout the whole range, so it is impossible to express one motor's speed as a function of another motor multiplied by some constant. After failing to find the cause of the difference in the speeds, a conclusion was reached that the motors run at different speeds due to their structure and therefore cannot be changed.
 
+%\begin{figure}[H]
+%  \centering
+%    \includegraphics[width=1\textwidth]{images/radsPlots.jpg}
+%	\caption{Angular Velocity vs. Output Signal for all Motors.}
+%	\label{radsPlots}
+%\end{figure}
+
+In order to make use of the data, an equation with signal in microseconds as an input and angular velocity as an output had to be found. By utilising the \textit{polyfit} function in Matlab, a 2\textsuperscript{nd} order polynomial equation fitting the original graph was obtained. The equation seen in Figure \ref{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
+%ADD NEW PLOTS FOR ALL 4 MOTORS
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/mstorpm.jpg}
-	\caption{Converted and plotted RPM values and the trendline}
+	\caption{Converted and Plotted RPM Values and the Trendline.}
 	\label{RadsTrendline}
 \end{figure}
 
-\section{Electronic Speed Controllers}
-ESCs have 5 input pins, 3 of which come from the flight controller. These 3 wires supply the signal for the ESC to translate into the angle of the shaft for the motor. Before ESCs can be used, they need to be properly calibrated. Programming additional settings is optional, but in most cases necessary too. Normally, the calibration for UAVs is done by setting the throttle to full on the radio controller before powering the ESCs. However, since the board translates the throttle signal into a PWM signal, it is possible to calibrate and run the motors directly from the flight controller by sending a PWM signal using software.
+\subsection{Operating Range}
+Due to lack of linearities in the equations expressing the angular velocity, some operating range has to be defined when calculating coefficients, to find reasonable approximates that would hold true for the most of the prototype's function. Given the drone's main objective - hovering - it is not a far-fetched idea to chose operating point as $TWR = 1$. A newtonmeter was attached to the first motor, with the propeller mounted on it. Then, a signal from the board was sent to the motor, starting at 700 and increasing by 100, up to 2400 $\mu s$. The recorded data had significant amount of noise and had to be filtered out in Matlab. Figure \ref{forcePlot} shows the measured force in newtons, where every significant increase in the force shows increment in the signal.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/forceMeasurements.png}
+	\caption{Thrust Force Created by First Motor.}
+	\label{forcePlot}
+\end{figure}
+The test reveals two things: at maximum speed, the motor can provide solid $8N$ thrust and at higher signals coming in from the board, some overshoot in the motors can be seen, which, in later steps, will have to be taken into consideration.
 
-\subsection{Calibration and Programming}
-The calibration is done by first sending the maximum length of signal the user wishes to use. The ESC emits sounds that are brand-specific and indicate whether the signal was successfully recognised or not. Once the maximum signal is accepted, the user the emits the minimum signal and waits for approval. Additional sound is then emitted, indicating that the calibration was successful.
+Given the fact that the drone is drawn to the ground by a $14N$ force, each motor needs to produce about $\frac{14N}{4} = 3.5N$ thrust. Looking at the plot of the test in Figure \ref{forcePlot}, first motor reaches this point at 1499$\mu s$ signal coming from the APM, which, based on Figure \ref{radsPlots}, is equal to 1139$rad/s$. Then, using same graphs, it is possible to find the input signals corresponding to same angular velocity for the remaining motors. These values will be given in Table \ref{motorCoeffs}.
+The coefficients and performance of the motors will be centred around these values.
 
-Using Arduino's Servo library, a self-explanatory built-in function \textit{servo.writeMicroseconds(int value)} is used to send the signal. By default, the library has the minimum signal set to 544$\mu s$ and the maximum - to 2400$\mu s$. For this project, we shortened the range down to 700$\mu s$ and 2000$\mu s$ for both signals respectively. A commented code used to calibrate the ESC connected to the first pin of the board can be seen in listing \ref{code:calib}.
+\subsection{Measuring Motor Coefficients}
+First, through trial and error, the deadzones for when the motors are receiving a signal from the flight controller but are not spinning yet were found (see Table \ref{motorCoeffs}).
 
-\lstinputlisting[language=C++, caption={Calibrating the ESC}, label={code:calib}]{Arduino/ESCCalib/ESCCalib.ino}
+The motor time constant $\tau$ is described as the time it takes the motor to reach 63\% of its expected speed, since the receiving the signal. To do this, PASCO [NAME] rotary sensor has been connected to one of the motors. Then, using the SPARKvue software, the angular velocity of the motor for a specific time frame was obtained. A signal was sent from the flight controller to the motor and the angular velocity was plotted against the time, as seen in Figure \ref{timeconstant}.
 
-Programming additional settings of the ESC is done in a similar manner - by sending minimum and maximum signals after the ESC emits particular sounds, indicating wanted selections. The programmable features and selections are brand-specific and can be found in the datasheets. For the purposes of this project, the ESCs have been programmed to include two features - brake mode off and selection of li-ion battery.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/timeconstant.png}
+	\caption{Angular Velocity vs. Time.}
+	\label{timeconstant}
+\end{figure}
 
+The readings were a bit distorted due to the placement of rotary sensor - the rubber band connecting the motor and the sensor's wheel was not in a fixed position, slowing down the motor at times. Nevertheless, the important part was the rise of the angular velocity. It was determined that 63\% of the peak value 308$rad/s$ was reached in $0.361s$.
 
+The DC gain $k_i$ is the constant, describing the relationship between angular velocity $\omega$ and the $PWM$ input signal. An equation for a specific motor's angular velocity can be given as:
+\begin{equation}
+\label{kieq}
+	\omega = k_i*(PWM - PWM^{Dz})
+\end{equation}
+
+where $PWM^{Dz}$ is the deadzone of the motor.
+Since the deadzone for all motors is known and so is the angular velocity and the $PWM$ signal at a specific point, it is then possible to use Equation \ref{kieq} to find $k_i$ for the motors. The full list of coefficients is given in Table \ref{motorCoeffs}.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Motor	& $k_i$ 	& $PWM$ 	& $PWM^{Dz}$ 	\\ \hline
+1 		& 1.585104	& 1499		& 780			\\ \hline
+2 		& 1.22626	& 1710		& 780			\\ \hline
+3 		& 1.465694	& 1559		& 781			\\ \hline
+4 		& 1.058975	& 1857		& 781			\\ \hline
+
+\end{tabular}
+\caption{Motor Deadzones, $k_i$ Coefficient and the Lift-off $PWM$ Requirements.}
+\label{motorCoeffs}
+\end{table}
+
+SIMULATE IN MATLAB

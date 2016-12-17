@@ -27,7 +27,6 @@ bool programStarted = false; //check when connected to PC over USB
 void setup() {
   
     Serial.begin(115200);
-    Serial.println("Program begins...");
     Wire.begin();
     //As per APM standard code, stop the barometer from holding the SPI bus
     pinMode(40, OUTPUT);
@@ -42,34 +41,21 @@ void setup() {
 }
 
 void loop() {
-    long currTimer = millis(); //get time
-    if(programStarted == false){
-      Serial.println("Waiting for input.");
-      while (!Serial.available());
-      Serial.read();
-      programStarted = true;
-      prevTimer = millis();
-      Serial.println("Program will now start");
-    }else{
-            Serial.print("Acc X ");
-            Serial.print(AcceDeg(ChipSelPin1, 0));
-            Serial.print("   ");
-            Serial.print("Acc Y ");
-            Serial.print(AcceDeg(ChipSelPin1, 1));
-            Serial.print("   ");
-            Serial.print("Acc Z ");  
-            Serial.print(AcceDeg(ChipSelPin1, 2));
-            Serial.print("   ");  
-            Serial.print("Gyro X ");  
-            Serial.print(GyroDeg(ChipSelPin1, 0));
-            Serial.print("   ");  
-            Serial.print("Gyro Y ");  
-            Serial.print(GyroDeg(ChipSelPin1, 1)); 
-            Serial.print("   "); 
-            Serial.print("Gyro Z ");  
-            Serial.println(GyroDeg(ChipSelPin1, 2));          
-          }
-      }
+long currTimer = millis(); //get time
+  if(currTimer - prevTimer < 30000){
+     Serial.print(AcceDeg(ChipSelPin1, 0));
+     Serial.print(" ");
+     Serial.print(AcceDeg(ChipSelPin1, 1));
+     Serial.print(" ");
+     Serial.print(AcceDeg(ChipSelPin1, 2));
+     Serial.print(" ");  
+     Serial.print(GyroDeg(ChipSelPin1, 0));
+     Serial.print(" ");  
+     Serial.print(GyroDeg(ChipSelPin1, 1)); 
+     Serial.print(" "); 
+     Serial.println(GyroDeg(ChipSelPin1, 2));          
+  }     
+}
 
 void SPIwrite(byte reg, byte data, int ChipSelPin) {
   uint8_t dump;

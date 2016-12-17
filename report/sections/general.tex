@@ -1,7 +1,7 @@
 Before delving into the mathematical modelling of the quadcopter, it is important to understand a few basic concepts in regards to the working principles of a quadcopter and the frames in which the final model will be defined.
 
 \section{Systems of coordinates} \label{2.1} 
-Describing the movement of the quadcopter in a three dimensional space can be done by using two frames, which can be seen in figure \ref{frames1}. The NED frame is the one that we refer to in our daily life. It points towards North, East and Downwards normal to the surface of Earth. The origin of the NED coordinate system is fixed in O. The frame can also be referred to as inertial and the vectors expressed in it will be marked with $^{I}$. The other frame is fixed on the quadcopter, therefore it is called Boxy-fixed frame. It has the center in $O_{C}$, which is the center of mass of the quadcopter. Its' three axis are x,y and z. The x axis points towards one of the motors, the z axis points to the ground and the y axis completes the orthogonal coordinate system. The vectors described in this frame will be market with $^{B}$.\cite{Report1} \cite{Report2} 
+Describing the movement of the quadcopter in a three dimensional space can be done by using two frames, which can be seen in Figure \ref{frames1}. The NED frame is the one that we refer to in our daily life. It points towards North, East and Downwards normal to the surface of Earth. The origin of the NED coordinate system is fixed in O. The frame can also be referred to as inertial and the vectors expressed in it will be marked with $^{I}$. The other frame is fixed on the quadcopter, therefore it is called Boxy-fixed frame. It has the center in $O_{C}$, which is the center of mass of the quadcopter. Its' three axis are x,y and z. The x axis points towards one of the motors, the z axis points to the ground and the y axis completes the orthogonal coordinate system. The vectors described in this frame will be market with $^{B}$.\cite{Report1} \cite{Report2} 
 
 \begin{figure}[H]
   \centering
@@ -10,7 +10,7 @@ Describing the movement of the quadcopter in a three dimensional space can be do
 	\label{frames1}
 \end{figure}
 
-Besides the coordinate system, figure \ref{frames1} also shows the hexagonal placement of the four motors, the spinning direction of each of them and the roll - $\phi$, pitch - $\theta$ and yaw - $\psi$ angles. 
+Besides the coordinate system, Figure \ref{frames1} also shows the hexagonal placement of the four motors, the spinning direction of each of them and the roll - $\phi$, pitch - $\theta$ and yaw - $\psi$ angles. 
 
 The quadcoter's position represents the O to $O_{C}$ displacement:
 
@@ -38,16 +38,14 @@ The quadcopter's angular velocity can be expressed using the angular velocity ab
 
 \section{Working principle}
 
-To have an understanding of how a quadcopter actually works like, it is important to know the forces affecting it. See figure \ref{droneForces}.
+To have an understanding of how a quadcopter actually works like, it is important to know the forces affecting it. See Figure \ref{droneForces}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.75\textwidth]{images/forces.png}
-	\caption{Forces affecting an aerial vehicle} \cite{ForcesFig}
+	\caption{Forces affecting an aerial vehicle. \cite{ForcesFig}}
 	\label{droneForces}
 \end{figure}
-
-%ref: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Lift-force-en.svg/2000px-Lift-force-en.svg.png
 
 The 4 main forces acting on the quadcopter - or any aerial vehicle, for that matter are:
 
@@ -68,17 +66,15 @@ If the motors are powered off, the only force affected is the drop and therefore
 
 Therefore, in order to get a quadcopter up in the air, it is necessary to generate enough thrust for TWR ration to be higher than one. In order to land it, the TWR must be smaller than 1, allowing the quadcopter to move downwards.
 
-\section{Quadcopter manouvering}
-Quadcopters are made with four identical motors, each of them having an attached propeller. As it can be seen in Figure \label{rollpitchyaw}, each pair of propellers rotate in different directions. The odd numbered motors have clockwise rotation, while even numbered motors have counter-clockwise rotation. The speed of the motors has to be adjusted in order to obtain the manouvers shown in Figure \label{rollpitchyaw}. 
+\section{Quadcopter maneuvering}
+Quadcopters are made with four identical motors, each of them having an attached propeller. As it can be seen in Figure \ref{rollpitchyaw}, each pair of propellers rotate in different directions. The odd numbered motors have clockwise rotation, while even numbered motors have counter-clockwise rotation. The speed of the motors has to be adjusted in order to obtain the manouvers shown in Figure \ref{rollpitchyaw}. 
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.9\textwidth]{images/rollpitchyaw.png}
-	\caption{Quadcopter Rotation System} \cite{RPYFig}
+	\caption{Quadcopter Rotation System. \cite{RPYFig}}
 	\label{rollpitchyaw}
 \end{figure}
-
-%(ref: http://e-collection.library.ethz.ch/eserv/eth:7849/eth-7849-01.pdf)
 
 The arrows in Figure \ref{rollpitchyaw} represent the angular speeds of the motors and they can be written as:
 
@@ -95,15 +91,13 @@ The quadcopter's possible motions can be split into four categories:
   \item \textbf{Translational motion} or vertical movement can be obtained by equally increasind or decreasing the angular speeds of all motors as seen in cases (g) and (h). \cite{Report1}
 \end{itemize} 
 
-%(ref: thesis.pdf)
-
 \section{Assumptions}
 Given the fact that stabilizing a quadcopter is quite a complex problem, we will make a few general assumptions that will enable us to make a more simple version of the model:
 \begin{itemize}
   \item The quadcopter is symmetric along $u_{x}$ and $u_{y}$.
   \item The quadcopter is a rigid body.
   \item The flapping effects of the rotors are ignored.
-  \item Nnlinearities of the battery are ignored.
+  \item Nonlinearities of the battery are ignored.
   \item Both accelerometer and gyroscope sensors are considered to be at the center of mass of the quadcopter.
   \item All motors have the same time constant.
   \item All aerodynamic forces acting on the quadcopter are ignored.

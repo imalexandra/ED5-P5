@@ -6,7 +6,7 @@ This chapter will, step by step, introduce the sensors, describe how they functi
 
 To measure the direction of the gravity vector and define the pitch and roll angles, an accelerometer is an easy to use solution.
 The raw ADC values obtained from the accelerometer first have to be converted into some acceleration $m/s^2$. To make this happen, a resolution equation is defined that will describe the relationship between the raw values and the acceleration.
-For this particular accelerometer, some general acceleration $a_\theta $ along some axis $\theta$ can be found using equation \ref{sensors1}.
+For this particular accelerometer, some general acceleration $a_\theta $ along some axis $\theta$ can be found using Equation \ref{sensors1}.
 
 \begin{equation}
 \label{sensors1}	
@@ -32,22 +32,57 @@ We have used the Serial Monitor within the Arduino IDE environment to read the o
 
 We have made separate functions that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. An example of one of the functions is shown Code \ref{c1}.
 
-\lstinputlisting[language=C++, firstline=95, lastline=100, caption={Function that accesses registers and returns a raw value}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=95, lastline=100, caption={Function that accesses registers and returns a raw value.}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
 \clearpage
 
 The raw values are then converted into angles by using the functions
 
-\lstinputlisting[language=C++, firstline=144, lastline=163, caption={Function to obtain angles based on the raw values of the accelerometer}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=144, lastline=163, caption={Function to obtain angles based on the raw values of the accelerometer.}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-\lstinputlisting[language=C++, firstline=167, lastline=193, caption={Function to obtain angles based on the raw values of the accelerometer}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=167, lastline=193, caption={Function to obtain angles based on the raw values of the accelerometer.}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-The serial monitor was used to print out the the angles. At steady state, it yielded:
+The serial monitor was used to print out the the angles. At steady state, it yielded the results seen in Figure \ref{angles}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/accgy.png}
-	\caption{Angles obtained from Accelerometer and Gyroscope}
+	\caption{Angles obtained from Accelerometer and Gyroscope.}
+	\label{angles}
 \end{figure}
 
 //insert prinscreen for tilting 
+
+\section{Filtering sensor data}
+The configuration for the accelerometer and gyroscope enables a low-pass filter at 42Hz. However, looking at the data that the accelerometer reads, there is still some considerable amount of noise and occasional spikes in a steady state. In order to design a filter to counter these problems, flight of the prototype had to be simulated, to record the sensor values when the vehicle goes up in the air and tires to stabilize itself. Therefore, flight controller was unmounted from the frame, connected to a computer and then raised in the air, while tilting it to the sides. The test ran for 30 seconds and provided a $4591\times 6 matrix$, containing 4591 readings for all 3 axis of accelerometer and gyroscope. The plotted data over time for x-axis of the accelerometer and gyroscope can be seen in Figure \ref{dataPlot}.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/MPUXPlot.png}
+	\caption{Accelerometer and gyroscope x-axis test results.}
+	\label{dataPlot}
+\end{figure}
+
+The sensor is running at approximately $\frac{4591}{30s} = 153Hz$ frequency, making any additional filter more difficult to perform. However, looking at the test data, it is evident that gyroscope provides clean results just with the help of on-board filter. The main focus then shifts towards the accelerometer - looking at the spectrogram of the accelerometer x-axis data (see Figure \ref{spectrogram}, a low-pass FIR filter is chosen.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/spectrogram.png}
+	\caption{Accelerometer x-axis spectrogram.}
+	\label{spectrogram}
+\end{figure}
+
+In order to get rid of as much noise as possible, the cut-off frequency was chosen to be the maximum possible value - half of the sampling frequency. The order for the filter was chosen to be 10, mostly through trial and error - at this point, the filter has considerable effect, while not having a very high order, which carries its own cost. The filter was applied to the signal using simple code in Matlab, seen in Listing \ref{code:c4}.
+
+\lstinputlisting[language=Matlab, firstline=1, lastline=6, caption={Filter generation code.}, label={code:c4}]{Arduino/AccelFilter.txt}
+
+The filter was proven to be quite efficient, as seen in Figure \ref{accelFilter}. While not completely perfect, possible improvements will be covered in the discussion chapter.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/accelFilter.png}
+	\caption{Implemented filter and its close-up.}
+	\label{accelFilter}
+\end{figure}
+
+%ULTRASONIC NO FILTER <- is it even necessary?
