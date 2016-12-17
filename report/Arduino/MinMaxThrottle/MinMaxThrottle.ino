@@ -35,12 +35,12 @@ void setup() {
   
   Serial.println("Now writing maximum output.");
   Serial.println("Turn on power source, then wait 2 seconds and press any key.");
-  //motorFL.writeMicroseconds(MAX_SIGNAL);
-  //motorFR.writeMicroseconds(MAX_SIGNAL);
-  //motorBR.writeMicroseconds(MAX_SIGNAL);
-  //motorBL.writeMicroseconds(MAX_SIGNAL);
-  //while (!Serial.available());
-  //Serial.read();
+  motorFL.writeMicroseconds(MAX_SIGNAL);
+  motorFR.writeMicroseconds(MAX_SIGNAL);
+  motorBR.writeMicroseconds(MAX_SIGNAL);
+  motorBL.writeMicroseconds(MAX_SIGNAL);
+  while (!Serial.available());
+  Serial.read();
 
   Serial.println("Sending minimum output");
   motorFL.writeMicroseconds(MIN_SIGNAL);

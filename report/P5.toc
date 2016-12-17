@@ -21,23 +21,22 @@
 \contentsline {section}{\numberline {4.2}Quaternions Representation}{15}{section.4.2}
 \contentsline {section}{\numberline {4.3}Euler Representation}{16}{section.4.3}
 \contentsline {chapter}{\numberline {5}Sensors}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}Model of the sensors}{17}{section.5.1}
-\contentsline {subsubsection}{Accelerometer}{17}{subsubsection*.18}
-\contentsline {subsubsection}{Gyroscope}{18}{subsubsection*.19}
-\contentsline {section}{\numberline {5.2}Programming Accelerometer and Gyroscope}{18}{section.5.2}
-\contentsline {chapter}{\numberline {6}Actuators}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Propeller model}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Motor model}{23}{section.6.2}
-\contentsline {section}{\numberline {6.3}Motor and Ardupilot Identification}{24}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}APM Frequency}{24}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Output Operating Range}{25}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Expected and Real Motor Performance}{26}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}APM Output and Motor Speed Relationship}{27}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{31}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Calibration and Programming}{31}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {7}State space model}{33}{chapter.7}
-\contentsline {chapter}{\numberline {8}Discussion}{34}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusion}{35}{chapter.9}
-\contentsline {chapter}{Bibliography}{36}{chapter*.32}
-\contentsline {chapter}{\numberline {10}Appendix}{37}{chapter.10}
-\contentsline {section}{\numberline {10.1}Appendix code}{37}{section.10.1}
+\contentsline {section}{\numberline {5.1}Accelerometer}{17}{section.5.1}
+\contentsline {section}{\numberline {5.2}Gyroscope}{19}{section.5.2}
+\contentsline {section}{\numberline {5.3}Programming}{19}{section.5.3}
+\contentsline {chapter}{\numberline {6}Actuators}{24}{chapter.6}
+\contentsline {section}{\numberline {6.1}Propeller model}{24}{section.6.1}
+\contentsline {section}{\numberline {6.2}Motor model}{26}{section.6.2}
+\contentsline {section}{\numberline {6.3}Motor and Ardupilot Identification}{27}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}APM Frequency}{27}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Output Operating Range}{28}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Expected and Real Motor Performance}{29}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}APM Output and Motor Speed Relationship}{30}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{34}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Calibration and Programming}{34}{subsection.6.4.1}
+\contentsline {chapter}{\numberline {7}State space model}{36}{chapter.7}
+\contentsline {chapter}{\numberline {8}Discussion}{37}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusion}{38}{chapter.9}
+\contentsline {chapter}{Bibliography}{39}{chapter*.31}
+\contentsline {chapter}{\numberline {10}Appendix}{40}{chapter.10}
+\contentsline {section}{\numberline {10.1}Appendix code}{40}{section.10.1}

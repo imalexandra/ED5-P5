@@ -145,9 +145,9 @@ float AcceDeg(int ChipSelPin,int AxisSelect) {
   float Ax=ToG(AcceX(ChipSelPin));
   float Ay=ToG(AcceY(ChipSelPin));
   float Az=ToG(AcceZ(ChipSelPin));
-  float ADegX=((atan(Ax/(sqrt((Ay*Ay)+(Az*Az)))))/PI)*180; //correct PITCH
-  float ADegY=((atan(Ay/(sqrt((Ax*Ax)+(Az*Az)))))/PI)*180; //correct ROLL
-  float ADegZ=((atan((sqrt((Ax*Ax)+(Ay*Ay)))/Az))/PI)*180; //correct YAW
+  float ADegX=((atan(Ax/(sqrt((Ay*Ay)+(Az*Az)))))/PI)*180; 
+  float ADegY=((atan(Ay/(sqrt((Ax*Ax)+(Az*Az)))))/PI)*180; 
+  float ADegZ=((atan((sqrt((Ax*Ax)+(Ay*Ay)))/Az))/PI)*180; 
   switch (AxisSelect)
   {
     case 0:
@@ -172,9 +172,9 @@ float GyroDeg(int ChipSelPin, int AxisSelect) {
   {
     dt=0;
   }
-  float Gx=ToD(GyroX(ChipSelPin)); //correct PITCH
-  float Gy=1-ToD(GyroY(ChipSelPin)); //correct ROLL
-  float Gz=ToD(GyroZ(ChipSelPin)); //correct YAW
+  float Gx=ToD(GyroX(ChipSelPin)); 
+  float Gy=1-ToD(GyroY(ChipSelPin)); 
+  float Gz=ToD(GyroZ(ChipSelPin)); 
   angleX+=Gx*(dt/1000);
   angleY+=Gy*(dt/1000);
   angleZ+=Gz*(dt/1000);
