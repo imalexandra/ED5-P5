@@ -35,8 +35,10 @@
 \contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{34}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Calibration and Programming}{34}{subsection.6.4.1}
 \contentsline {chapter}{\numberline {7}State space model}{36}{chapter.7}
-\contentsline {chapter}{\numberline {8}Discussion}{37}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusion}{38}{chapter.9}
-\contentsline {chapter}{Bibliography}{39}{chapter*.31}
-\contentsline {chapter}{\numberline {10}Appendix}{40}{chapter.10}
-\contentsline {section}{\numberline {10.1}Appendix code}{40}{section.10.1}
+\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{36}{section.7.1}
+\contentsline {section}{\numberline {7.2}Linear state space representation}{37}{section.7.2}
+\contentsline {chapter}{\numberline {8}Discussion}{40}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusion}{41}{chapter.9}
+\contentsline {chapter}{Bibliography}{42}{chapter*.31}
+\contentsline {chapter}{\numberline {10}Appendix}{43}{chapter.10}
+\contentsline {section}{\numberline {10.1}Appendix code}{43}{section.10.1}

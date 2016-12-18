@@ -1,0 +1,132 @@
+\section{Nonlinear state space representation}
+The state vector $X=[V, \Omega, P, \Psi]^{T}$ is obtained using the linear velocity vector, the angular velocity vector, the position vector and the attitude of the quadcopter. Each of these vectors has three components.
+
+The quaternion representation described in Section X is used to simulate the dynamics and kinematics of the quadcopter, while the control is applied with Euler angles. Hence, in order to obtain control techniques based on the model of the system, the model is derived using Euler angles.
+
+The model of the system can be described by defining some functions g and h which fulfils the nonlinear state space representation:
+
+\begin{equation}
+\label{s1} 
+ 	\dot{\textbf{X}}=g\textbf{(X, U)} \\
+ \end{equation}
+
+\begin{equation}
+\label{s2} 
+ 	\textbf{Y}=h\textbf{(X,U)} \\
+ \end{equation}
+ 
+Equation \ref{s1} is the dynamic equation and Equation \ref{s2}  is the output equation, where \textbf{X} is the state vector of the system, \textbf{U} is the input vector of the system and \textbf{Y} is the ouput vector of the system.
+
+The quadcopter dynamic are described by Equations \label{S6}-\label{S10}. As it can be observed, the input vector is obtained from the forces and moments applied to the quadcopter. But, we have decided to choose a more intuitive method and go with a model based on the signal sent from the board. Therefore, $U=[PWM_{1}, PWM_{2}, PWM_{3}, PWM_{4}]$. The relationship between the forces and moments and the angular velocity of the motors was found in Equations \label{motor1}-\label{motor4}. Using them and the linearization of angular velocities as functions of PWM enables us to describe our system's input.
+
+The ouput vector of the system has as components the measurements from the accelerometer and gyroscope.
+
+\section{Linear state space representation}
+In the previous Section, the state space was described as nonlinear. Therefore, a linearization must be obtained in order to come up with a control method for the system. This linearization is done by approximating the nonlinear state space by a linear expression:
+
+\begin{equation}
+\label{s1} 
+ 	\dot{\textbf{X}}\approx\textbf{AX+BU} \\
+ \end{equation}
+
+\begin{equation}
+\label{s2} 
+ 	\textbf{Y}\approx\textbf{CX+DU} \\
+ \end{equation}
+
+It is important to note that this kind of linearization is only accurate in the surroundings of a certain operating point $X_{0}$. For hovering conditions, $X_{0}=[0, 0, 0, 0, 0, 0, 0, 0, -z, 0, 0, 0]^{T}$. A linearization of a function can be computed mathematically using Taylor series.
+
+The operating point for the input vector can be obtained by solving Equation ,
+
+\begin{equation}
+\label{s10} 
+ 	F_{z}=mg_{0} \\
+ \end{equation}
+ 
+ \begin{equation}
+\label{s11} 
+ 	F_{i}=\frac{mg_{0}}{4}
+ \end{equation}
+ 
+ \begin{equation}
+\label{s12} 
+ 	\omega_{i}^{2}=\frac{mg_{0}}{4K_{T}}
+ \end{equation}
+ 
+where $\omega_{i}^{2}$ is the angular velocity for linearization.
+
+MORE ABOUT MOTORS AND KI HERE
+
+The linearization point in terms of angular velocities can then be determined from the curves representing the behavior of the model of the motors. The polynomials are then linearized around that point and the static gain is obtained.
+
+Finally, the matrices for the linearizatid model can be obtained:
+
+\setcounter{MaxMatrixCols}{20}
+
+\begin{equation}
+ 	A=\begin{bmatrix}
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -g & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & g & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	\end{bmatrix}
+ \end{equation}
+ 
+ \begin{equation}
+ 	B=\begin{bmatrix}
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	\end{bmatrix}
+ \end{equation}
+ 
+REWRITE B 
+ 
+ \begin{equation}
+ 	C=\begin{bmatrix}
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & -1 \\
+ 	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+ 	\end{bmatrix}
+ \end{equation}
+ 
+  \begin{equation}
+ 	D=\begin{bmatrix}
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	0 & 0 & 0 & 0 \\
+ 	\end{bmatrix}
+ \end{equation}
+ 
+Observability and controllability are two notions common to the state space analysis of a system. The controllability translates the possibility of moving the quadrotor through its states. The observability translates the ability to measure the internal states of the system. It is confirmed that both models are fully controllable. REFERENCE THESIS
+
+The poles of the system hold the information of the dynamic response or behavior of the system. The eigenvalues of matrix A reveal the poles of the chosen continuous system. Using Matlab, it is shown that the twelve poles are located at the origin; the system is unstable. REPHRASE
