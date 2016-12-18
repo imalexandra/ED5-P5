@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Report1}
 Bernardo Sousa~Machado Henriques.
@@ -19,6 +19,10 @@ Tradeoffs for locomotion in air and water.
 Toward obstacle avoidance on quadrotors.
 \newblock
   \url{http://e-collection.library.ethz.ch/eserv/eth:7849/eth-7849-01.pdf}.
+
+\bibitem{HCDatasheet}
+Ultrasonic ranging module hc - sr04.
+\newblock \url{http://www.micropik.com/PDF/HCSR04.pdf}.
 
 \bibitem{MPU6000}
 Mpu-6000 and mpu-6050 product specification revision 3.4.

@@ -1,4 +1,16 @@
-This chapter will, step by step, introduce the sensors, describe how they function and define the methods used to extract the data from them. The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot, fitted on 6-axis MPU6000 14-bit chip. The accelerometer works by detecting a force that is actually the opposite of the acceleration vector. This force is not always caused by acceleration, but it can be. It just happens that acceleration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
+This chapter will, step by step, introduce the sensors, describe how they function and define the methods used to extract the data from them. The ultrasonic sensor has a pretty straightforward functionality - a signal is sent out from the $trigger$ pin, while the $echo$ pin catches the signal coming back and estimates the distance. The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot, fitted on 6-axis MPU6000 14-bit chip. The accelerometer works by detecting a force that is actually the opposite of the acceleration vector. This force is not always caused by acceleration, but it can be. It just happens that acceleration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
+
+\section{Ultrasonic Sensor}
+The HC-SR04 datasheet\cite{HCDatasheet} states that the sensor can measure distances between 2 and 400$cm$, with 3$mm$ accuracy. The trigger pin, when commanded to, orders the module to send out an 8 cycle sonic burst at 40$kHz$ frequency. Then, if any of the signals return, the distance is calculated. The signal travel time is measured based on the time the module stayed on high level. While distance travelled $d$ is equal to velocity of sound $v (340m/s) \times t$ - the time, it should be noted that the signal travels both from and back to the sensor. Therefore, the whole equation should be divided by 2, in order to find the real distance between the sensor and the object.
+Utilizing the $NewPing$ library for ultrasonic sensors, a simple code can be made, found in appendix Listing \ref{sonicCode}.
+In order to determine the performance of the sensor, it was placed in front of a stationary object. The code ran for 30 seconds and produced 20262 readings - resulting in frequency of $675Hz$. The output in $cm$ was plotted against time in Matlab, producing Figure \ref{sonicPlot}.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/sonicPlot.png}
+	\caption{Ultrasonic Sensor Results over 30 Seconds.}
+	\label{sonicPlot}
+\end{figure} 
+It is evident, that although the readings are not completely constant, the error is very minimal and no filter is needed.
 
 \section{Accelerometer}
 According to the MPU-6000 datasheet\cite{MPU6000}, the raw accelerometer data can be converted into multiples of \textit{g} by dividing with a factor of 16384. However, we have computed the rotations around the axes by using an alternative method. We have first chosen a reference position, which is the typical orientation of a device with the x and y axis in the 0 \textit{g} field plane and the x axis in the 1 \textit{g} field. This is shown in figure REF, where $\theta$ is the angle between the horizon and the x-axis of the accelerometer, $\psi$ as the angle between the horizon and the y-axis of the accelerometer, and

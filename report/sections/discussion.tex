@@ -1,1 +1,22 @@
-TALK ABOUT POSSIBLE FILTER IMPROVEMENTS. TALK HOW IT FUCKING SUCKS WHEN THERE'S NO DOCUMENTATION ABOUT THE DRONE YOU HAVE AND ITS COMPONENTS. TALK ABOUT THE LEGITIMACY OF THE DATA, TESTS, EQUATIONS, MENTION ALL THE NON-LINEARITIES. TALK ABOUT THE LACK OF COMPLETE IMPLEMENTATION AND POSSIBLE APPROACHES TO IT.
+In this chapter, the ups and downs of the report will be covered and the quality of the tests and data acquired will be evaluated. Moreover, the unimplemented features will be discussed, as well as the requirements and methods for possible implementation.
+\section{Sensor Filters}
+It was previously mentioned, that the filters designed for the accelerometer provide reasonable results. The simulated flight conditions provided reasonable data to design a filter that would suit a fully functioning prototype. 
+Still, some noise remained, despite using both an on-board filter and an additional filter designed in Matlab. This noise, although minimal, could take up some computational power, demanding recalculation of the whole system, despite no real change in stability being present.
+To help reduce the problem, a simple solution of throwing in more computational power could work - a higher order filter could be designed, provided that the microcontroller allows it.
+Increasing the order by another 10 produces even better results, as seen in Figure \ref{newFilter}.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.5\textwidth]{images/newFilter.png}
+	\caption{A Low-Pass 20th Order FIR Filter for x-axis of Accelerometer.}
+	\label{newFilter}
+\end{figure}
+
+However, on top of more complex equation, the 20th order filter introduces a slight delay of about $0.1s$. For a hovering quadcopter, a tiny delay like such would carry no consequences, but a completely autonomous drone carrying out complicated tasks could suffer from such lag.
+The filter part of the project could be concluded in such way - a more effective filter design is possible, but it has additional costs. The only way to know whether a stronger filter is needed is to first get the prototype completely working.
+
+\section{Validity of tests}
+It is necessary to talk about the quality of tests performed on motors and sensors. While the tools used to measure various data such as RPM and force were accurate, lack of proper documentation of the prototype's components lead to unknown expected performances. Moreover, lack of any linearities in the motor performance meant that accurate calculations could only be done around the operating range - anything beyond that point would remain an approximate, with undoubtedly increasing error.
+In order to avoid such problems, it would be necessary to build a new prototype from scratch, carefully picking out required components. This would, however, require both time and money, as well as additional tools and understanding of desired performance. Overall, a longer working period would be needed to produce a prototype with better performance.
+
+TALK ABOUT THE LACK OF COMPLETE IMPLEMENTATION AND POSSIBLE APPROACHES TO IT.
