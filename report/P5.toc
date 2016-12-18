@@ -15,35 +15,6 @@
 \contentsline {subsubsection}{APM Flight Controller}{11}{subsubsection*.12}
 \contentsline {subsubsection}{Power Distribution Board}{11}{subsubsection*.14}
 \contentsline {subsubsection}{Battery}{12}{subsubsection*.15}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {3.2}Prototype Measurements}{12}{section.3.2}
-\contentsline {chapter}{\numberline {4}Quadcopter Model}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Quaternions and Euler angles}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Quaternions Representation}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}Euler Representation}{16}{section.4.3}
-\contentsline {chapter}{\numberline {5}Sensors}{17}{chapter.5}
-\contentsline {section}{\numberline {5.1}Accelerometer}{17}{section.5.1}
-\contentsline {section}{\numberline {5.2}Gyroscope}{19}{section.5.2}
-\contentsline {section}{\numberline {5.3}Programming}{19}{section.5.3}
-\contentsline {chapter}{\numberline {6}Actuators}{24}{chapter.6}
-\contentsline {section}{\numberline {6.1}Propeller model}{24}{section.6.1}
-\contentsline {section}{\numberline {6.2}Motor model}{26}{section.6.2}
-\contentsline {section}{\numberline {6.3}Motor and Ardupilot Identification}{27}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}APM Frequency}{27}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Output Operating Range}{28}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Expected and Real Motor Performance}{29}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}APM Output and Motor Speed Relationship}{30}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Electronic Speed Controllers}{34}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Calibration and Programming}{34}{subsection.6.4.1}
-\contentsline {chapter}{\numberline {7}State space model}{36}{chapter.7}
-\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{36}{section.7.1}
-\contentsline {section}{\numberline {7.2}Linear state space representation}{37}{section.7.2}
-\contentsline {chapter}{\numberline {8}Discussion}{40}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusion}{41}{chapter.9}
-\contentsline {chapter}{Bibliography}{42}{chapter*.31}
-\contentsline {chapter}{\numberline {10}Appendix}{43}{chapter.10}
-\contentsline {section}{\numberline {10.1}Appendix code}{43}{section.10.1}
-=======
 \contentsline {subsection}{\numberline {3.1.1}Drone Frame}{12}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Prototype Measurements}{13}{section.3.2}
 \contentsline {chapter}{\numberline {4}Quadcopter Model}{14}{chapter.4}
@@ -51,28 +22,28 @@
 \contentsline {section}{\numberline {4.2}Quaternions Representation}{16}{section.4.2}
 \contentsline {section}{\numberline {4.3}Euler Representation}{17}{section.4.3}
 \contentsline {chapter}{\numberline {5}Sensors}{18}{chapter.5}
-\contentsline {section}{\numberline {5.1}Model of the sensors}{18}{section.5.1}
-\contentsline {subsubsection}{Accelerometer}{18}{subsubsection*.20}
-\contentsline {subsubsection}{Gyroscope}{19}{subsubsection*.21}
-\contentsline {section}{\numberline {5.2}Programming Accelerometer and Gyroscope}{19}{section.5.2}
-\contentsline {section}{\numberline {5.3}Filtering sensor data}{21}{section.5.3}
-\contentsline {chapter}{\numberline {6}Actuators}{25}{chapter.6}
-\contentsline {section}{\numberline {6.1}Propeller model}{25}{section.6.1}
-\contentsline {section}{\numberline {6.2}Motor model}{27}{section.6.2}
-\contentsline {section}{\numberline {6.3}Electronic Speed Controllers}{28}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Calibration and Programming}{28}{subsection.6.3.1}
-\contentsline {section}{\numberline {6.4}Ardupilot and Motor Identification}{29}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}APM Frequency}{29}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Expected and Real Motor Performance}{31}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Measuring Motor Speed}{32}{subsection.6.4.3}
-\contentsline {subsection}{\numberline {6.4.4}Measuring Speed in Desired Range}{34}{subsection.6.4.4}
-\contentsline {subsection}{\numberline {6.4.5}Operating Range}{34}{subsection.6.4.5}
-\contentsline {subsection}{\numberline {6.4.6}Measuring Motor Coefficients}{35}{subsection.6.4.6}
-\contentsline {chapter}{\numberline {7}State space model}{37}{chapter.7}
-\contentsline {chapter}{\numberline {8}Discussion}{38}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusion}{39}{chapter.9}
-\contentsline {chapter}{Bibliography}{40}{chapter*.38}
-\contentsline {chapter}{\numberline {10}Appendix}{41}{chapter.10}
-\contentsline {section}{\numberline {10.1}Output Tables}{41}{section.10.1}
-\contentsline {section}{\numberline {10.2}Appendix code}{42}{section.10.2}
->>>>>>> origin/master
+\contentsline {section}{\numberline {5.1}Accelerometer}{18}{section.5.1}
+\contentsline {section}{\numberline {5.2}Gyroscope}{20}{section.5.2}
+\contentsline {section}{\numberline {5.3}Programming}{20}{section.5.3}
+\contentsline {section}{\numberline {5.4}Filtering sensor data}{24}{section.5.4}
+\contentsline {chapter}{\numberline {6}Actuators}{28}{chapter.6}
+\contentsline {section}{\numberline {6.1}Propeller model}{28}{section.6.1}
+\contentsline {section}{\numberline {6.2}Motor model}{30}{section.6.2}
+\contentsline {section}{\numberline {6.3}Electronic Speed Controllers}{31}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Calibration and Programming}{31}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Ardupilot and Motor Identification}{32}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}APM Frequency}{32}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Expected and Real Motor Performance}{34}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Measuring Motor Speed}{35}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Measuring Speed in Desired Range}{37}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.5}Operating Range}{37}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {6.4.6}Measuring Motor Coefficients}{38}{subsection.6.4.6}
+\contentsline {chapter}{\numberline {7}State space model}{40}{chapter.7}
+\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{40}{section.7.1}
+\contentsline {section}{\numberline {7.2}Linear state space representation}{41}{section.7.2}
+\contentsline {chapter}{\numberline {8}Discussion}{44}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusion}{45}{chapter.9}
+\contentsline {chapter}{Bibliography}{46}{chapter*.37}
+\contentsline {chapter}{\numberline {10}Appendix}{47}{chapter.10}
+\contentsline {section}{\numberline {10.1}Output Tables}{47}{section.10.1}
+\contentsline {section}{\numberline {10.2}Appendix code}{48}{section.10.2}
