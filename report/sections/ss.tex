@@ -17,7 +17,7 @@ The model of the system can be described by defining some functions g and h whic
  
 Equation \ref{s1} is the dynamic equation and Equation \ref{s2}  is the output equation, where \textbf{X} is the state vector of the system, \textbf{U} is the input vector of the system and \textbf{Y} is the ouput vector of the system.
 
-The quadcopter dynamic are described by Equations \label{S6}-\label{S10}. As it can be observed, the input vector is obtained from the forces and moments applied to the quadcopter. But, we have decided to choose a more intuitive method and go with a model based on the signal sent from the board. Therefore, $U=[PWM_{1}, PWM_{2}, PWM_{3}, PWM_{4}]$. The relationship between the forces and moments and the angular velocity of the motors was found in Equations \label{motor1}-\label{motor4}. Using them and the linearization of angular velocities as functions of PWM enables us to describe our system's input.
+The quadcopter dynamic are described by Equations \ref{S6}-\ref{S10}. As it can be observed, the input vector is obtained from the forces and moments applied to the quadcopter. But, we have decided to choose a more intuitive method and go with a model based on the signal sent from the board. Therefore, $U=[PWM_{1}, PWM_{2}, PWM_{3}, PWM_{4}]$. The relationship between the forces and moments and the angular velocity of the motors was found in Equations \ref{motor1}-\ref{motor4}. Using them and the linearization of angular velocities as functions of PWM enables us to describe our system's input.
 
 The ouput vector of the system has as components the measurements from the accelerometer and gyroscope.
 
@@ -57,9 +57,9 @@ where $\omega_{i}^{2}$ is the angular velocity for linearization.
 
 MORE ABOUT MOTORS AND KI HERE
 
-The linearization point in terms of angular velocities can then be determined from the curves representing the behavior of the model of the motors. The polynomials are then linearized around that point and the static gain is obtained.
+The linearization point in terms of angular velocities can then be determined from the curves representing the behaviour of the model of the motors. The polynomials are then linearized around that point and the static gain is obtained.
 
-Finally, the matrices for the linearizatid model can be obtained:
+Finally, the matrices for the linearized model can be obtained:
 
 \setcounter{MaxMatrixCols}{20}
 
@@ -129,4 +129,4 @@ REWRITE B
  
 Observability and controllability are two notions common to the state space analysis of a system. The controllability translates the possibility of moving the quadrotor through its states. The observability translates the ability to measure the internal states of the system. It is confirmed that both models are fully controllable. REFERENCE THESIS
 
-The poles of the system hold the information of the dynamic response or behavior of the system. The eigenvalues of matrix A reveal the poles of the chosen continuous system. Using Matlab, it is shown that the twelve poles are located at the origin; the system is unstable. REPHRASE
+The poles of the system hold the information of the dynamic response or behaviour of the system. The eigenvalues of matrix A reveal the poles of the chosen continuous system. Using Matlab, it is shown that the twelve poles are located at the origin; the system is unstable. REPHRASE

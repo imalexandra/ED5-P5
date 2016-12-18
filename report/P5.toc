@@ -33,9 +33,9 @@
 \contentsline {subsection}{\numberline {6.3.1}Calibration and Programming}{32}{subsection.6.3.1}
 \contentsline {section}{\numberline {6.4}Ardupilot and Motor Identification}{33}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}APM Frequency}{33}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Expected and Real Motor Performance}{34}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Expected and Real Motor Performance}{35}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Measuring Motor Speed}{36}{subsection.6.4.3}
-\contentsline {subsection}{\numberline {6.4.4}Measuring Speed in Desired Range}{37}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.4}Measuring Speed in Desired Range}{38}{subsection.6.4.4}
 \contentsline {subsection}{\numberline {6.4.5}Operating Range}{39}{subsection.6.4.5}
 \contentsline {subsection}{\numberline {6.4.6}Measuring Motor Coefficients}{40}{subsection.6.4.6}
 \contentsline {chapter}{\numberline {7}State space model}{43}{chapter.7}

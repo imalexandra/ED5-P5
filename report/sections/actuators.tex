@@ -32,9 +32,9 @@ where the constant related to thrust $K_{T}$ and the constant related to the mom
 	K_{M}=c_{P}\frac{\rho D^{5}}{8\Pi^{2}}
 \end{equation}
 
-with D= being the diameter of the propeller, $\rho$ being the air density, $ c_{T} $ and $ c_{P} $ being the thrust and power coefficient. We are considering these values to have small values (<0.2) based on what we have read from other projects.
+with D = being the diameter of the propeller, $\rho$ being the air density, $ c_{T} $ and $ c_{P} $ being the thrust and power coefficient. We are considering these values to have small values (<0.2) based on what we have read from other projects.
 
-Therefore:
+Therefore\cite{Report1}:
 
 \begin{equation}
 	K_{T}\approx 1.45\times10^{-5}
@@ -43,8 +43,6 @@ Therefore:
 \begin{equation}
 	K_{M} \approx 3.5\times10^{-7}
 \end{equation}
-
-%reference
 
 We can write $K \approx K_{M}/K_{T}=4.1\times10^{-7}=0.024$. The forces and moments can now be expressed as:
 
@@ -78,7 +76,7 @@ Each motor receives a three-phase signal that is proportional with the angular v
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.6\textwidth]{images/dc.png}
-	\caption{Electrical and Mechanical part of the motor.\cite{MotorFig}}
+	\caption{Electrical and Mechanical Part of the Motor.\cite{MotorFig}}
 	\label{dc}
 \end{figure}
 
@@ -128,7 +126,7 @@ This section will show the experiments that we have carried out in regards to th
 Due to lack of proper documentation, it was necessary to measure the frequency of the signals sent out by the flight controller. To do so, Tektronix DPO 20424b oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in Figure \ref{oscillo1}.
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.5\textwidth]{images/oscillo1.png}
+    \includegraphics[width=0.8\textwidth]{images/oscillo1.png}
 	\caption{Oscilloscope Measuring APM's Frequency.}
 	\label{oscillo1}
 \end{figure}
@@ -136,7 +134,7 @@ Due to lack of proper documentation, it was necessary to measure the frequency o
 The second experiment on the board was then made to determine how the flight controller handles the output signals during those 20$ms$. First two outputs of the APM were connected to the oscilloscope, both utilizing the Servo library to send signals of length of 2000$\mu s$. Results can be seen in Figure \ref{oscillo2}.
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.5\textwidth]{images/oscillo2.png}
+    \includegraphics[width=0.8\textwidth]{images/oscillo2.png}
 	\caption{Readings of the Two Output Signals.}
 	\label{oscillo2}
 \end{figure}
@@ -145,7 +143,7 @@ Then, for further testing purposes, both outputs were given different values in 
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.5\textwidth]{images/oscillo3.png}
+    \includegraphics[width=1\textwidth]{images/oscillo3.png}
 	\caption{Left - Signals Running at 1000$\mu s$; Right - 2000$\mu s$.}
 	\label{oscillo3}
 \end{figure}

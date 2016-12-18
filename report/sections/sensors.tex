@@ -1,20 +1,17 @@
 This chapter will, step by step, introduce the sensors, describe how they function and define the methods used to extract the data from them. The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot, fitted on 6-axis MPU6000 14-bit chip. The accelerometer works by detecting a force that is actually the opposite of the acceleration vector. This force is not always caused by acceleration, but it can be. It just happens that acceleration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
 
 \section{Accelerometer}
-According to the MPU-6000 datasheet (ADD REFERENCE), the raw accelerometer data can be converted into multiples of \textit{g} by dividing with a factor of 16384. However, we have computed the rotations around the axes by using an alternative method. We have first chosen a reference position, which is the typical orientation of a device with the x and y axis in the 0 \textit{g} field plane and the x axis in the 1 \textit{g} field. This is shown in figure REF, where $\theta$ is the angle between the horizon and the x-axis of the accelerometer, $\psi$ as the angle between the horizon and the y-axis of the accelerometer, and
-$\phi$ as the angle between the gravity vector and the z-axis. When in the initial position of \textit{0} g on the x- and y-axes and 1 \textit{g} on the z-axis, all calculated angles would be 0 degrees. ADD REF SAME AS PICTURE
+According to the MPU-6000 datasheet\cite{MPU6000}, the raw accelerometer data can be converted into multiples of \textit{g} by dividing with a factor of 16384. However, we have computed the rotations around the axes by using an alternative method. We have first chosen a reference position, which is the typical orientation of a device with the x and y axis in the 0 \textit{g} field plane and the x axis in the 1 \textit{g} field. This is shown in figure REF, where $\theta$ is the angle between the horizon and the x-axis of the accelerometer, $\psi$ as the angle between the horizon and the y-axis of the accelerometer, and
+$\phi$ as the angle between the gravity vector and the z-axis. When in the initial position of \textit{0} g on the x- and y-axes and 1 \textit{g} on the z-axis, all calculated angles would be 0 degrees\cite{AccelCite1}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/accangle.png}
-	\caption{Inclination angles //http://www.analog.com/media/en/technical-documentation/application-notes/AN-1057.pdf}
+	\caption{Inclination Angles \cite{AccelCite1}}
 	\label{acc}
 \end{figure} 
-To measure the direction of the gravity vector and define the pitch and roll angles, an accelerometer is an easy to use solution.
-The raw ADC values obtained from the accelerometer first have to be converted into some acceleration $m/s^2$. To make this happen, a resolution equation is defined that will describe the relationship between the raw values and the acceleration.
-For this particular accelerometer, some general acceleration $a_\theta $ along some axis $\theta$ can be found using Equation \ref{sensors1}.
 
-Therefore, by using basic trigonometry, the formulas for the converted accelarometer data are:
+Therefore, by using basic trigonometry, the formulas for the converted accelerometer data are:
 
 \begin{equation}	
  	\theta=tan^{-1}(\frac{A_{X}}{\sqrt{A_{Y}^{2}+A_{Z}^{2}}})
@@ -30,12 +27,12 @@ Therefore, by using basic trigonometry, the formulas for the converted accelarom
  
 The inversion of the last equation is due to the initial position being a 1 \textit{g} field. If the horizon is desired as the reference for the z-axis, the operand can be inverted. A positive angle means that the corresponding positive axis of the accelerometer is pointed above the horizon, whereas a negative angle means that the axis is pointed below the horizon. Because the inverse tangent function and a ratio of accelerations is used, the benefits mentioned in the dual-axis example apply, namely that the effective incremental sensitivity is constant and that the angles can be accurately measured for all points around the unit sphere.
 
-An important thing to keep in mind is that the accelerometer provides accurate orientation angles when gravity is the only force acting on the sensor. When manouvering the sensor, other forces are being applied to it, which causes a fluctuation in the measurements. As a result, the accelerometer provides accurate data over the long term, but is noisy in the short term. ADD REFERENCE http://www.geekmomprojects.com/gyroscopes-and-accelerometers-on-a-chip/
+An important thing to keep in mind is that the accelerometer provides accurate orientation angles when gravity is the only force acting on the sensor. When manouvering the sensor, other forces are being applied to it, which causes a fluctuation in the measurements. As a result, the accelerometer provides accurate data over the long term, but is noisy in the short term\cite{AccelCite2}.
 
 \section{Gyroscope}
 Computing orientation from the gyroscope sensor is different, since the gyroscope measures angular velocity (the rate of change in orientation angle), not angular orientation itself. To compute the orientation, we must first initialize the sensor position, then measure the angular velocity $\omega$ around the X, Y and Z axes at measured intervals ($\Delta t$).   Then $\omega \times \Delta t$ is the change in angle. The new orientation angle will be the original angle plus this change. The problem with this approach is that we are integrating – adding up many small computed intervals – to find orientation.  Repeatedly adding up increments of  $\omega \times \Delta t$ will result in small systematic errors becoming magnified over time. This is the cause of gyroscopic drift, and over long timescales the gyroscope data will become increasingly inaccurate. In short, the gyroscope provides accurate data about changing orientation in the short term, but the necessary integration causes the results to drift over longer time scales.
 
-The MPU-6000 datasheet (ADD REFERENCE) shows that dividing the raw gyroscope values by 131 gives angular velocity in degrees per second, which multiplied by the time between sensor readings, gives the change in angular position. If we save the previous angular position, we simply add the computed change each time to find the new value.
+The MPU-6000 datasheet\cite{MPU6000} shows that dividing the raw gyroscope values by 131 gives angular velocity in degrees per second, which multiplied by the time between sensor readings, gives the change in angular position. If we save the previous angular position, we simply add the computed change each time to find the new value.
 
 
 \section{Programming}
@@ -66,7 +63,7 @@ The serial monitor was used to print out the the angles. At steady state, it yie
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/accgy.png}
-	\caption{Angles obtained from Accelerometer and Gyroscope.}
+	\caption{Angles Obtained from Accelerometer and Gyroscope.}
 	\label{angles}
 \end{figure}
 
@@ -87,7 +84,7 @@ The sensor is running at approximately $\frac{4591}{30s} = 153Hz$ frequency, mak
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/spectrogram.png}
-	\caption{Accelerometer x-axis spectrogram.}
+	\caption{Accelerometer x-axis Spectrogram.}
 	\label{spectrogram}
 \end{figure}
 
@@ -100,8 +97,6 @@ The filter was proven to be quite efficient, as seen in Figure \ref{accelFilter}
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/accelFilter.png}
-	\caption{Implemented filter and its close-up.}
+	\caption{Implemented Filter and its Close-up.}
 	\label{accelFilter}
 \end{figure}
-
-%ULTRASONIC NO FILTER <- is it even necessary?
