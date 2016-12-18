@@ -222,14 +222,16 @@ The plots of the angular velocity (see Figure \ref{radsPlots}) have revealed int
 	\label{radsPlots}
 \end{figure}
 
-In order to make use of the data, an equation with signal in microseconds as an input and angular velocity as an output had to be found. By utilising the \textit{polyfit} function in Matlab, a 2\textsuperscript{nd} order polynomial equation fitting the original graph was obtained. The equation seen in Figure \ref{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
-%ADD NEW PLOTS FOR ALL 4 MOTORS
+In order to make use of the data, an equation with signal in microseconds as an input and angular velocity as an output had to be found. By utilising the \textit{polyfit} function in Matlab, a linear equation $1^{st}$ order polynomial equation fitting the original graph was obtained. The equation seen in Figure \ref{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
+
 \begin{figure}[H]
   \centering
-    \includegraphics[width=1\textwidth]{images/mstorpm.jpg}
-	\caption{Converted and Plotted RPM Values and the Trendline.}
+    \includegraphics[width=1\textwidth]{images/polyfits.png}
+	\caption{Linear Relationship between Signals and Angular Velocities.}
 	\label{RadsTrendline}
 \end{figure}
+
+EQUATIONS
 
 \subsection{Operating Range}
 Due to lack of linearities in the equations expressing the angular velocity, some operating range has to be defined when calculating coefficients, to find reasonable approximates that would hold true for the most of the prototype's function. Given the drone's main objective - hovering - it is not a far-fetched idea to chose operating point as $TWR = 1$. A newtonmeter was attached to the first motor, with the propeller mounted on it. Then, a signal from the board was sent to the motor, starting at 700 and increasing by 100, up to 2400 $\mu s$. The recorded data had significant amount of noise and had to be filtered out in Matlab. Figure \ref{forcePlot} shows the measured force in newtons, where every significant increase in the force shows increment in the signal.
