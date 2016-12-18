@@ -222,7 +222,7 @@ The plots of the angular velocity (see Figure \ref{radsPlots}) have revealed int
 	\label{radsPlots}
 \end{figure}
 
-In order to make use of the data, an equation with signal in microseconds as an input and angular velocity as an output had to be found. By utilising the \textit{polyfit} function in Matlab, a linear equation $1^{st}$ order polynomial equation fitting the original graph was obtained. The equation seen in Figure \ref{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
+In order to use this data, it was decided to first reduce the range of the measurements - from 1500 to 2000 $\mu s$. Then, utilising the $polyfit$ function in Matlab, it is possible to derive linear equations with signal as input and angular velocity as output. The equations have been plotted in Figure \ref{RadsTrendline}.
 
 \begin{figure}[H]
   \centering
@@ -230,8 +230,31 @@ In order to make use of the data, an equation with signal in microseconds as an 
 	\caption{Linear Relationship between Signals and Angular Velocities.}
 	\label{RadsTrendline}
 \end{figure}
+The following equations for the linear functions then are:
+\begin{center}
+\begin{equation}
+	\omega _1 = 0.0771\times PWM1 + 1026.837
+\end{equation}
 
-EQUATIONS
+
+
+\begin{equation}
+	\omega _2 = 0.0826\times PWM2 + 994.62
+\end{equation}
+
+
+
+\begin{equation}
+	\omega _3 = 0.0849\times PWM3 + 1006.507
+\end{equation}
+
+
+
+\begin{equation}
+	\omega _4 = 0.0852\times PWM4 + 978.91
+\end{equation}
+\end{center}
+The linear equations do not fit the original graph perfectly, but require less computational power to perform calculations. It is possible to instead acquire $2^{nd}$ polynomial that would be a more accurate estimation of the original graph, however, that would require more time to compute. This question will be briefly addressed in the discussion chapter. 
 
 \subsection{Operating Range}
 Due to lack of linearities in the equations expressing the angular velocity, some operating range has to be defined when calculating coefficients, to find reasonable approximates that would hold true for the most of the prototype's function. Given the drone's main objective - hovering - it is not a far-fetched idea to chose operating point as $TWR = 1$. A newtonmeter was attached to the first motor, with the propeller mounted on it. Then, a signal from the board was sent to the motor, starting at 700 and increasing by 100, up to 2400 $\mu s$. The recorded data had significant amount of noise and had to be filtered out in Matlab. Figure \ref{forcePlot} shows the measured force in newtons, where every significant increase in the force shows increment in the signal.
@@ -284,4 +307,19 @@ Motor	& $k_i$ 	& $PWM$ 	& $PWM^{Dz}$ 	\\ \hline
 \label{motorCoeffs}
 \end{table}
 
-SIMULATE IN MATLAB
+The transfer function with the coefficients in place has been modelled in Simulink, as seen in Figure \ref{motorSimulink}.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/simulinkmotor.png}
+	\caption{Simulink Model of the Motors.}
+	\label{motorSimulink}
+\end{figure}
+
+By giving the PWM values from Table \ref{motorCoeffs}, the simulation shows angular velocity of all four motors. It can be seen in Figure \ref{motorScope} that the speeds still do not match perfectly. This is because none of the functions are linear, giving only the approximations of the coefficients used in the model and not exact values. As such, some controller will need to be implemented to try and compensate for the differences.
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/scopewithcloseup.png}
+	\caption{The Output of the Model and a Close Up.}
+	\label{motorScope}
+\end{figure}
