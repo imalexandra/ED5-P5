@@ -35,9 +35,14 @@
 \BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 35
 \BOOKMARK [1][-]{section.7.1}{7.1 Nonlinear state space representation}{chapter.7}% 36
 \BOOKMARK [1][-]{section.7.2}{7.2 Linear state space representation}{chapter.7}% 37
-\BOOKMARK [0][-]{chapter.8}{8 Discussion}{}% 38
-\BOOKMARK [0][-]{chapter.9}{9 Conclusion}{}% 39
-\BOOKMARK [0][-]{chapter*.41}{Bibliography}{}% 40
-\BOOKMARK [0][-]{chapter.10}{10 Appendix}{}% 41
-\BOOKMARK [1][-]{section.10.1}{10.1 Output Tables}{chapter.10}% 42
-\BOOKMARK [1][-]{section.10.2}{10.2 Appendix code}{chapter.10}% 43
+\BOOKMARK [0][-]{chapter.8}{8 System Simulation}{}% 38
+\BOOKMARK [1][-]{section.8.1}{8.1 Implementation}{chapter.8}% 39
+\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Motors}{section.8.1}% 40
+\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Model Simulation}{section.8.1}% 41
+\BOOKMARK [0][-]{chapter.9}{9 Control Design}{}% 42
+\BOOKMARK [0][-]{chapter.10}{10 Discussion}{}% 43
+\BOOKMARK [0][-]{chapter.11}{11 Conclusion}{}% 44
+\BOOKMARK [0][-]{chapter*.54}{Bibliography}{}% 45
+\BOOKMARK [0][-]{chapter.12}{12 Appendix}{}% 46
+\BOOKMARK [1][-]{section.12.1}{12.1 Output Tables}{chapter.12}% 47
+\BOOKMARK [1][-]{section.12.2}{12.2 Appendix code}{chapter.12}% 48

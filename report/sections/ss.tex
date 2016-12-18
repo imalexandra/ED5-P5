@@ -84,10 +84,10 @@ Finally, the matrices for the linearized model can be obtained:
  	B=\begin{bmatrix}
  	0 & 0 & 0 & 0 \\
  	0 & 0 & 0 & 0 \\
- 	0 & 0 & 0 & 0 \\
- 	0 & 0 & 0 & 0 \\
- 	0 & 0 & 0 & 0 \\
- 	0 & 0 & 0 & 0 \\
+ 	1.585104 & 0 & 0 & 0 \\
+ 	0 & 1.22626 & 0 & 0 \\
+ 	0 & 0 & 1.465694 & 0 \\
+ 	0 & 0 & 0 & 1.058975 \\
  	0 & 0 & 0 & 0 \\
  	0 & 0 & 0 & 0 \\
  	0 & 0 & 0 & 0 \\
@@ -96,8 +96,6 @@ Finally, the matrices for the linearized model can be obtained:
  	0 & 0 & 0 & 0 \\
  	\end{bmatrix}
  \end{equation}
- 
-REWRITE B 
  
  \begin{equation}
  	C=\begin{bmatrix}
@@ -130,3 +128,4 @@ REWRITE B
 Observability and controllability are two notions common to the state space analysis of a system. The controllability translates the possibility of moving the quadrotor through its states. The observability translates the ability to measure the internal states of the system. It is confirmed that both models are fully controllable. REFERENCE THESIS
 
 The poles of the system hold the information of the dynamic response or behaviour of the system. The eigenvalues of matrix A reveal the poles of the chosen continuous system. Using Matlab, it is shown that the twelve poles are located at the origin; the system is unstable. REPHRASE
+

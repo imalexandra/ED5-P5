@@ -41,9 +41,14 @@
 \contentsline {chapter}{\numberline {7}State space model}{43}{chapter.7}
 \contentsline {section}{\numberline {7.1}Nonlinear state space representation}{43}{section.7.1}
 \contentsline {section}{\numberline {7.2}Linear state space representation}{44}{section.7.2}
-\contentsline {chapter}{\numberline {8}Discussion}{47}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusion}{48}{chapter.9}
-\contentsline {chapter}{Bibliography}{49}{chapter*.41}
-\contentsline {chapter}{\numberline {10}Appendix}{50}{chapter.10}
-\contentsline {section}{\numberline {10.1}Output Tables}{50}{section.10.1}
-\contentsline {section}{\numberline {10.2}Appendix code}{51}{section.10.2}
+\contentsline {chapter}{\numberline {8}System Simulation}{47}{chapter.8}
+\contentsline {section}{\numberline {8.1}Implementation}{47}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Motors}{47}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Model Simulation}{49}{subsection.8.1.2}
+\contentsline {chapter}{\numberline {9}Control Design}{52}{chapter.9}
+\contentsline {chapter}{\numberline {10}Discussion}{55}{chapter.10}
+\contentsline {chapter}{\numberline {11}Conclusion}{56}{chapter.11}
+\contentsline {chapter}{Bibliography}{57}{chapter*.54}
+\contentsline {chapter}{\numberline {12}Appendix}{58}{chapter.12}
+\contentsline {section}{\numberline {12.1}Output Tables}{58}{section.12.1}
+\contentsline {section}{\numberline {12.2}Appendix code}{59}{section.12.2}
