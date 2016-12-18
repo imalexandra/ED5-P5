@@ -1,4 +1,4 @@
-This chapter will give a general overview on the pieces of technical equipement which we are using and show what the purpose of each one is. In addition, a diagram of the wiring of the components can be found in appendix X. %Wiring.png
+This chapter will give a general overview on the pieces of technical equipment which we are using and show what the purpose of each one is.
 
 \section{Prototype Hardware}
 
@@ -10,7 +10,7 @@ The motor that we are using is the Turnigy Multistar Brushless Motor seen in Fig
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/motor.jpg}
-	\caption{Turnigy Multistar 2213-980 V2 Brushless Motor}
+	\caption{Turnigy Multistar 2213-980 V2 Brushless Motor.}
 	\label{motor}
 \end{figure}
 
@@ -20,7 +20,7 @@ The propellers don't have such strict requirements as the motors. They are neede
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/propeller.jpg}
-	\caption{Hobbyking Slowfly Propeller 10x4.5}
+	\caption{Hobbyking Slowfly Propeller 10x4.5.}
 	\label{propeller}
 \end{figure}
 
@@ -30,7 +30,7 @@ Electronic Speed Controller (ESC) is a widely used device in rotorcrafts. The pu
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/esc.jpg}
-	\caption{TURNIGY Plush 30A Speed Controller}
+	\caption{TURNIGY Plush 30A Speed Controller.}
 	\label{esc}
 \end{figure}
 
@@ -40,7 +40,7 @@ ArduPilotMega (APM) is an open source unmanned aerial vehicle (UAV) platform whi
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/ardupilot.jpg}
-	\caption{APM 2.5 board}
+	\caption{APM 2.5 board.}
 	\label{ardupilot}
 \end{figure}
 
@@ -55,11 +55,32 @@ To power up our quadcopter, we will use a TURNIGY nano-tech Lipoly battery, whic
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/battery.jpg}
-	\caption{Turnigy nano-tech 6000mah 3S 25~50C Lipo Pack}
+	\caption{Turnigy nano-tech 6000mah 3S 25~50C Lipo Pack.}
+	\label{battery}
+\end{figure}
+
+\subsection{Drone Frame}
+The drone frame, including arms for the motors, supporting legs and surface for the flight controller and battery, has been chosen and assembled by a previous group. The complete drone with all of its components put together can be seen in Figure \ref{fullDrone}.
+
+FIGURE
+
+The wiring of the electronic components can be seen in Figure \ref{wiring}.
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/Wiring.png}
+	\caption{Wiring of the electronic components.}
 	\label{battery}
 \end{figure}
 
 \section{Prototype Measurements}
-mass, length, height, moment of inertia
+The arm length has been measured to be $SOMETHING cm$ and the total height of the drone has been estimated to be $SOMETHING cm$.
+To obtain the total weight of the drone, all parts of it, including the battery, were mounted on the frame. Then, a piece of rope was tied around all arms of the vehicle, to lift it up in the air. The other end of the rope was put on a hook of PASCO [NAME] newtonmeter. The device was communicating its data to the PASCO Capstone software on a computer, giving a plot of force over time. The following plot can be seen in Figure \ref{weightPlot}.
 
-%add quadcopter 'skeleton' and wiring between all this and picture
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/weightPlot.png}
+	\caption{Force vs. time plot of the drone.}
+	\label{battery}
+\end{figure}
+
+After some time period, the prototype was lifted into the air to let the gravitational force affecting the drone be measured by the newtonmeter. It was measured that the gravitational force affecting the vehicle is approximately $14N$. From Newton's second law, we know that $F = ma$, where in this particular scenario, acceleration $a$ is equal to the gravitational force $g = 9.81m/s^2$. Therefore, the mass of the drone is equal to $m = \frac{F}{g} = \frac{14N}{9.81m/s^2} = 1.427kg$.

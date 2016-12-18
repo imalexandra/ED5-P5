@@ -1,0 +1,14 @@
+Fs = 153;                    % sample rate in Hz
+N = 4591;                     % number of signal samples
+a1 = z(:,[1]);			% signal taken from the imported matrix
+t = (0:N-1)/Fs;              % time vector
+df1 = designfilt('lowpassfir','FilterOrder',10,'CutoffFrequency',Fnorm);
+y1 = filter(df1,a1);
+
+figure
+plot(t,a1,t,y1,'r','linewidth',1.5);
+title('Filtered Waveforms');
+xlabel('Time (s)');
+legend('Noisy Waveform', 'Filtered Signal');
+grid on
+axis tight

@@ -5,10 +5,11 @@
 \BOOKMARK [0][-]{chapter.2}{2 General characteristics of a quadcopter}{}% 5
 \BOOKMARK [1][-]{section.2.1}{2.1 Systems of coordinates}{chapter.2}% 6
 \BOOKMARK [1][-]{section.2.2}{2.2 Working principle}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{2.3 Quadcopter manouvering}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{2.3 Quadcopter maneuvering}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.4}{2.4 Assumptions}{chapter.2}% 9
 \BOOKMARK [0][-]{chapter.3}{3 Prototype}{}% 10
 \BOOKMARK [1][-]{section.3.1}{3.1 Prototype Hardware}{chapter.3}% 11
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.3.2}{3.2 Prototype Measurements}{chapter.3}% 12
 \BOOKMARK [0][-]{chapter.4}{4 Quadcopter Model}{}% 13
 \BOOKMARK [1][-]{section.4.1}{4.1 Quaternions and Euler angles}{chapter.4}% 14
@@ -36,3 +37,34 @@
 \BOOKMARK [0][-]{chapter*.31}{Bibliography}{}% 36
 \BOOKMARK [0][-]{chapter.10}{10 Appendix}{}% 37
 \BOOKMARK [1][-]{section.10.1}{10.1 Appendix code}{chapter.10}% 38
+=======
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Drone Frame}{section.3.1}% 12
+\BOOKMARK [1][-]{section.3.2}{3.2 Prototype Measurements}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{4 Quadcopter Model}{}% 14
+\BOOKMARK [1][-]{section.4.1}{4.1 Quaternions and Euler angles}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{4.2 Quaternions Representation}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{4.3 Euler Representation}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{5 Sensors}{}% 18
+\BOOKMARK [1][-]{section.5.1}{5.1 Model of the sensors}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.2}{5.2 Programming Accelerometer and Gyroscope}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.3}{5.3 Filtering sensor data}{chapter.5}% 21
+\BOOKMARK [0][-]{chapter.6}{6 Actuators}{}% 22
+\BOOKMARK [1][-]{section.6.1}{6.1 Propeller model}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.2}{6.2 Motor model}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.3}{6.3 Electronic Speed Controllers}{chapter.6}% 25
+\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Calibration and Programming}{section.6.3}% 26
+\BOOKMARK [1][-]{section.6.4}{6.4 Ardupilot and Motor Identification}{chapter.6}% 27
+\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 APM Frequency}{section.6.4}% 28
+\BOOKMARK [2][-]{subsection.6.4.2}{6.4.2 Expected and Real Motor Performance}{section.6.4}% 29
+\BOOKMARK [2][-]{subsection.6.4.3}{6.4.3 Measuring Motor Speed}{section.6.4}% 30
+\BOOKMARK [2][-]{subsection.6.4.4}{6.4.4 Measuring Speed in Desired Range}{section.6.4}% 31
+\BOOKMARK [2][-]{subsection.6.4.5}{6.4.5 Operating Range}{section.6.4}% 32
+\BOOKMARK [2][-]{subsection.6.4.6}{6.4.6 Measuring Motor Coefficients}{section.6.4}% 33
+\BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 34
+\BOOKMARK [0][-]{chapter.8}{8 Discussion}{}% 35
+\BOOKMARK [0][-]{chapter.9}{9 Conclusion}{}% 36
+\BOOKMARK [0][-]{chapter*.38}{Bibliography}{}% 37
+\BOOKMARK [0][-]{chapter.10}{10 Appendix}{}% 38
+\BOOKMARK [1][-]{section.10.1}{10.1 Output Tables}{chapter.10}% 39
+\BOOKMARK [1][-]{section.10.2}{10.2 Appendix code}{chapter.10}% 40
+>>>>>>> origin/master
