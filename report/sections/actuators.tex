@@ -125,10 +125,10 @@ Programming additional settings of the ESC is done in a similar manner - by send
 This section will show the experiments that we have carried out in regards to the motor as well as Ardupilot frequency analysis.
 
 \subsection{APM Frequency}
-Due to lack of proper documentation, it was necessary to measure the frequency of the signals sent out by the flight controller. To do so, an oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in Figure \ref{oscillo1}.
+Due to lack of proper documentation, it was necessary to measure the frequency of the signals sent out by the flight controller. To do so, Tektronix DPO 20424b oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in Figure \ref{oscillo1}.
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.5\textwidth]{images/oscillo1.jpg}
+    \includegraphics[width=0.5\textwidth]{images/oscillo1.png}
 	\caption{Oscilloscope Measuring APM's Frequency.}
 	\label{oscillo1}
 \end{figure}
@@ -136,7 +136,7 @@ Due to lack of proper documentation, it was necessary to measure the frequency o
 The second experiment on the board was then made to determine how the flight controller handles the output signals during those 20$ms$. First two outputs of the APM were connected to the oscilloscope, both utilizing the Servo library to send signals of length of 2000$\mu s$. Results can be seen in Figure \ref{oscillo2}.
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.5\textwidth]{images/oscillo2.jpg}
+    \includegraphics[width=0.5\textwidth]{images/oscillo2.png}
 	\caption{Readings of the Two Output Signals.}
 	\label{oscillo2}
 \end{figure}
@@ -146,7 +146,7 @@ Then, for further testing purposes, both outputs were given different values in 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{images/oscillo3.png}
-	\caption{Left - Signals Running at 2000$\mu s$; Right - 700$\mu s$.}
+	\caption{Left - Signals Running at 1000$\mu s$; Right - 2000$\mu s$.}
 	\label{oscillo3}
 \end{figure}
 
@@ -189,7 +189,7 @@ Here, $f$ is the frequency and $n$ is the number of poles (in the case of this p
 
 Therefore, it is possible to measure the frequency at various output values, which can then be used to define an equation that uses the board's signal length as an input value and results in an RPM.
 
-The frequency was measured using an (NAME) oscilloscope and by connecting the probe's ground clip to the ground of the battery and the probe tip to any one of the wires between motor and the ESC. Then, by providing different output signals in some arbitrary range from the flight controller, the frequency was measured on the oscilloscope screen. An on-board filter was used to filter out some noise, especially at lower output signals. The recorded frequency was later converted into RPM using Equation \ref{voltage1}, for later comparison. The output signal lengths and the corresponding frequencies converted into RPM can be seen in Table \ref{FreqTable}.
+The frequency was measured using a oscilloscope and by connecting the probe's ground clip to the ground of the battery and the probe tip to any one of the wires between motor and the ESC. Then, by providing different output signals in some arbitrary range from the flight controller, the frequency was measured on the oscilloscope screen. An on-board filter was used to filter out some noise, especially at lower output signals. The recorded frequency was later converted into RPM using Equation \ref{voltage1}, for later comparison. The output signal lengths and the corresponding frequencies converted into RPM can be seen in Table \ref{FreqTable}.
 
 While measuring, it was observed that the frequency would never reach stable readings and therefore, a sizeable error is possible between measurements. Because of that, RPM was manually measured using the tachometer at same output values, as seen in Table \ref{RPMTable}.
 

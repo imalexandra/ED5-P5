@@ -62,14 +62,19 @@ To power up our quadcopter, we will use a TURNIGY nano-tech Lipoly battery, whic
 \subsection{Drone Frame}
 The drone frame, including arms for the motors, supporting legs and surface for the flight controller and battery, has been chosen and assembled by a previous group. The complete drone with all of its components put together can be seen in Figure \ref{fullDrone}.
 
-FIGURE
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/fullDrone.jpg}
+	\caption{Fully Assembled Drone.}
+	\label{fullDrone}
+\end{figure}
 
 The wiring of the electronic components can be seen in Figure \ref{wiring}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/Wiring2.png}
 	\caption{Wiring of the Electronic Components.}
-	\label{battery}
+	\label{wiring}
 \end{figure}
 
 \section{Prototype Measurements}
@@ -80,7 +85,7 @@ To obtain the total weight of the drone, all parts of it, including the battery,
   \centering
     \includegraphics[width=1\textwidth]{images/weightPlot.png}
 	\caption{Force vs. Time Plot of the Drone.}
-	\label{battery}
+	\label{weightPlot}
 \end{figure}
 
 After some time period, the prototype was lifted into the air to let the gravitational force affecting the drone be measured by the newtonmeter. It was measured that the gravitational force affecting the vehicle is approximately $14N$. From Newton's second law, we know that $F = ma$, where in this particular scenario, acceleration $a$ is equal to the gravitational force $g = 9.81m/s^2$. Therefore, the mass of the drone is equal to $m = \frac{F}{g} = \frac{14N}{9.81m/s^2} = 1.427kg$.
