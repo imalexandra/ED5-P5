@@ -36,14 +36,14 @@
 \contentsline {subsection}{\numberline {6.4.2}Expected and Real Motor Performance}{34}{subsection.6.4.2}
 \contentsline {subsection}{\numberline {6.4.3}Measuring Motor Speed}{35}{subsection.6.4.3}
 \contentsline {subsection}{\numberline {6.4.4}Measuring Speed in Desired Range}{37}{subsection.6.4.4}
-\contentsline {subsection}{\numberline {6.4.5}Operating Range}{37}{subsection.6.4.5}
-\contentsline {subsection}{\numberline {6.4.6}Measuring Motor Coefficients}{38}{subsection.6.4.6}
-\contentsline {chapter}{\numberline {7}State space model}{40}{chapter.7}
-\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{40}{section.7.1}
-\contentsline {section}{\numberline {7.2}Linear state space representation}{41}{section.7.2}
-\contentsline {chapter}{\numberline {8}Discussion}{44}{chapter.8}
-\contentsline {chapter}{\numberline {9}Conclusion}{45}{chapter.9}
-\contentsline {chapter}{Bibliography}{46}{chapter*.37}
-\contentsline {chapter}{\numberline {10}Appendix}{47}{chapter.10}
-\contentsline {section}{\numberline {10.1}Output Tables}{47}{section.10.1}
-\contentsline {section}{\numberline {10.2}Appendix code}{48}{section.10.2}
+\contentsline {subsection}{\numberline {6.4.5}Operating Range}{38}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {6.4.6}Measuring Motor Coefficients}{39}{subsection.6.4.6}
+\contentsline {chapter}{\numberline {7}State space model}{41}{chapter.7}
+\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{41}{section.7.1}
+\contentsline {section}{\numberline {7.2}Linear state space representation}{42}{section.7.2}
+\contentsline {chapter}{\numberline {8}Discussion}{45}{chapter.8}
+\contentsline {chapter}{\numberline {9}Conclusion}{46}{chapter.9}
+\contentsline {chapter}{Bibliography}{47}{chapter*.38}
+\contentsline {chapter}{\numberline {10}Appendix}{48}{chapter.10}
+\contentsline {section}{\numberline {10.1}Output Tables}{48}{section.10.1}
+\contentsline {section}{\numberline {10.2}Appendix code}{49}{section.10.2}

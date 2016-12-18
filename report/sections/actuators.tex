@@ -215,12 +215,12 @@ In order to make use of these findings, the RPM values have to be converted into
 Once it was decided how to measure angular velocity, an output range of 1500 to 2400 $\mu s$ was chosen. The RPM was measured at certain microseconds signal, with increments of 100 across all four motors and converted into $rad/s$. The measured values have been put into Table \ref{speedTable}.
 The plots of the angular velocity (see Figure \ref{radsPlots}) have revealed interesting discoveries - all four motors run at different speeds. Moreover, there seems to be no linear relationship between them throughout the whole range, so it is impossible to express one motor's speed as a function of another motor multiplied by some constant. After failing to find the cause of the difference in the speeds, a conclusion was reached that the motors run at different speeds due to their structure and therefore cannot be changed.
 
-%\begin{figure}[H]
-%  \centering
-%    \includegraphics[width=1\textwidth]{images/radsPlots.jpg}
-%	\caption{Angular Velocity vs. Output Signal for all Motors.}
-%	\label{radsPlots}
-%\end{figure}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=1\textwidth]{images/radsPlots.png}
+	\caption{Angular Velocity vs. Output Signal for all Motors.}
+	\label{radsPlots}
+\end{figure}
 
 In order to make use of the data, an equation with signal in microseconds as an input and angular velocity as an output had to be found. By utilising the \textit{polyfit} function in Matlab, a 2\textsuperscript{nd} order polynomial equation fitting the original graph was obtained. The equation seen in Figure \ref{RadsTrendline} can then be used as an approximation for the conversion of the sent signal in $\mu s$ into angular rate.
 %ADD NEW PLOTS FOR ALL 4 MOTORS
@@ -247,7 +247,7 @@ The coefficients and performance of the motors will be centred around these valu
 \subsection{Measuring Motor Coefficients}
 First, through trial and error, the deadzones for when the motors are receiving a signal from the flight controller but are not spinning yet were found (see Table \ref{motorCoeffs}).
 
-The motor time constant $\tau$ is described as the time it takes the motor to reach 63\% of its expected speed, since the receiving the signal. To do this, PASCO [NAME] rotary sensor has been connected to one of the motors. Then, using the SPARKvue software, the angular velocity of the motor for a specific time frame was obtained. A signal was sent from the flight controller to the motor and the angular velocity was plotted against the time, as seen in Figure \ref{timeconstant}.
+The motor time constant $\tau$ is described as the time it takes the motor to reach 63\% of its expected speed, since the receiving the signal. To do this, PASPORT Rotary Motion Sensor PS-2120A has been connected to one of the motors. Then, using the SPARKvue software, the angular velocity of the motor for a specific time frame was obtained. A signal was sent from the flight controller to the motor and the angular velocity was plotted against the time, as seen in Figure \ref{timeconstant}.
 
 \begin{figure}[H]
   \centering
