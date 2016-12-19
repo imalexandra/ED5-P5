@@ -48,23 +48,23 @@ The MPU-6000 datasheet\cite{MPU6000} shows that dividing the raw gyroscope value
 
 
 \section{Programming}
-It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analogue and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. We have decided on SPI and the setup code for it is shown below:
-
+It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analogue and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. We have decided on SPI and the setup code for it is shown in Listing \ref{code:c1}.
+\clearpage
 \lstinputlisting[language=C++, firstline=27, lastline=41, caption={SPI Configuration}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
 As we can see, the $(setup)$ ends by calling the \textit{ConfigureMPU6000()} function:
 
-\lstinputlisting[language=C++, firstline=181, lastline=210, caption={Chip Configuration}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=181, lastline=210, caption={Chip Configuration}, label={code:c6}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\clearpage
+Firstly, we need to get the raw values from both accelerometer and gyroscope and that is done by accessing their registers. We have made separate functions, which can be seen in Listing \ref{code:c7}, that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. 
 
-Firstly, we need to get the raw values from both accelerometer and gyroscope and that is done by accessing their registers. We have made separate functions, which can be seen in Listing \ref{code:c1}, that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. 
-
-\lstinputlisting[language=C++, firstline=81, lastline=126, caption={Functions that Accesses the Registers and Returns Raw Values.}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=81, lastline=126, caption={Functions that Accesses the Registers and Returns Raw Values.}, label={code:c7}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
 If we want to calculate the inclination of a device relative to the ground for example, we can calculate the angle between the force vector and one of the z-axis. We can do that by using the formulas in Section \ref{accelEqs} and by degree conversion. The functions that take care of converting the raw values from both accelerometer and gyroscope are the following:
 
-\lstinputlisting[language=C++, firstline=129, lastline=149, caption={Function to Obtain Angles Based on the Raw Values of the Accelerometer.}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=129, lastline=147, caption={Function to Obtain Angles Based on the Raw Values of the Accelerometer.}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-\lstinputlisting[language=C++, firstline=152, lastline=179, caption={Function to Obtain Angles Based on the Raw Values of the Gyroscope.}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=152, lastline=177, caption={Function to Obtain Angles Based on the Raw Values of the Gyroscope.}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
 We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the accelerometer output is because accelerometers are more sensitive to noise and vibrations.
 The serial monitor was used to print out the the angles. At steady state, it yielded the results seen in Figure \ref{angles}.
@@ -98,12 +98,12 @@ The sensor is running at approximately $\frac{4591}{30s} = 153Hz$ frequency, mak
 In order to get rid of as much noise as possible, the cut-off frequency was chosen to be the maximum possible value - half of the sampling frequency. The order for the filter was chosen to be 10, mostly through trial and error - at this point, the filter has considerable effect, while not having a very high order, which carries its own cost. The filter was applied to the signal using simple code in Matlab, seen in Listing \ref{code:c4}.
 
 \lstinputlisting[language=Matlab, firstline=1, lastline=6, caption={Filter generation code.}, label={code:c4}]{Arduino/AccelFilter.txt}
-
+\clearpage
 The filter was proven to be quite efficient, as seen in Figure \ref{accelFilter}. While not completely perfect, possible improvements will be covered in the discussion chapter.
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.8\textwidth]{images/accelFilter.png}
+    \includegraphics[width=1\textwidth]{images/accelFilter.png}
 	\caption{Implemented Filter and its Close-up.}
 	\label{accelFilter}
 \end{figure}

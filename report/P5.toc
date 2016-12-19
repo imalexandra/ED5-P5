@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {2}General characteristics of a quadcopter}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Systems of coordinates}{4}{section.2.1}
 \contentsline {section}{\numberline {2.2}Working principle}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Quadcopter maneuvering}{6}{section.2.3}
+\contentsline {section}{\numberline {2.3}Quadcopter maneuvering}{7}{section.2.3}
 \contentsline {section}{\numberline {2.4}Assumptions}{8}{section.2.4}
 \contentsline {chapter}{\numberline {3}Prototype}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Prototype Hardware}{9}{section.3.1}
@@ -15,8 +15,9 @@
 \contentsline {subsection}{\numberline {3.1.4}APM Flight Controller}{11}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Power Distribution Board}{11}{subsection.3.1.5}
 \contentsline {subsection}{\numberline {3.1.6}Ultrasonic Sensors}{11}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Battery}{12}{subsection.3.1.7}
-\contentsline {subsection}{\numberline {3.1.8}Drone Frame}{12}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.7}Ultrasonic Sensor}{11}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}Battery}{12}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.9}Drone Frame}{12}{subsection.3.1.9}
 \contentsline {section}{\numberline {3.2}Prototype Measurements}{13}{section.3.2}
 \contentsline {chapter}{\numberline {4}Quadcopter Model}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Quaternions and Euler angles}{15}{section.4.1}
@@ -40,22 +41,22 @@
 \contentsline {section}{\numberline {6.3}Gyroscope}{35}{section.6.3}
 \contentsline {section}{\numberline {6.4}Programming}{35}{section.6.4}
 \contentsline {section}{\numberline {6.5}Filtering sensor data}{39}{section.6.5}
-\contentsline {chapter}{\numberline {7}State space model}{42}{chapter.7}
-\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{42}{section.7.1}
-\contentsline {section}{\numberline {7.2}Linear state space representation}{43}{section.7.2}
-\contentsline {chapter}{\numberline {8}System Simulation}{46}{chapter.8}
-\contentsline {section}{\numberline {8.1}Implementation}{46}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Motors}{46}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Model Simulation}{48}{subsection.8.1.2}
-\contentsline {chapter}{\numberline {9}Control Design}{51}{chapter.9}
-\contentsline {chapter}{\numberline {10}Discussion}{54}{chapter.10}
-\contentsline {section}{\numberline {10.1}Sensor Filters}{54}{section.10.1}
-\contentsline {section}{\numberline {10.2}Validity of tests}{55}{section.10.2}
-\contentsline {chapter}{\numberline {11}Conclusion}{56}{chapter.11}
-\contentsline {chapter}{Bibliography}{57}{chapter*.49}
-\contentsline {chapter}{\numberline {12}Appendix}{59}{chapter.12}
-\contentsline {section}{\numberline {12.1}Data Tables}{59}{section.12.1}
-\contentsline {subsection}{\numberline {12.1.1}Measuring Method Test Results}{59}{subsection.12.1.1}
-\contentsline {subsection}{\numberline {12.1.2}Motor Speed Test Results}{60}{subsection.12.1.2}
-\contentsline {section}{\numberline {12.2}Appendix code}{61}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}Ultrasonic Sensor Code}{61}{subsection.12.2.1}
+\contentsline {chapter}{\numberline {7}State space model}{43}{chapter.7}
+\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{43}{section.7.1}
+\contentsline {section}{\numberline {7.2}Linear state space representation}{44}{section.7.2}
+\contentsline {chapter}{\numberline {8}System Simulation}{47}{chapter.8}
+\contentsline {section}{\numberline {8.1}Implementation}{47}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Motors}{47}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Model Simulation}{49}{subsection.8.1.2}
+\contentsline {chapter}{\numberline {9}Control Design}{52}{chapter.9}
+\contentsline {chapter}{\numberline {10}Discussion}{55}{chapter.10}
+\contentsline {section}{\numberline {10.1}Sensor Filters}{55}{section.10.1}
+\contentsline {section}{\numberline {10.2}Validity of tests}{56}{section.10.2}
+\contentsline {chapter}{\numberline {11}Conclusion}{57}{chapter.11}
+\contentsline {chapter}{Bibliography}{58}{chapter*.49}
+\contentsline {chapter}{\numberline {12}Appendix}{60}{chapter.12}
+\contentsline {section}{\numberline {12.1}Data Tables}{60}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Measuring Method Test Results}{60}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Motor Speed Test Results}{61}{subsection.12.1.2}
+\contentsline {section}{\numberline {12.2}Appendix code}{62}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Ultrasonic Sensor Code}{62}{subsection.12.2.1}

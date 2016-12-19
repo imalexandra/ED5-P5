@@ -15,47 +15,48 @@
 \BOOKMARK [2][-]{subsection.3.1.4}{3.1.4 APM Flight Controller}{section.3.1}% 15
 \BOOKMARK [2][-]{subsection.3.1.5}{3.1.5 Power Distribution Board}{section.3.1}% 16
 \BOOKMARK [2][-]{subsection.3.1.6}{3.1.6 Ultrasonic Sensors}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.7}{3.1.7 Battery}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.8}{3.1.8 Drone Frame}{section.3.1}% 19
-\BOOKMARK [1][-]{section.3.2}{3.2 Prototype Measurements}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{4 Quadcopter Model}{}% 21
-\BOOKMARK [1][-]{section.4.1}{4.1 Quaternions and Euler angles}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.2}{4.2 Quaternions Representation}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.3}{4.3 Euler Representation}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{5 Actuators}{}% 25
-\BOOKMARK [1][-]{section.5.1}{5.1 Propeller model}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{5.2 Motor model}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{5.3 Electronic Speed Controllers}{chapter.5}% 28
-\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Calibration and Programming}{section.5.3}% 29
-\BOOKMARK [1][-]{section.5.4}{5.4 Ardupilot and Motor Identification}{chapter.5}% 30
-\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 APM Frequency}{section.5.4}% 31
-\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Expected and Real Motor Performance}{section.5.4}% 32
-\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Measuring Motor Speed}{section.5.4}% 33
-\BOOKMARK [2][-]{subsection.5.4.4}{5.4.4 Measuring Speed in Desired Range}{section.5.4}% 34
-\BOOKMARK [2][-]{subsection.5.4.5}{5.4.5 Operating Range}{section.5.4}% 35
-\BOOKMARK [2][-]{subsection.5.4.6}{5.4.6 Measuring Motor Coefficients}{section.5.4}% 36
-\BOOKMARK [0][-]{chapter.6}{6 Sensors}{}% 37
-\BOOKMARK [1][-]{section.6.1}{6.1 Ultrasonic Sensor}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.2}{6.2 Accelerometer}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.3}{6.3 Gyroscope}{chapter.6}% 40
-\BOOKMARK [1][-]{section.6.4}{6.4 Programming}{chapter.6}% 41
-\BOOKMARK [1][-]{section.6.5}{6.5 Filtering sensor data}{chapter.6}% 42
-\BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 43
-\BOOKMARK [1][-]{section.7.1}{7.1 Nonlinear state space representation}{chapter.7}% 44
-\BOOKMARK [1][-]{section.7.2}{7.2 Linear state space representation}{chapter.7}% 45
-\BOOKMARK [0][-]{chapter.8}{8 System Simulation}{}% 46
-\BOOKMARK [1][-]{section.8.1}{8.1 Implementation}{chapter.8}% 47
-\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Motors}{section.8.1}% 48
-\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Model Simulation}{section.8.1}% 49
-\BOOKMARK [0][-]{chapter.9}{9 Control Design}{}% 50
-\BOOKMARK [0][-]{chapter.10}{10 Discussion}{}% 51
-\BOOKMARK [1][-]{section.10.1}{10.1 Sensor Filters}{chapter.10}% 52
-\BOOKMARK [1][-]{section.10.2}{10.2 Validity of tests}{chapter.10}% 53
-\BOOKMARK [0][-]{chapter.11}{11 Conclusion}{}% 54
-\BOOKMARK [0][-]{chapter*.49}{Bibliography}{}% 55
-\BOOKMARK [0][-]{chapter.12}{12 Appendix}{}% 56
-\BOOKMARK [1][-]{section.12.1}{12.1 Data Tables}{chapter.12}% 57
-\BOOKMARK [2][-]{subsection.12.1.1}{12.1.1 Measuring Method Test Results}{section.12.1}% 58
-\BOOKMARK [2][-]{subsection.12.1.2}{12.1.2 Motor Speed Test Results}{section.12.1}% 59
-\BOOKMARK [1][-]{section.12.2}{12.2 Appendix code}{chapter.12}% 60
-\BOOKMARK [2][-]{subsection.12.2.1}{12.2.1 Ultrasonic Sensor Code}{section.12.2}% 61
+\BOOKMARK [2][-]{subsection.3.1.7}{3.1.7 Ultrasonic Sensor}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.8}{3.1.8 Battery}{section.3.1}% 19
+\BOOKMARK [2][-]{subsection.3.1.9}{3.1.9 Drone Frame}{section.3.1}% 20
+\BOOKMARK [1][-]{section.3.2}{3.2 Prototype Measurements}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{4 Quadcopter Model}{}% 22
+\BOOKMARK [1][-]{section.4.1}{4.1 Quaternions and Euler angles}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.2}{4.2 Quaternions Representation}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.3}{4.3 Euler Representation}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{5 Actuators}{}% 26
+\BOOKMARK [1][-]{section.5.1}{5.1 Propeller model}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{5.2 Motor model}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{5.3 Electronic Speed Controllers}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Calibration and Programming}{section.5.3}% 30
+\BOOKMARK [1][-]{section.5.4}{5.4 Ardupilot and Motor Identification}{chapter.5}% 31
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 APM Frequency}{section.5.4}% 32
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Expected and Real Motor Performance}{section.5.4}% 33
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Measuring Motor Speed}{section.5.4}% 34
+\BOOKMARK [2][-]{subsection.5.4.4}{5.4.4 Measuring Speed in Desired Range}{section.5.4}% 35
+\BOOKMARK [2][-]{subsection.5.4.5}{5.4.5 Operating Range}{section.5.4}% 36
+\BOOKMARK [2][-]{subsection.5.4.6}{5.4.6 Measuring Motor Coefficients}{section.5.4}% 37
+\BOOKMARK [0][-]{chapter.6}{6 Sensors}{}% 38
+\BOOKMARK [1][-]{section.6.1}{6.1 Ultrasonic Sensor}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.2}{6.2 Accelerometer}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.3}{6.3 Gyroscope}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.4}{6.4 Programming}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.5}{6.5 Filtering sensor data}{chapter.6}% 43
+\BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 44
+\BOOKMARK [1][-]{section.7.1}{7.1 Nonlinear state space representation}{chapter.7}% 45
+\BOOKMARK [1][-]{section.7.2}{7.2 Linear state space representation}{chapter.7}% 46
+\BOOKMARK [0][-]{chapter.8}{8 System Simulation}{}% 47
+\BOOKMARK [1][-]{section.8.1}{8.1 Implementation}{chapter.8}% 48
+\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Motors}{section.8.1}% 49
+\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Model Simulation}{section.8.1}% 50
+\BOOKMARK [0][-]{chapter.9}{9 Control Design}{}% 51
+\BOOKMARK [0][-]{chapter.10}{10 Discussion}{}% 52
+\BOOKMARK [1][-]{section.10.1}{10.1 Sensor Filters}{chapter.10}% 53
+\BOOKMARK [1][-]{section.10.2}{10.2 Validity of tests}{chapter.10}% 54
+\BOOKMARK [0][-]{chapter.11}{11 Conclusion}{}% 55
+\BOOKMARK [0][-]{chapter*.49}{Bibliography}{}% 56
+\BOOKMARK [0][-]{chapter.12}{12 Appendix}{}% 57
+\BOOKMARK [1][-]{section.12.1}{12.1 Data Tables}{chapter.12}% 58
+\BOOKMARK [2][-]{subsection.12.1.1}{12.1.1 Measuring Method Test Results}{section.12.1}% 59
+\BOOKMARK [2][-]{subsection.12.1.2}{12.1.2 Motor Speed Test Results}{section.12.1}% 60
+\BOOKMARK [1][-]{section.12.2}{12.2 Appendix code}{chapter.12}% 61
+\BOOKMARK [2][-]{subsection.12.2.1}{12.2.1 Ultrasonic Sensor Code}{section.12.2}% 62
