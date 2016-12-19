@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.30)  19 DEC 2016 17:21
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.1)  19 DEC 2016 16:52
->>>>>>> origin/master
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.1)  19 DEC 2016 17:22
->>>>>>> origin/master
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.1)  19 DEC 2016 17:28
 entering extended mode
 **./P5.tex
 (P5.tex
@@ -1290,13 +1282,8 @@ LaTeX Info: Redefining \nameref on input line 5.
 \@outlinefile=\write4
 \openout4 = `P5.out'.
 
-<<<<<<< HEAD
- (./sections/frontpage.tex
-<images/aau_logo_en.pdf, id=260, 115.43124pt x 77.28876pt>
-=======
  (sections/frontpage.tex
-<images/aau_logo_en.pdf, id=258, 115.43124pt x 77.28876pt>
->>>>>>> origin/master
+<images/aau_logo_en.pdf, id=262, 115.43124pt x 77.28876pt>
 File: images/aau_logo_en.pdf Graphic file (type pdf)
 
 <use images/aau_logo_en.pdf>
@@ -1430,12 +1417,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 Chapter 2.
-<<<<<<< HEAD
-(./sections/general.tex
-<images/frames1.png, id=387, 958.58125pt x 280.04625pt>
-=======
-(sections/general.tex <images/frames1.png, id=384, 958.58125pt x 280.04625pt>
->>>>>>> origin/master
+(sections/general.tex <images/frames1.png, id=389, 958.58125pt x 280.04625pt>
 File: images/frames1.png Graphic file (type png)
 
 <use images/frames1.png>
@@ -1445,11 +1427,7 @@ Package pdftex.def Info: images/frames1.png used on input line 8.
 
 
  <./images/frames1.png>]
-<<<<<<< HEAD
-<images/forces.png, id=404, 2007.5pt x 1294.8375pt>
-=======
-<images/forces.png, id=401, 2007.5pt x 1294.8375pt>
->>>>>>> origin/master
+<images/forces.png, id=406, 2007.5pt x 1294.8375pt>
 File: images/forces.png Graphic file (type png)
  <use images/forces.png>
 Package pdftex.def Info: images/forces.png used on input line 45.
@@ -1475,11 +1453,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<<<<<<< HEAD
-[6] <images/rollpitchyaw.png, id=428, 695.59875pt x 488.82625pt>
-=======
-[6] <images/rollpitchyaw.png, id=425, 695.59875pt x 488.82625pt>
->>>>>>> origin/master
+[6] <images/rollpitchyaw.png, id=430, 695.59875pt x 488.82625pt>
 File: images/rollpitchyaw.png Graphic file (type png)
 
 <use images/rollpitchyaw.png>
@@ -1501,11 +1475,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 Chapter 3.
-<<<<<<< HEAD
-(./sections/psetup.tex <images/motor.jpg, id=447, 425.33907pt x 311.66437pt>
-=======
-(sections/psetup.tex <images/motor.jpg, id=444, 425.33907pt x 311.66437pt>
->>>>>>> origin/master
+(sections/psetup.tex <images/motor.jpg, id=449, 425.33907pt x 311.66437pt>
 File: images/motor.jpg Graphic file (type jpg)
 
 <use images/motor.jpg>
@@ -1515,21 +1485,13 @@ Package pdftex.def Info: images/motor.jpg used on input line 12.
 
 
  <./images/motor.jpg>]
-<<<<<<< HEAD
-<images/propeller.jpg, id=458, 425.33907pt x 311.66437pt>
-=======
-<images/propeller.jpg, id=455, 425.33907pt x 311.66437pt>
->>>>>>> origin/master
+<images/propeller.jpg, id=460, 425.33907pt x 311.66437pt>
 File: images/propeller.jpg Graphic file (type jpg)
 
 <use images/propeller.jpg>
 Package pdftex.def Info: images/propeller.jpg used on input line 22.
 (pdftex.def)             Requested size: 213.39568pt x 156.36443pt.
-<<<<<<< HEAD
- <images/esc.jpg, id=463, 425.33907pt x 311.66437pt>
-=======
- <images/esc.jpg, id=460, 425.33907pt x 311.66437pt>
->>>>>>> origin/master
+ <images/esc.jpg, id=465, 425.33907pt x 311.66437pt>
 File: images/esc.jpg Graphic file (type jpg)
 
 <use images/esc.jpg>
@@ -1543,22 +1505,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [10 <./images/propeller.jpg> <./images/esc.jpg>]
-<<<<<<< HEAD
-<images/ardupilot.jpg, id=475, 368.87813pt x 261.97874pt>
-=======
-<images/ardupilot.jpg, id=472, 368.87813pt x 261.97874pt>
->>>>>>> origin/master
+<images/ardupilot.jpg, id=477, 368.87813pt x 261.97874pt>
 File: images/ardupilot.jpg Graphic file (type jpg)
 
 <use images/ardupilot.jpg>
 Package pdftex.def Info: images/ardupilot.jpg used on input line 42.
 (pdftex.def)             Requested size: 213.39568pt x 151.55202pt.
 
-<<<<<<< HEAD
-<images/HCSR04.jpg, id=478, 93.34875pt x 71.36662pt>
-=======
-<images/HCSR04.jpg, id=475, 93.34875pt x 71.36662pt>
->>>>>>> origin/master
+<images/HCSR04.jpg, id=480, 93.34875pt x 71.36662pt>
 File: images/HCSR04.jpg Graphic file (type jpg)
  <use images/HCSR04.jpg>
 Package pdftex.def Info: images/HCSR04.jpg used on input line 56.
@@ -1571,21 +1525,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <./images/ardupilot.jpg>]
-<<<<<<< HEAD
-<images/battery.jpg, id=490, 289.08pt x 199.4652pt>
-=======
-<images/battery.jpg, id=486, 289.08pt x 199.4652pt>
->>>>>>> origin/master
+<images/battery.jpg, id=491, 289.08pt x 199.4652pt>
 File: images/battery.jpg Graphic file (type jpg)
  <use images/battery.jpg>
 Package pdftex.def Info: images/battery.jpg used on input line 66.
 (pdftex.def)             Requested size: 213.39568pt x 147.24278pt.
 
-<<<<<<< HEAD
-<images/fullDrone.jpg, id=494, 167.04694pt x 125.33682pt>
-=======
-<images/fullDrone.jpg, id=490, 167.04694pt x 125.33682pt>
->>>>>>> origin/master
+<images/fullDrone.jpg, id=495, 167.04694pt x 125.33682pt>
 File: images/fullDrone.jpg Graphic file (type jpg)
 
 <use images/fullDrone.jpg>
@@ -1599,11 +1545,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [12 <./images/HCSR04.jpg> <./images/battery.jpg>]
-<<<<<<< HEAD
-<images/Wiring2.png, id=505, 620.3175pt x 377.91188pt>
-=======
-<images/Wiring2.png, id=501, 620.3175pt x 377.91188pt>
->>>>>>> origin/master
+<images/Wiring2.png, id=506, 620.3175pt x 377.91188pt>
 File: images/Wiring2.png Graphic file (type png)
 
 <use images/Wiring2.png>
@@ -1617,11 +1559,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [13 <./images/fullDrone.jpg> <./images/Wiring2.png (PNG copy)>]
-<<<<<<< HEAD
-<images/weightPlot.png, id=512, 819.06pt x 349.305pt>
-=======
-<images/weightPlot.png, id=508, 819.06pt x 349.305pt>
->>>>>>> origin/master
+<images/weightPlot.png, id=513, 819.06pt x 349.305pt>
 File: images/weightPlot.png Graphic file (type png)
 
 <use images/weightPlot.png>
@@ -1636,12 +1574,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14 <./images/weightPlot.png>]
 Chapter 4.
-<<<<<<< HEAD
-(./sections/quadm.tex
-<images/blockdiagram.png, id=521, 672.5125pt x 212.795pt>
-=======
-(sections/quadm.tex <images/blockdiagram.png, id=517, 672.5125pt x 212.795pt>
->>>>>>> origin/master
+(sections/quadm.tex <images/blockdiagram.png, id=522, 672.5125pt x 212.795pt>
 File: images/blockdiagram.png Graphic file (type png)
 
 <use images/blockdiagram.png>
@@ -1673,11 +1606,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 Chapter 5.
-<<<<<<< HEAD
-(./sections/sensors.tex <images/sonicPlot.png, id=562, 856.70062pt x 457.71pt>
-=======
-(sections/sensors.tex <images/sonicPlot.png, id=558, 856.70062pt x 457.71pt>
->>>>>>> origin/master
+(sections/sensors.tex <images/sonicPlot.png, id=563, 856.70062pt x 457.71pt>
 File: images/sonicPlot.png Graphic file (type png)
 
 <use images/sonicPlot.png>
@@ -1687,11 +1616,7 @@ Package pdftex.def Info: images/sonicPlot.png used on input line 9.
 
 
 ]
-<<<<<<< HEAD
-<images/accangle.png, id=573, 666.49pt x 613.29124pt>
-=======
-<images/accangle.png, id=569, 666.49pt x 613.29124pt>
->>>>>>> origin/master
+<images/accangle.png, id=574, 666.49pt x 613.29124pt>
 File: images/accangle.png Graphic file (type png)
 
 <use images/accangle.png>
@@ -1763,11 +1688,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<<<<<<< HEAD
-[25] <images/accgy.png, id=760, 658.96187pt x 666.99188pt>
-=======
-[25] <images/accgy.png, id=754, 658.96187pt x 666.99188pt>
->>>>>>> origin/master
+[25] <images/accgy.png, id=759, 658.96187pt x 666.99188pt>
 File: images/accgy.png Graphic file (type png)
 
 <use images/accgy.png>
@@ -1781,22 +1702,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [26 <./images/accgy.png>]
-<<<<<<< HEAD
-<images/MPUXPlot.png, id=768, 851.43094pt x 438.8897pt>
-=======
-<images/MPUXPlot.png, id=762, 851.43094pt x 438.8897pt>
->>>>>>> origin/master
+<images/MPUXPlot.png, id=767, 851.43094pt x 438.8897pt>
 File: images/MPUXPlot.png Graphic file (type png)
 
 <use images/MPUXPlot.png>
 Package pdftex.def Info: images/MPUXPlot.png used on input line 83.
 (pdftex.def)             Requested size: 426.79135pt x 220.00015pt.
 
-<<<<<<< HEAD
-<images/spectrogram.png, id=770, 879.285pt x 464.4853pt>
-=======
-<images/spectrogram.png, id=764, 879.285pt x 464.4853pt>
->>>>>>> origin/master
+<images/spectrogram.png, id=769, 879.285pt x 464.4853pt>
 File: images/spectrogram.png Graphic file (type png)
 
 <use images/spectrogram.png>
@@ -1817,11 +1730,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [28 <./images/spectrogram.png>]
-<<<<<<< HEAD
-<images/accelFilter.png, id=792, 1116.17pt x 1201.48875pt>
-=======
-<images/accelFilter.png, id=786, 1116.17pt x 1201.48875pt>
->>>>>>> origin/master
+<images/accelFilter.png, id=791, 1116.17pt x 1201.48875pt>
 File: images/accelFilter.png Graphic file (type png)
 
 <use images/accelFilter.png>
@@ -1838,12 +1747,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
  <./images/accelFilter.png (PNG copy)>]
 Chapter 6.
-<<<<<<< HEAD
-(./sections/actuators.tex
-<images/ablockd.png, id=799, 1037.8775pt x 182.6825pt>
-=======
-(sections/actuators.tex <images/ablockd.png, id=793, 1037.8775pt x 182.6825pt>
->>>>>>> origin/master
+(sections/actuators.tex <images/ablockd.png, id=798, 1037.8775pt x 182.6825pt>
 File: images/ablockd.png Graphic file (type png)
 
 <use images/ablockd.png>
@@ -1859,11 +1763,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<<<<<<< HEAD
-[31] <images/dc.png, id=822, 198.9834pt x 130.086pt>
-=======
-[31] <images/dc.png, id=816, 198.9834pt x 130.086pt>
->>>>>>> origin/master
+[31] <images/dc.png, id=821, 198.9834pt x 130.086pt>
 File: images/dc.png Graphic file (type png)
  <use images/dc.png>
 Package pdftex.def Info: images/dc.png used on input line 78.
@@ -1888,11 +1788,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<<<<<<< HEAD
-[33]) <images/oscillo1.png, id=856, 481.8pt x 234.8775pt>
-=======
-[33]) <images/oscillo1.png, id=849, 481.8pt x 234.8775pt>
->>>>>>> origin/master
+[33]) <images/oscillo1.png, id=854, 481.8pt x 234.8775pt>
 File: images/oscillo1.png Graphic file (type png)
 
 <use images/oscillo1.png>
@@ -1905,22 +1801,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<<<<<<< HEAD
-[34] <images/oscillo2.png, id=871, 481.8pt x 234.8775pt>
-=======
-[34] <images/oscillo2.png, id=864, 481.8pt x 234.8775pt>
->>>>>>> origin/master
+[34] <images/oscillo2.png, id=869, 481.8pt x 234.8775pt>
 File: images/oscillo2.png Graphic file (type png)
 
 <use images/oscillo2.png>
 Package pdftex.def Info: images/oscillo2.png used on input line 137.
 (pdftex.def)             Requested size: 341.43437pt x 166.45238pt.
 
-<<<<<<< HEAD
-<images/oscillo3.png, id=873, 964.60374pt x 235.88126pt>
-=======
-<images/oscillo3.png, id=866, 964.60374pt x 235.88126pt>
->>>>>>> origin/master
+<images/oscillo3.png, id=871, 964.60374pt x 235.88126pt>
 File: images/oscillo3.png Graphic file (type png)
 
 <use images/oscillo3.png>
@@ -1935,21 +1823,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [35 <./images/oscillo1.png (PNG copy)> <./images/oscillo2.png (PNG copy)> <./im
 ages/oscillo3.png (PNG copy)>]
-<<<<<<< HEAD
-<images/KvPlot.png, id=883, 420.82219pt x 316.93407pt>
-=======
-<images/KvPlot.png, id=876, 420.82219pt x 316.93407pt>
->>>>>>> origin/master
+<images/KvPlot.png, id=881, 420.82219pt x 316.93407pt>
 File: images/KvPlot.png Graphic file (type png)
  <use images/KvPlot.png>
 Package pdftex.def Info: images/KvPlot.png used on input line 161.
 (pdftex.def)             Requested size: 341.43437pt x 257.14558pt.
 
-<<<<<<< HEAD
-<images/tachometer.jpg, id=885, 167.04694pt x 125.33682pt>
-=======
-<images/tachometer.jpg, id=878, 167.04694pt x 125.33682pt>
->>>>>>> origin/master
+<images/tachometer.jpg, id=883, 167.04694pt x 125.33682pt>
 File: images/tachometer.jpg Graphic file (type jpg)
 
 <use images/tachometer.jpg>
@@ -1970,11 +1850,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [37 <./images/tachometer.jpg>]
-<<<<<<< HEAD
-<images/rpm66.jpg, id=908, 1031.855pt x 780.9175pt>
-=======
-<images/rpm66.jpg, id=901, 1031.855pt x 780.9175pt>
->>>>>>> origin/master
+<images/rpm66.jpg, id=906, 1031.855pt x 780.9175pt>
 File: images/rpm66.jpg Graphic file (type jpg)
  <use images/rpm66.jpg>
 Package pdftex.def Info: images/rpm66.jpg used on input line 199.
@@ -1987,21 +1863,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [38 <./images/rpm66.jpg>]
-<<<<<<< HEAD
-<images/radsPlots.png, id=919, 860.46469pt x 456.95718pt>
-=======
-<images/radsPlots.png, id=912, 860.46469pt x 456.95718pt>
->>>>>>> origin/master
+<images/radsPlots.png, id=917, 860.46469pt x 456.95718pt>
 File: images/radsPlots.png Graphic file (type png)
 
 <use images/radsPlots.png>
 Package pdftex.def Info: images/radsPlots.png used on input line 218.
 (pdftex.def)             Requested size: 426.79135pt x 226.6512pt.
-<<<<<<< HEAD
- <images/polyfits.png, id=921, 867.24pt x 457.71pt>
-=======
- <images/polyfits.png, id=914, 867.24pt x 457.71pt>
->>>>>>> origin/master
+ <images/polyfits.png, id=919, 867.24pt x 457.71pt>
 File: images/polyfits.png Graphic file (type png)
 
 <use images/polyfits.png>
@@ -2015,11 +1883,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [39 <./images/radsPlots.png>]
-<<<<<<< HEAD
-<images/forceMeasurements.png, id=931, 862.72313pt x 442.65375pt>
-=======
-<images/forceMeasurements.png, id=924, 862.72313pt x 442.65375pt>
->>>>>>> origin/master
+<images/forceMeasurements.png, id=929, 862.72313pt x 442.65375pt>
 File: images/forceMeasurements.png Graphic file (type png)
 
 <use images/forceMeasurements.png>
@@ -2040,11 +1904,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [41 <./images/forceMeasurements.png>]
-<<<<<<< HEAD
-<images/timeconstant.png, id=955, 1325.95375pt x 731.73375pt>
-=======
-<images/timeconstant.png, id=947, 1325.95375pt x 731.73375pt>
->>>>>>> origin/master
+<images/timeconstant.png, id=952, 1325.95375pt x 731.73375pt>
 File: images/timeconstant.png Graphic file (type png)
 
 <use images/timeconstant.png>
@@ -2085,13 +1945,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [46]
 Chapter 8.
-<<<<<<< HEAD
-(./sections/system.tex
-<images/simulinkmotor.png, id=1002, 667.49374pt x 421.575pt>
-=======
 (sections/system.tex
-<images/simulinkmotor.png, id=997, 667.49374pt x 421.575pt>
->>>>>>> origin/master
+<images/simulinkmotor.png, id=1002, 667.49374pt x 421.575pt>
 File: images/simulinkmotor.png Graphic file (type png)
 
 <use images/simulinkmotor.png>
@@ -2181,24 +2036,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [52]
 Chapter 9.
-<<<<<<< HEAD
-(./sections/control.tex
-<images/closedloopGx.png, id=1059, 1041.8925pt x 446.66875pt>
-=======
 (sections/control.tex
-<images/closedloopGx.png, id=1054, 1041.8925pt x 446.66875pt>
->>>>>>> origin/master
+<images/closedloopGx.png, id=1059, 1041.8925pt x 446.66875pt>
 File: images/closedloopGx.png Graphic file (type png)
 
 <use images/closedloopGx.png>
 Package pdftex.def Info: images/closedloopGx.png used on input line 5.
 (pdftex.def)             Requested size: 426.79135pt x 182.97179pt.
 
-<<<<<<< HEAD
 <images/closedloopGxstep.png, id=1062, 1094.0875pt x 677.53125pt>
-=======
-<images/closedloopGxstep.png, id=1057, 1094.0875pt x 677.53125pt>
->>>>>>> origin/master
 File: images/closedloopGxstep.png Graphic file (type png)
 
 <use images/closedloopGxstep.png>
@@ -2208,22 +2054,14 @@ Package pdftex.def Info: images/closedloopGxstep.png used on input line 14.
 
 
  <./images/closedloopGx.png>]
-<<<<<<< HEAD
 <images/closedloopGystep.png, id=1072, 1089.06876pt x 676.5275pt>
-=======
-<images/closedloopGystep.png, id=1067, 1089.06876pt x 676.5275pt>
->>>>>>> origin/master
 File: images/closedloopGystep.png Graphic file (type png)
 
 <use images/closedloopGystep.png>
 Package pdftex.def Info: images/closedloopGystep.png used on input line 21.
 (pdftex.def)             Requested size: 426.79135pt x 265.11438pt.
 
-<<<<<<< HEAD
 <images/closedloopGzstep.png, id=1073, 1090.0725pt x 670.505pt>
-=======
-<images/closedloopGzstep.png, id=1068, 1090.0725pt x 670.505pt>
->>>>>>> origin/master
 File: images/closedloopGzstep.png Graphic file (type png)
 
 <use images/closedloopGzstep.png>
@@ -2237,11 +2075,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [54 <./images/closedloopGxstep.png> <./images/closedloopGystep.png>]
-<<<<<<< HEAD
 <images/closedloopNystep.png, id=1081, 1092.08pt x 675.52374pt>
-=======
-<images/closedloopNystep.png, id=1076, 1092.08pt x 675.52374pt>
->>>>>>> origin/master
 File: images/closedloopNystep.png Graphic file (type png)
 
 <use images/closedloopNystep.png>
@@ -2267,16 +2101,12 @@ Chapter 10.
 
 
 ]
-<images/newFilter.png, id=1101, 847.66687pt x 470.50781pt>
+<images/newFilter.png, id=1100, 847.66687pt x 470.50781pt>
 File: images/newFilter.png Graphic file (type png)
 
 <use images/newFilter.png>
 Package pdftex.def Info: images/newFilter.png used on input line 15.
-<<<<<<< HEAD
-(pdftex.def)             Requested size: 213.39568pt x 118.4451pt.
-=======
 (pdftex.def)             Requested size: 426.79135pt x 236.8974pt.
->>>>>>> origin/master
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2293,11 +2123,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [59]
 Chapter 11.
-<<<<<<< HEAD
-(./sections/conclusion.tex) [60
-=======
 (sections/conclusion.tex) [60
->>>>>>> origin/master
 
 
 ] (P5.bbl
@@ -2354,14 +2180,10 @@ Underfull \hbox (badness 1418) in paragraph at lines 68--72
 [61
 
 
-<<<<<<< HEAD
-[61
-=======
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 79--82
 []\T1/lmr/m/n/12 Vfds how do i cal-cu-late rpm for three phase in-duc-
  []
->>>>>>> origin/master
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 79--82
@@ -2384,11 +2206,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [62]
 Chapter 12.
-<<<<<<< HEAD
-(./sections/appendix.tex [63
-=======
 (sections/appendix.tex [63
->>>>>>> origin/master
 
 ]
 
@@ -2397,11 +2215,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-<<<<<<< HEAD
-[64] (./Arduino/ultrasonic/ultrasonic.ino)
-=======
 [64] (Arduino/ultrasonic/ultrasonic.ino)
->>>>>>> origin/master
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2418,67 +2232,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
 (P5.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
-<<<<<<< HEAD
-
-
-Package rerunfilecheck Warning: File `P5.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `P5.out':
-(rerunfilecheck)             Before: 9F8D23435C1ACBD205EC31EF4994F88B;4361
-(rerunfilecheck)             After:  E38663CC20A098D6BF98F3D2EA9897E3;4429.
-=======
 Package rerunfilecheck Info: File `P5.out' has not changed.
-(rerunfilecheck)             Checksum: 9E013B65F834808C52B249C04CB205FC;4424.
+(rerunfilecheck)             Checksum: DBE0673F90DCD5A5210681E4CA6AA3B1;4493.
 
->>>>>>> origin/master
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 24546 strings out of 493089
- 429911 string characters out of 6134842
- 777262 words of memory out of 5000000
- 26929 multiletter control sequences out of 15000+600000
- 101960 words of font info for 77 fonts, out of 8000000 for 9000
- 1146 hyphenation exceptions out of 8191
- 64i,14n,100p,1246b,1969s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
-15/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-d
-ist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/
-enc/dvips/lm/lm-rm.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx12.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
-/public/lm/lmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
-lmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
-m/lmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmssbx10
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on P5.pdf (73 pages, 3354781 bytes).
-PDF statistics:
- 1360 PDF objects out of 1440 (max. 8388607)
- 1167 compressed objects within 12 object streams
- 450 named destinations out of 1000 (max. 500000)
-=======
- 24682 strings out of 493634
- 429984 string characters out of 3143748
+ 24684 strings out of 493634
+ 430010 string characters out of 3143748
  779491 words of memory out of 3000000
- 26958 multiletter control sequences out of 15000+200000
+ 26959 multiletter control sequences out of 15000+200000
  119609 words of font info for 83 fonts, out of 3000000 for 9000
  1030 hyphenation exceptions out of 8191
  64i,14n,100p,1249b,1969s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2503,10 +2269,9 @@ eX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 am Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmtt12.pfb>
-Output written on P5.pdf (73 pages, 3459718 bytes).
+Output written on P5.pdf (73 pages, 3461602 bytes).
 PDF statistics:
- 1353 PDF objects out of 1440 (max. 8388607)
- 449 named destinations out of 1000 (max. 500000)
->>>>>>> origin/master
- 747 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1358 PDF objects out of 1440 (max. 8388607)
+ 450 named destinations out of 1000 (max. 500000)
+ 755 words of extra memory for PDF output out of 10000 (max. 10000000)
 
