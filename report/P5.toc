@@ -23,6 +23,7 @@
 \contentsline {section}{\numberline {4.1}Quaternions and Euler angles}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Quaternions Representation}{17}{section.4.2}
 \contentsline {section}{\numberline {4.3}Euler Representation}{18}{section.4.3}
+<<<<<<< Updated upstream
 \contentsline {chapter}{\numberline {5}Actuators}{19}{chapter.5}
 \contentsline {section}{\numberline {5.1}Propeller model}{19}{section.5.1}
 \contentsline {section}{\numberline {5.2}Motor model}{21}{section.5.2}
@@ -60,3 +61,42 @@
 \contentsline {subsection}{\numberline {12.1.2}Motor Speed Test Results}{61}{subsection.12.1.2}
 \contentsline {section}{\numberline {12.2}Appendix code}{62}{section.12.2}
 \contentsline {subsection}{\numberline {12.2.1}Ultrasonic Sensor Code}{62}{subsection.12.2.1}
+=======
+\contentsline {chapter}{\numberline {5}Sensors}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Ultrasonic Sensor}{19}{section.5.1}
+\contentsline {section}{\numberline {5.2}Accelerometer}{20}{section.5.2}
+\contentsline {section}{\numberline {5.3}Gyroscope}{22}{section.5.3}
+\contentsline {section}{\numberline {5.4}Programming}{22}{section.5.4}
+\contentsline {section}{\numberline {5.5}Filtering sensor data}{26}{section.5.5}
+\contentsline {chapter}{\numberline {6}Actuators}{29}{chapter.6}
+\contentsline {section}{\numberline {6.1}Propeller model}{29}{section.6.1}
+\contentsline {section}{\numberline {6.2}Motor model}{31}{section.6.2}
+\contentsline {section}{\numberline {6.3}Electronic Speed Controllers}{32}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Calibration and Programming}{32}{subsection.6.3.1}
+\contentsline {section}{\numberline {6.4}Ardupilot and Motor Identification}{33}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}APM Frequency}{33}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Expected and Real Motor Performance}{35}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Measuring Motor Speed}{36}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.4}Measuring Speed in Desired Range}{38}{subsection.6.4.4}
+\contentsline {subsection}{\numberline {6.4.5}Operating Range}{39}{subsection.6.4.5}
+\contentsline {subsection}{\numberline {6.4.6}Measuring Motor Coefficients}{40}{subsection.6.4.6}
+\contentsline {chapter}{\numberline {7}State space model}{42}{chapter.7}
+\contentsline {section}{\numberline {7.1}Nonlinear state space representation}{42}{section.7.1}
+\contentsline {section}{\numberline {7.2}Linear state space representation}{43}{section.7.2}
+\contentsline {chapter}{\numberline {8}System Simulation}{46}{chapter.8}
+\contentsline {section}{\numberline {8.1}Implementation}{46}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Motors}{46}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Model Simulation}{48}{subsection.8.1.2}
+\contentsline {chapter}{\numberline {9}Control Design}{51}{chapter.9}
+\contentsline {chapter}{\numberline {10}Discussion}{54}{chapter.10}
+\contentsline {section}{\numberline {10.1}Sensor Filters}{54}{section.10.1}
+\contentsline {section}{\numberline {10.2}Validity of tests}{55}{section.10.2}
+\contentsline {chapter}{\numberline {11}Conclusion}{56}{chapter.11}
+\contentsline {chapter}{Bibliography}{57}{chapter*.49}
+\contentsline {chapter}{\numberline {12}Appendix}{59}{chapter.12}
+\contentsline {section}{\numberline {12.1}Data Tables}{59}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Measuring Method Test Results}{59}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Motor Speed Test Results}{60}{subsection.12.1.2}
+\contentsline {section}{\numberline {12.2}Appendix code}{61}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Ultrasonic Sensor Code}{61}{subsection.12.2.1}
+>>>>>>> Stashed changes
