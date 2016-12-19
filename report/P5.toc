@@ -53,11 +53,12 @@
 \contentsline {section}{\numberline {10.1}Ultrasonic Sensors}{57}{section.10.1}
 \contentsline {section}{\numberline {10.2}Sensor Filters}{57}{section.10.2}
 \contentsline {section}{\numberline {10.3}Validity of tests}{58}{section.10.3}
-\contentsline {chapter}{\numberline {11}Conclusion}{59}{chapter.11}
-\contentsline {chapter}{Bibliography}{60}{chapter*.50}
-\contentsline {chapter}{\numberline {12}Appendix}{62}{chapter.12}
-\contentsline {section}{\numberline {12.1}Data Tables}{62}{section.12.1}
-\contentsline {subsection}{\numberline {12.1.1}Measuring Method Test Results}{62}{subsection.12.1.1}
-\contentsline {subsection}{\numberline {12.1.2}Motor Speed Test Results}{63}{subsection.12.1.2}
-\contentsline {section}{\numberline {12.2}Appendix code}{64}{section.12.2}
-\contentsline {subsection}{\numberline {12.2.1}Ultrasonic Sensor Code}{64}{subsection.12.2.1}
+\contentsline {section}{\numberline {10.4}Implementation}{59}{section.10.4}
+\contentsline {chapter}{\numberline {11}Conclusion}{60}{chapter.11}
+\contentsline {chapter}{Bibliography}{61}{chapter*.50}
+\contentsline {chapter}{\numberline {12}Appendix}{63}{chapter.12}
+\contentsline {section}{\numberline {12.1}Data Tables}{63}{section.12.1}
+\contentsline {subsection}{\numberline {12.1.1}Measuring Method Test Results}{63}{subsection.12.1.1}
+\contentsline {subsection}{\numberline {12.1.2}Motor Speed Test Results}{64}{subsection.12.1.2}
+\contentsline {section}{\numberline {12.2}Appendix code}{65}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Ultrasonic Sensor Code}{65}{subsection.12.2.1}
