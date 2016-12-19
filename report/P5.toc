@@ -50,8 +50,9 @@
 \contentsline {subsection}{\numberline {8.1.2}Model Simulation}{48}{subsection.8.1.2}
 \contentsline {chapter}{\numberline {9}Control Design}{53}{chapter.9}
 \contentsline {chapter}{\numberline {10}Discussion}{57}{chapter.10}
-\contentsline {section}{\numberline {10.1}Sensor Filters}{57}{section.10.1}
-\contentsline {section}{\numberline {10.2}Validity of tests}{58}{section.10.2}
+\contentsline {section}{\numberline {10.1}Ultrasonic Sensors}{57}{section.10.1}
+\contentsline {section}{\numberline {10.2}Sensor Filters}{57}{section.10.2}
+\contentsline {section}{\numberline {10.3}Validity of tests}{58}{section.10.3}
 \contentsline {chapter}{\numberline {11}Conclusion}{59}{chapter.11}
 \contentsline {chapter}{Bibliography}{60}{chapter*.50}
 \contentsline {chapter}{\numberline {12}Appendix}{62}{chapter.12}
