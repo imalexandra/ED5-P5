@@ -1,9 +1,9 @@
 This chapter will, step by step, introduce the sensors, describe how they function and define the methods used to extract the data from them. The ultrasonic sensor has a pretty straightforward functionality - a signal is sent out from the $trigger$ pin, while the $echo$ pin catches the signal coming back and estimates the distance. The accelerometer and gyroscope that we are using are both part of the built-in IMU of the Ardupilot, fitted on 6-axis MPU6000 14-bit chip. The accelerometer works by detecting a force that is actually the opposite of the acceleration vector. This force is not always caused by acceleration, but it can be. It just happens that acceleration causes an inertial force that is captured by the force detection mechanism of the accelerometer. The gyroscope measures the rotation around one of the axes.
 
 \section{Ultrasonic Sensor}
-The HC-SR04 datasheet\cite{HCDatasheet} states that the sensor can measure distances between 2 and 400$cm$, with 3$mm$ accuracy. The trigger pin, when commanded to, orders the module to send out an 8 cycle sonic burst at 40$kHz$ frequency. Then, if any of the signals return, the distance is calculated. The signal travel time is measured based on the time the module stayed on high level. While distance travelled $d$ is equal to velocity of sound $v (340m/s) \times t$ - the time, it should be noted that the signal travels both from and back to the sensor. Therefore, the whole equation should be divided by 2, in order to find the real distance between the sensor and the object.
+The HC-SR04 datasheet\cite{HCDatasheet} states that the sensor can measure distances between 2 and 400 $cm$, with 3 $mm$ accuracy. The trigger pin, when commanded to, orders the module to send out an 8 cycle sonic burst at 40 $kHz$ frequency. Then, if any of the signals return, the distance is calculated. The signal travel time is measured based on the time the module stayed on high level. While distance travelled $d$ is equal to velocity of sound $v \times t$ - the time (where $v = 340m/s$), it should be noted that the signal travels both from and back to the sensor. Therefore, the whole equation should be divided by 2, in order to find the real distance between the sensor and the object.
 Utilizing the $NewPing$ library for ultrasonic sensors, a simple code can be made, found in appendix Listing \ref{sonicCode}.
-In order to determine the performance of the sensor, it was placed in front of a stationary object. The code ran for 30 seconds and produced 20262 readings - resulting in frequency of $675Hz$. The output in $cm$ was plotted against time in Matlab, producing Figure \ref{sonicPlot}.
+In order to determine the performance of the sensor, it was placed in front of a stationary object. The code ran for 30 seconds and produced 20262 readings - resulting in frequency of 675 $Hz$. The output in $cm$ was plotted against time in Matlab, producing Figure \ref{sonicPlot}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/sonicPlot.png}
@@ -12,29 +12,29 @@ In order to determine the performance of the sensor, it was placed in front of a
 \end{figure} 
 It is evident, that although the readings are not completely constant, the error is very minimal and no filter is needed.
 
-\section{Accelerometer}
-According to the MPU-6000 datasheet\cite{MPU6000}, the raw accelerometer data can be converted into multiples of \textit{g} by dividing with a factor of 16384. However, we have computed the rotations around the axes by using an alternative method. We have first chosen a reference position, which is the typical orientation of a device with the x and y axis in the 0 \textit{g} field plane and the x axis in the 1 \textit{g} field. This is shown in figure REF, where $\theta$ is the angle between the horizon and the x-axis of the accelerometer, $\psi$ as the angle between the horizon and the y-axis of the accelerometer, and
-$\phi$ as the angle between the gravity vector and the z-axis. When in the initial position of \textit{0} g on the x- and y-axes and 1 \textit{g} on the z-axis, all calculated angles would be 0 degrees\cite{AccelCite1}.
+\section{Accelerometer}\label{accelEqs}
+According to the MPU-6000 datasheet\cite{MPU6000}, the raw accelerometer data can be converted into multiples of \textit{g} by dividing with a factor of 16384. However, we have computed the rotations around the axes by using an alternative method. We have first chosen a reference position, which is the typical orientation of a device with the x and y axis in the 0 \textit{g} field plane and the x axis in the 1 \textit{g} field. This is shown in Figure \ref{acc}, where $\theta$ is the angle between the horizon and the x-axis of the accelerometer, $\psi$ as the angle between the horizon and the y-axis of the accelerometer, and
+$\phi$ as the angle between the gravity vector and the z-axis. When in the initial position of \textit{0} g on the x and y-axes and 1 \textit{g} on the z-axis, all calculated angles would be 0$^{\circ}$.\cite{AccelCite1}
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/accangle.png}
-	\caption{Inclination Angles \cite{AccelCite1}}
+	\caption{Inclination Angles. \cite{AccelCite1}}
 	\label{acc}
 \end{figure} 
 
 Therefore, by using basic trigonometry, the formulas for the converted accelerometer data are:
 
 \begin{equation}	
- 	\theta=tan^{-1}(\frac{A_{X}}{\sqrt{A_{Y}^{2}+A_{Z}^{2}}})
+ 	\theta=tan^{-1}\left(\frac{A_{X}}{\sqrt{A_{Y}^{2}+A_{Z}^{2}}}\right)
  \end{equation}
  
  \begin{equation}	
- 	\psi=tan^{-1}(\frac{A_{Y}}{\sqrt{A_{X}^{2}+A_{Z}^{2}}})
+ 	\psi=tan^{-1}\left(\frac{A_{Y}}{\sqrt{A_{X}^{2}+A_{Z}^{2}}}\right)
  \end{equation}
  
  \begin{equation}	
- 	\phi=tan^{-1}(\frac{\sqrt{A_{X}^{2}+A_{Y}^{2}}}{A_{Z}})
+ 	\phi=tan^{-1}\left(\frac{\sqrt{A_{X}^{2}+A_{Y}^{2}}}{A_{Z}}\right)
  \end{equation}
  
 The inversion of the last equation is due to the initial position being a 1 \textit{g} field. If the horizon is desired as the reference for the z-axis, the operand can be inverted. A positive angle means that the corresponding positive axis of the accelerometer is pointed above the horizon, whereas a negative angle means that the axis is pointed below the horizon. Because the inverse tangent function and a ratio of accelerations is used, the benefits mentioned in the dual-axis example apply, namely that the effective incremental sensitivity is constant and that the angles can be accurately measured for all points around the unit sphere.
@@ -50,39 +50,34 @@ The MPU-6000 datasheet\cite{MPU6000} shows that dividing the raw gyroscope value
 \section{Programming}
 It is important to understand how the sensors can actually deliver us the data. Usually, they fall into two categories: analogue and digital. The one we are using is digital and it can be programmed using I2C, SPI or USART communication. We have decided on SPI and the setup code for it is shown below:
 
-\lstinputlisting[language=C++, firstline=31, lastline=41, caption={Setup}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=27, lastline=41, caption={SPI Configuration}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-As we can see, the setup ends by calling the \textit{ConfigureMPU6000()} function:
+As we can see, the $(setup)$ ends by calling the \textit{ConfigureMPU6000()} function:
 
-\lstinputlisting[language=C++, firstline=195, lastline=224, caption={Function to configure chip}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=181, lastline=210, caption={Chip Configuration}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-Firstly, we need to get the raw values from both accelerometer and gyroscope and that is done by accessing their registers. We have made separate functions, which can be seen in Code REFERENCE, that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. 
+Firstly, we need to get the raw values from both accelerometer and gyroscope and that is done by accessing their registers. We have made separate functions, which can be seen in Listing \ref{code:c1}, that read from the registers of the accelerometer and gyroscope and that return the raw values of each sensor. These functions are very similar, the only difference being the registers that are accessed to get the information needed. 
 
-\lstinputlisting[language=C++, firstline=95, lastline=100, caption={Function that accesses registers and returns a raw value.}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=81, lastline=126, caption={Functions that Accesses the Registers and Returns Raw Values.}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-\lstinputlisting[language=C++, firstline=95, lastline=140, caption={Functions that accesses the registers and returns raw values}, label={code:c1}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+If we want to calculate the inclination of a device relative to the ground for example, we can calculate the angle between the force vector and one of the z-axis. We can do that by using the formulas in Section \ref{accelEqs} and by degree conversion. The functions that take care of converting the raw values from both accelerometer and gyroscope are the following:
 
-If we want to calculate the inclination of a device relative to the ground for example, we can calculate the angle between the force vector and one of the z-axis. We can do that by using the formulas in SECTION X and by degree conversion. The functions that take care of converting the raw values from both accelerometer and gyroscope are the following:
+\lstinputlisting[language=C++, firstline=129, lastline=149, caption={Function to Obtain Angles Based on the Raw Values of the Accelerometer.}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-\lstinputlisting[language=C++, firstline=144, lastline=163, caption={Function to obtain angles based on the raw values of the accelerometer.}, label={code:c2}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
+\lstinputlisting[language=C++, firstline=152, lastline=179, caption={Function to Obtain Angles Based on the Raw Values of the Gyroscope.}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
 
-\lstinputlisting[language=C++, firstline=167, lastline=193, caption={Function to obtain angles based on the raw values of the accelerometer.}, label={code:c3}]{Arduino/acc_gyro_only/acc_gyro_only.ino}
-
-We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the accelerometer output is because accelerometers are more sensitive to noise and vibrations. The figure below shows the printed outputs at steady state, that is when the quadcopter is parallel to the ground.
-
+We have used the Serial Monitor within the Arduino IDE environment to read the outputs from both sensors and they seem to be accurate. The difference in the values of the accelerometer output is because accelerometers are more sensitive to noise and vibrations.
 The serial monitor was used to print out the the angles. At steady state, it yielded the results seen in Figure \ref{angles}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/accgy.png}
-	\caption{Angles Obtained from Accelerometer and Gyroscope.}
+	\caption{Steady State Outputs of Accelerometer and Gyroscope.}
 	\label{angles}
 \end{figure}
 
-//insert prinscreen for tilting 
-
 \section{Filtering sensor data}
-The configuration for the accelerometer and gyroscope enables a low-pass filter at 42Hz. However, looking at the data that the accelerometer reads, there is still some considerable amount of noise and occasional spikes in a steady state. In order to design a filter to counter these problems, flight of the prototype had to be simulated, to record the sensor values when the vehicle goes up in the air and tires to stabilize itself. Therefore, flight controller was unmounted from the frame, connected to a computer and then raised in the air, while tilting it to the sides. The test ran for 30 seconds and provided a $4591\times 6$ matrix, containing 4591 readings for all 3 axis of accelerometer and gyroscope. The plotted data over time for x-axis of the accelerometer and gyroscope can be seen in Figure \ref{dataPlot}.
+The configuration for the accelerometer and gyroscope enables a low-pass filter at 42 $Hz$. However, looking at the data that the accelerometer reads, there is still some considerable amount of noise and occasional spikes in a steady state. In order to design a filter to counter these problems, the flight of the prototype had to be simulated, to record the sensor values when the vehicle goes up in the air and tires to stabilize itself. Therefore, flight controller was unmounted from the frame, connected to a computer and then raised in the air, while tilting it to the sides. The test ran for 30 seconds and provided a $4591\times 6$ matrix, containing 4591 readings for all 3 axis of accelerometer and gyroscope. The plotted data over time for x-axis of the accelerometer and gyroscope can be seen in Figure \ref{dataPlot}.
 
 \begin{figure}[H]
   \centering
@@ -91,7 +86,7 @@ The configuration for the accelerometer and gyroscope enables a low-pass filter 
 	\label{dataPlot}
 \end{figure}
 
-The sensor is running at approximately $\frac{4591}{30s} = 153Hz$ frequency, making any additional filter more difficult to perform. However, looking at the test data, it is evident that gyroscope provides clean results just with the help of on-board filter. The main focus then shifts towards the accelerometer - looking at the spectrogram of the accelerometer x-axis data (see Figure \ref{spectrogram}, a low-pass FIR filter is chosen.
+The sensor is running at approximately $\frac{4591}{30s} = 153Hz$ frequency, making any additional filter more difficult to perform. However, looking at the test data, it is evident that gyroscope provides clean results just with the help of on-board filter. The main focus then shifts towards the accelerometer - looking at the spectrogram of the accelerometer x-axis data (see Figure \ref{spectrogram}), a low-pass FIR filter is chosen.
 
 \begin{figure}[H]
   \centering
@@ -108,7 +103,7 @@ The filter was proven to be quite efficient, as seen in Figure \ref{accelFilter}
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=1\textwidth]{images/accelFilter.png}
+    \includegraphics[width=0.8\textwidth]{images/accelFilter.png}
 	\caption{Implemented Filter and its Close-up.}
 	\label{accelFilter}
 \end{figure}

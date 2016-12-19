@@ -9,7 +9,7 @@ Actuators are an important part of any control system because they are the ones 
 
 Each motor produces an angular velocity $\omega$, therefore the propeller spins at that defined angular velocity. In this chapter, we will be introducing more comprehensible models for both motor and propeller as well as some experiments regarding the PWM signal - motor speed relationship.
 
-\section{Propeller model}
+\section{Propeller model}\label{propModel}
 For this part of the report, we have decided not to take into account the aerodynamic forces that act on the propeller, therefore neglecting the air friction, the flapping of the biased and the ground effect. This enables us to create a simpler model, which is easy to understand and implement.
 
 The thrust $F_{i}$ and the moment across the $M_{i}$ along the $u_{z}$ axis can be written as functions of angular velocities such as:
@@ -32,9 +32,9 @@ where the constant related to thrust $K_{T}$ and the constant related to the mom
 	K_{M}=c_{P}\frac{\rho D^{5}}{8\Pi^{2}}
 \end{equation}
 
-with D = being the diameter of the propeller, $\rho$ being the air density, $ c_{T} $ and $ c_{P} $ being the thrust and power coefficient. We are considering these values to have small values (<0.2) based on what we have read from other projects.
+with $D$ = being the diameter of the propeller, $\rho$ being the air density, $ c_{T} $ and $ c_{P} $ being the thrust and power coefficient. We are considering these values to have small values (<0.2) based on what we have read from other projects.
 
-Therefore\cite{Report1}:
+Therefore:\cite{Report1}
 
 \begin{equation}
 	K_{T}\approx 1.45\times10^{-5}
@@ -66,10 +66,10 @@ We can write $K \approx K_{M}/K_{T}=4.1\times10^{-7}=0.024$. The forces and mome
 	M_{z}=(\omega_{1}^{2}+\omega_{3}^{2}-\omega_{2}^{2}-\omega_{4}^{2})K_{M}=(F_{1}+F_{3}-F_{2}-F_{4})K
 \end{equation}
 
-where D is expressed in centimetres.
+where $D$ is expressed in $cm$.
 
 \section{Motor model}
-Providing a signal to the motor is done through Ardupilot, using PWM, which enables providing an analogue signal by digital means.  In order to create a PWM signal, we have used the \textit{write.Microseconds()} function from the\textit{Servo.h} library within the Arduino IDE environment. The role of the speed controllers is to turn the PWM signal into a three-phase signal to feed the BLDC motors.
+Providing a signal to the motor is done through Ardupilot, using PWM, which makes it possible to provide an analogue signal by digital means.  In order to create a PWM signal, we have used the \textit{write.Microseconds()} function from the \textit{Servo.h} library within the Arduino IDE environment. The role of the speed controllers is to turn the PWM signal into a three-phase signal to feed the BLDC motors.
 
 Each motor receives a three-phase signal that is proportional with the angular velocity $\omega$. In general, the behaviour of a motor can be analysed by looking at the electrical and mechanical part of its structure. These parts are represented in Figure \ref{dc}. 
 
@@ -97,7 +97,7 @@ The transfer function can be taking the Laplace transform of each equation and m
    \frac{\omega}{PWM}=\frac{K_{e}}{(Js+b)(Ls+R)+K_{e}^{2}}
 \end{equation}
 
-where $\omega$ is the angular velocity of the motor, PWM is the signal to the motor, $K_{e}$ is the electromotive constant, J is the rotor's moment of inertia, b is the damping ratio of the mechanical system, L is the inductance, R is the resistance and I is the measurement of the current.
+where $\omega$ is the angular velocity of the motor, PWM is the signal to the motor, $K_{e}$ is the electromotive constant, $J$ is the rotor's moment of inertia, $b$ is the damping ratio of the mechanical system, $L$ is the inductance, $R$ is the resistance and $I$ is the measurement of the current.
 
 Equation \ref{modelm} can be further simplified and written as a first order system, since it is difficult to measure all the motor parameters:\cite{Report1}
 
@@ -113,9 +113,9 @@ ESCs have 5 input pins, 3 of which come from the flight controller. These 3 wire
 \subsection{Calibration and Programming}
 The calibration is done by first sending the maximum length of signal the user wishes to use. The ESC emits sounds that are brand-specific and indicate whether the signal was successfully recognised or not. Once the maximum signal is accepted, the user the emits the minimum signal and waits for approval. Additional sound is then emitted, indicating that the calibration was successful.
 
-Using Arduino's Servo library, a self-explanatory built-in function \textit{servo.writeMicroseconds(int value)} is used to send the signal. By default, the library has the minimum signal set to 544$\mu s$ and the maximum - to 2400$\mu s$. For this project, we shortened the range down to 700$\mu s$ and 2000$\mu s$ for both signals respectively. A commented code used to calibrate the ESC connected to the first pin of the board can be seen in Listing \ref{code:calib}.
+Using Arduino's Servo library, a self-explanatory built-in function \textit{servo.writeMicroseconds(int)} is used to send the signal. By default, the library has the minimum signal set to 544 $\mu s$ and the maximum - to 2400 $\mu s$. For this project, we shortened the range down to 700 $\mu s$ and 2000 $\mu s$ for both signals respectively. A commented code used to calibrate the ESC connected to the first pin of the board can be seen in Listing \ref{code:calib}.
 
-\lstinputlisting[language=C++, caption={Calibrating the ESC.}, label={code:calib}]{Arduino/ESCCalib/ESCCalib.ino}
+\lstinputlisting[language=C++, firstline=1, lastline=19, caption={ESC Calibration.}, label={code:calib}]{Arduino/ESCCalib/ESCCalib.ino}
 
 Programming additional settings of the ESC is done in a similar manner - by sending minimum and maximum signals after the ESC emits particular sounds, indicating wanted selections. The programmable features and selections are brand-specific and can be found in the datasheets. For the purposes of this project, the ESCs have been programmed to include two features - brake mode off and selection of li-ion battery.
 
@@ -123,7 +123,7 @@ Programming additional settings of the ESC is done in a similar manner - by send
 This section will show the experiments that we have carried out in regards to the motor as well as Ardupilot frequency analysis.
 
 \subsection{APM Frequency}
-Due to lack of proper documentation, it was necessary to measure the frequency of the signals sent out by the flight controller. To do so, Tektronix DPO 20424b oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20$ms$, therefore, the frequency of the board is 50$Hz$, as seen in Figure \ref{oscillo1}.
+Due to lack of proper documentation, it was necessary to measure the frequency of the signals sent out by the flight controller. To do so, Tektronix DPO 20424b oscilloscope was connected to one of the output pins of the board. Then, using the servo library, a signal was sent out. The interval between signals was found to be 20 $ms$, therefore, the frequency of the board is 50 $Hz$, as seen in Figure \ref{oscillo1}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/oscillo1.png}
@@ -131,7 +131,7 @@ Due to lack of proper documentation, it was necessary to measure the frequency o
 	\label{oscillo1}
 \end{figure}
 
-The second experiment on the board was then made to determine how the flight controller handles the output signals during those 20$ms$. First two outputs of the APM were connected to the oscilloscope, both utilizing the Servo library to send signals of length of 2000$\mu s$. Results can be seen in Figure \ref{oscillo2}.
+The second experiment on the board was then made to determine how the flight controller handles the output signals during those 20 $ms$. First two outputs of the APM were connected to the oscilloscope, both utilizing the Servo library to send signals of length of 2000 $\mu s$. Results can be seen in Figure \ref{oscillo2}.
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.8\textwidth]{images/oscillo2.png}
@@ -144,14 +144,14 @@ Then, for further testing purposes, both outputs were given different values in 
 \begin{figure}[H]
   \centering
     \includegraphics[width=1\textwidth]{images/oscillo3.png}
-	\caption{Left - Signals Running at 1000$\mu s$; Right - 2000$\mu s$.}
+	\caption{Left - Signals Running at 1000 $\mu s$; Right - 2000 $\mu s$.}
 	\label{oscillo3}
 \end{figure}
 
 From this, two conclusions can be made:
 \begin{enumerate}
 \item If the first signal is shorter than the second one, the second signal will still follow right after the first signal ends. In other words, the APM leaves no gaps between the outputs.
-\item Since the board runs at the frequency of 50$Hz$ and has a period of 20$ms$, this leaves $\frac{20}{8} = 2.5ms$ maximum length for each output signal. The servo library is hard-capped at 2.4$ms$ and thus is well within the limits of the board.
+\item Since the board runs at the frequency of 50 $Hz$ and has a period of 20 $ms$, this leaves $\frac{20}{8} = 2.5ms$ maximum length for each output signal. The servo library is hard-capped at 2.4 $ms$ and thus is well within the limits of the board.
 \end{enumerate}
 
 \subsection{Expected and Real Motor Performance}
@@ -234,19 +234,13 @@ The following equations for the linear functions then are:
 	\omega _1 = 0.0771\times PWM1 + 1026.837
 \end{equation}
 
-
-
 \begin{equation}
 	\omega _2 = 0.0826\times PWM2 + 994.62
 \end{equation}
 
-
-
 \begin{equation}
 	\omega _3 = 0.0849\times PWM3 + 1006.507
 \end{equation}
-
-
 
 \begin{equation}
 	\omega _4 = 0.0852\times PWM4 + 978.91
@@ -264,11 +258,11 @@ Due to lack of linearities in the equations expressing the angular velocity, som
 \end{figure}
 The test reveals two things: at maximum speed, the motor can provide solid $8N$ thrust and at higher signals coming in from the board, some overshoot in the motors can be seen, which, in later steps, will have to be taken into consideration.
 
-Given the fact that the drone is drawn to the ground by a $14N$ force, each motor needs to produce about $\frac{14N}{4} = 3.5N$ thrust. Looking at the plot of the test in Figure \ref{forcePlot}, first motor reaches this point at 1499$\mu s$ signal coming from the APM, which, based on Figure \ref{radsPlots}, is equal to 1139$rad/s$. Then, using same graphs, it is possible to find the input signals corresponding to same angular velocity for the remaining motors. These values will be given in Table \ref{motorCoeffs}.
+Given the fact that the drone is drawn to the ground by a 14 $N$ force, each motor needs to produce about $\frac{14N}{4} = 3.5N$ thrust. Looking at the plot of the test in Figure \ref{forcePlot}, first motor reaches this point at 1499 $\mu s$ signal coming from the APM, which, based on Figure \ref{radsPlots}, is equal to 1139 $rad/s$. Then, using same graphs, it is possible to find the input signals corresponding to same angular velocity for the remaining motors. These values will be given in Table \ref{motorCoeffs}.
 The coefficients and performance of the motors will be centred around these values.
 
 \subsection{Measuring Motor Coefficients}
-First, through trial and error, the deadzones for when the motors are receiving a signal from the flight controller but are not spinning yet were found (see Table \ref{motorCoeffs}).
+First, through trial and error, the deadzones for when the motors are receiving a signal from the flight controller, but are not spinning yet, were found (see Table \ref{motorCoeffs}).
 
 The motor time constant $\tau$ is described as the time it takes the motor to reach 63\% of its expected speed, since the receiving the signal. To do this, PASPORT Rotary Motion Sensor PS-2120A has been connected to one of the motors. Then, using the SPARKvue software, the angular velocity of the motor for a specific time frame was obtained. A signal was sent from the flight controller to the motor and the angular velocity was plotted against the time, as seen in Figure \ref{timeconstant}.
 

@@ -20,6 +20,46 @@ Toward obstacle avoidance on quadrotors.
 \newblock
   \url{http://e-collection.library.ethz.ch/eserv/eth:7849/eth-7849-01.pdf}.
 
+\bibitem{motorFigC}
+Turnigy multistar 2213-980kv 14 pole multi-rotor outrunner v2.
+\newblock
+  \url{https://hobbyking.com/en_us/turnigy-multistar-2213-980kv-14-pole-multi-rotor-outrunner-v2.html}.
+
+\bibitem{propFig}
+Hobbyking slowfly propeller 10x4.5 blue (cw/ccw) (4pcs).
+\newblock
+  \url{https://hobbyking.com/en_us/hobbyking-slowfly-propeller-10x4-5-blue-cw-ccw-4pcs.html}.
+
+\bibitem{ESCFig}
+Turnigy plush 30amp speed controller w/bec.
+\newblock
+  \url{https://hobbyking.com/en_us/turnigy-plush-30amp-speed-controller.html}.
+
+\bibitem{APMFig}
+Ardupilot mega 2.5+ flight controller.
+\newblock
+  \url{http://store.scoutuav.com/product/flight-controller/ardupilot-mega-2-5-flight-controller/}.
+
+\bibitem{UltrasonicFig}
+Easy ultrasonic 4-pin sensor monitoring (hc-sr04).
+\newblock
+  \url{http://www.instructables.com/id/Easy-ultrasonic-4-pin-sensor-monitoring-hc-sr04/}.
+
+\bibitem{batteryFig}
+Turnigy nano tech 6000mah 3s 25~50c lipo pack.
+\newblock
+  \url{http://tekntools.com/?product=turnigy-nano-tech-6000mah-3s-2550c-lipo-pack}.
+
+\bibitem{MotorFig}
+Dc motor speed: System modeling.
+\newblock
+  \url{http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling}.
+
+\bibitem{RPMEq}
+Vfds how do i calculate rpm for three phase induction motors?
+\newblock
+  \url{http://www.precision-elec.com/faq-vfd-how-do-i-calculate-rpm-for-three-phase-induction-motors/}.
+
 \bibitem{HCDatasheet}
 Ultrasonic ranging module hc - sr04.
 \newblock \url{http://www.micropik.com/PDF/HCSR04.pdf}.
@@ -39,15 +79,5 @@ Christopher~J. Fisher.
 \newblock Using an accelerometer for inclination sensing.
 \newblock
   \url{http://www.analog.com/media/en/technical-documentation/application-notes/AN-1057.pdf}.
-
-\bibitem{MotorFig}
-Dc motor speed: System modeling.
-\newblock
-  \url{http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling}.
-
-\bibitem{RPMEq}
-Vfds how do i calculate rpm for three phase induction motors?
-\newblock
-  \url{http://www.precision-elec.com/faq-vfd-how-do-i-calculate-rpm-for-three-phase-induction-motors/}.
 
 \end{thebibliography}

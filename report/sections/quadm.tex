@@ -1,6 +1,6 @@
-Quadcopter control is a complex, yet interesting problem. One of the reasons why this control problem is challenging is the fact that a quadcopter has six degrees of freedom, but only four inputs which affects the linearity of the dynamics and makes the quadcopter under-actuated. 
+Quadcopter control is a complex, yet interesting problem. One of the reasons why this control problem is challenging is the fact that a quadcopter has six degrees of freedom, but only four inputs, which affects the linearity of the dynamics and makes the quadcopter under-actuated. 
 
-In this chapter we will take a look at the kinematics and dynamics equations that describe our quadcopter system for which we have drawn the block diagram shown in Figure \ref{dk}.
+In this chapter, we will take a look at the kinematics' and dynamics' equations that describe our quadcopter system for which we have drawn the block diagram shown in Figure \ref{dk}.
 
 \begin{figure}[H]
   \centering
@@ -12,34 +12,26 @@ In this chapter we will take a look at the kinematics and dynamics equations tha
 \section{Quaternions and Euler angles}
 In Section \ref{2.1}, we have explained how the position of the quadcopter is expressed in the inertial frame and how the  velocity of the quadcopter is express in the body-fixed frame. Therefore, we need to be able to find a relationship between the two, so that we can move from one to the other.
 
-Euler angles have to be applied as a sequence of rotations. This report will use the \textit{roll, pitch, yaw} convention. Therefore, the roll rotation will be $(R(\phi)^{T})$, the pitch rotation will be $(R(\theta)^{T})$ and the yaw rotation will be $(R(\psi)^{T})$. Equations \ref{rollrotation}, \ref{pitchrotation} and \ref{yawrotation}  describe the quadcopter's orientation relative to the inertial frame in matrix form:
+Euler angles have to be applied as a sequence of rotations. This report will use the \textit{roll, pitch, yaw} convention. Therefore, the roll rotation will be $R(\phi)^{T}$, the pitch rotation will be $R(\theta)^{T}$ and the yaw rotation will be $R(\psi)^{T}$. Equation \ref{rollpitchyaweq} describe the quadcopter's orientation relative to the inertial frame in matrix form:
 
 \begin{equation}
-\label{rollrotation}	
+\label{rollpitchyaweq}
+\begin{aligned}
  	R(\phi)^{T}=\begin{bmatrix}
  	1 & 0 & 0 \\
  	0 & cos\phi & sin\phi \\
  	0 & -sin\phi & cos\phi \\
- 	\end{bmatrix}
- \end{equation}
- 
- \begin{equation}
-\label{pitchrotation}	
- 	R(\theta)^{T}=\begin{bmatrix}
+ 	\end{bmatrix}\\     R(\theta)^{T}=\begin{bmatrix}
  	cos\theta & 0 & -sin\theta \\
  	0 & 1 & 0 \\
  	sin\theta & 0 & cos\theta \\
- 	\end{bmatrix}
- \end{equation}
- 
- \begin{equation}
-\label{yawrotation}	
- 	R(\psi)^{T}=\begin{bmatrix}
+ 	\end{bmatrix}\\     R(\psi)^{T}=\begin{bmatrix}
  	cos\psi & sin\psi & 0 \\
  	-sin\psi & cos\psi & 0 \\
  	0 & 0 & 1 \\
  	\end{bmatrix}
- \end{equation}
+\end{aligned}
+\end{equation}
  
 Merging the three rotations as: 
 
@@ -59,7 +51,7 @@ gives the rotation matrix - \textit{S}, which expresses a vector from the inerti
 \end{bmatrix}
 \end{equation}
  	 
-We can notice that if we were to have $\theta=\Pi/2$, the rotation matrix brings out a singularity by turning into:
+We can notice that if we were to have $\theta=\frac{\Pi}{2}$, the rotation matrix brings out a singularity by turning into:
 
 \begin{equation}
 \label{S3}
@@ -133,7 +125,7 @@ The quadcopter's attitude can be written using the angular velocities vector $\O
 \end{bmatrix}
 \end{equation}
 
-Because we chose to neglect all other forces acting on the quadcopter except of the propeller thrust and gravity, we can further express the forces produced by the propellers along the $u_{z}$ axis as $[F_{1}, F_{2}, F_{3}, F_{4}]^{T}$. Therefore, the force in the body-fixed frame can be written as $F^{B}=[F_{x}, F_{y}, F_{z}]^{T}=[0, 0, -\sum\limits_{i=1}^4 F_{i}]^{T}$. Each force produces a moment around the axes of the quadcopter and as a result the moment in the body-fixed frame can be expressed as: $M^{B}=[M_{x}, M_{y}, M_{z}]^{T}$. These moments are explained in more detail in Chapter x.
+Because we chose to neglect all other forces acting on the quadcopter except of the propeller thrust and gravity, we can further express the forces produced by the propellers along the $u_{z}$ axis as $[F_{1}, F_{2}, F_{3}, F_{4}]^{T}$. Therefore, the force in the body-fixed frame can be written as $F^{B}=[F_{x}, F_{y}, F_{z}]^{T}=[0, 0, -\sum\limits_{i=1}^4 F_{i}]^{T}$. Each force produces a moment around the axes of the quadcopter and as a result the moment in the body-fixed frame can be expressed as: $M^{B}=[M_{x}, M_{y}, M_{z}]^{T}$. These moments are explained in more detail in Section \ref{propModel}.
 
 The dynamics of the quadcopter in regards to the rotations are given by $I\dot{\Omega}=-\Omega\times I \Omega+M_{B}$, which yields:
 
@@ -154,9 +146,16 @@ The dynamics of the quadcopter in regards to the rotations are given by $I\dot{\
 \end{bmatrix}
 \end{equation}
  	 
-where $I=diag(I_{x}, I_{y}, I_{z})$ is the inertia matrix.
+where the inertia matrix is:
+\begin{equation}
+\begin{bmatrix}
+ 	I_x & 0 & 0 \\
+ 	0 & I_y & 0 \\
+ 	0 & 0 & I_z \\
+\end{bmatrix}
+\end{equation}
 
-Finally, by applying Newton's second law, we obtain $m a^{B}=F^{B}+m S_{q} g^{I} - \Omega \times V^{B}$, where $a^{B}=\dot{V}^{B}=[dot{U}, dot{V}, dot{W}]^{T}$ is the acceleration vector and $g^{I}=[0, 0, g_{0}]^{T}$ is the gravity vector with $g=9.81m/s^{2}$.
+Finally, by applying Newton's second law, we obtain $m a^{B}=F^{B}+m S_{q} g^{I} - \Omega \times V^{B}$, where $a^{B}=\dot{V}^{B}=[\dot{U}, \dot{V}, \dot{W}]^{T}$ is the acceleration vector and $g^{I}=[0, 0, g_{0}]^{T}$ is the gravity vector with $g=9.81m/s^{2}$.
 
 Therefore:
 

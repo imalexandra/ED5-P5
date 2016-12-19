@@ -22,24 +22,24 @@
 \BOOKMARK [1][-]{section.4.1}{4.1 Quaternions and Euler angles}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.2}{4.2 Quaternions Representation}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.3}{4.3 Euler Representation}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{5 Sensors}{}% 25
-\BOOKMARK [1][-]{section.5.1}{5.1 Ultrasonic Sensor}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{5.2 Accelerometer}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{5.3 Gyroscope}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{5.4 Programming}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.5}{5.5 Filtering sensor data}{chapter.5}% 30
-\BOOKMARK [0][-]{chapter.6}{6 Actuators}{}% 31
-\BOOKMARK [1][-]{section.6.1}{6.1 Propeller model}{chapter.6}% 32
-\BOOKMARK [1][-]{section.6.2}{6.2 Motor model}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.3}{6.3 Electronic Speed Controllers}{chapter.6}% 34
-\BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Calibration and Programming}{section.6.3}% 35
-\BOOKMARK [1][-]{section.6.4}{6.4 Ardupilot and Motor Identification}{chapter.6}% 36
-\BOOKMARK [2][-]{subsection.6.4.1}{6.4.1 APM Frequency}{section.6.4}% 37
-\BOOKMARK [2][-]{subsection.6.4.2}{6.4.2 Expected and Real Motor Performance}{section.6.4}% 38
-\BOOKMARK [2][-]{subsection.6.4.3}{6.4.3 Measuring Motor Speed}{section.6.4}% 39
-\BOOKMARK [2][-]{subsection.6.4.4}{6.4.4 Measuring Speed in Desired Range}{section.6.4}% 40
-\BOOKMARK [2][-]{subsection.6.4.5}{6.4.5 Operating Range}{section.6.4}% 41
-\BOOKMARK [2][-]{subsection.6.4.6}{6.4.6 Measuring Motor Coefficients}{section.6.4}% 42
+\BOOKMARK [0][-]{chapter.5}{5 Actuators}{}% 25
+\BOOKMARK [1][-]{section.5.1}{5.1 Propeller model}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{5.2 Motor model}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{5.3 Electronic Speed Controllers}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.3.1}{5.3.1 Calibration and Programming}{section.5.3}% 29
+\BOOKMARK [1][-]{section.5.4}{5.4 Ardupilot and Motor Identification}{chapter.5}% 30
+\BOOKMARK [2][-]{subsection.5.4.1}{5.4.1 APM Frequency}{section.5.4}% 31
+\BOOKMARK [2][-]{subsection.5.4.2}{5.4.2 Expected and Real Motor Performance}{section.5.4}% 32
+\BOOKMARK [2][-]{subsection.5.4.3}{5.4.3 Measuring Motor Speed}{section.5.4}% 33
+\BOOKMARK [2][-]{subsection.5.4.4}{5.4.4 Measuring Speed in Desired Range}{section.5.4}% 34
+\BOOKMARK [2][-]{subsection.5.4.5}{5.4.5 Operating Range}{section.5.4}% 35
+\BOOKMARK [2][-]{subsection.5.4.6}{5.4.6 Measuring Motor Coefficients}{section.5.4}% 36
+\BOOKMARK [0][-]{chapter.6}{6 Sensors}{}% 37
+\BOOKMARK [1][-]{section.6.1}{6.1 Ultrasonic Sensor}{chapter.6}% 38
+\BOOKMARK [1][-]{section.6.2}{6.2 Accelerometer}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.3}{6.3 Gyroscope}{chapter.6}% 40
+\BOOKMARK [1][-]{section.6.4}{6.4 Programming}{chapter.6}% 41
+\BOOKMARK [1][-]{section.6.5}{6.5 Filtering sensor data}{chapter.6}% 42
 \BOOKMARK [0][-]{chapter.7}{7 State space model}{}% 43
 \BOOKMARK [1][-]{section.7.1}{7.1 Nonlinear state space representation}{chapter.7}% 44
 \BOOKMARK [1][-]{section.7.2}{7.2 Linear state space representation}{chapter.7}% 45
