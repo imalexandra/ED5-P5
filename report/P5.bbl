@@ -50,16 +50,6 @@ Turnigy nano tech 6000mah 3s 25~50c lipo pack.
 \newblock
   \url{http://tekntools.com/?product=turnigy-nano-tech-6000mah-3s-2550c-lipo-pack}.
 
-\bibitem{MotorFig}
-Dc motor speed: System modeling.
-\newblock
-  \url{http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling}.
-
-\bibitem{RPMEq}
-Vfds how do i calculate rpm for three phase induction motors?
-\newblock
-  \url{http://www.precision-elec.com/faq-vfd-how-do-i-calculate-rpm-for-three-phase-induction-motors/}.
-
 \bibitem{HCDatasheet}
 Ultrasonic ranging module hc - sr04.
 \newblock \url{http://www.micropik.com/PDF/HCSR04.pdf}.
@@ -79,5 +69,15 @@ Christopher~J. Fisher.
 \newblock Using an accelerometer for inclination sensing.
 \newblock
   \url{http://www.analog.com/media/en/technical-documentation/application-notes/AN-1057.pdf}.
+
+\bibitem{MotorFig}
+Dc motor speed: System modeling.
+\newblock
+  \url{http://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling}.
+
+\bibitem{RPMEq}
+Vfds how do i calculate rpm for three phase induction motors?
+\newblock
+  \url{http://www.precision-elec.com/faq-vfd-how-do-i-calculate-rpm-for-three-phase-induction-motors/}.
 
 \end{thebibliography}
