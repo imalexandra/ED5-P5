@@ -21,7 +21,7 @@ The quadcopter dynamic are described by Equations \ref{S6} - \ref{S10}. As it ca
 
 The ouput vector of the system has as components the measurements from the accelerometer and gyroscope.
 
-\section{Linear state space representation}
+\section{Linear state space representation}\label{ssr}
 In the previous Section, the state space was described as nonlinear. Therefore, a linearization must be obtained in order to come up with a control method for the system. This linearization is done by approximating the nonlinear state space by a linear expression:
 
 \begin{equation}
@@ -123,7 +123,6 @@ Finally, the matrices for the linearized model can be computationally obtained:
  	\end{bmatrix}
  \end{equation}
  
-Observability and controllability are two notions common to the state space analysis of a system. The controllability translates the possibility of moving the quadrotor through its states. The observability translates the ability to measure the internal states of the system. It is confirmed that both models are fully controllable. REFERENCE THESIS
+Observability and controllability are two notions common to the state space analysis of a system. The controllability translates the possibility of moving the quadrotor through its states. The observability translates the ability to measure the internal states of the system. It is confirmed that both models are fully controllable. \cite{Report1}
 
-The poles of the system hold the information of the dynamic response or behaviour of the system. The eigenvalues of matrix A reveal the poles of the chosen continuous system. Using Matlab, it is shown that the twelve poles are located at the origin; the system is unstable. REPHRASE
-
+System's poles contain the information about the dynamic response and behaviour of the system. The poles of the chosen system are the eigenvalues of $A$ matrix. It is evident that the system is unstable due to the fact that all twelve poles are located at the origin point.

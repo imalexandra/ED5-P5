@@ -1,4 +1,9 @@
 In this chapter, the ups and downs of the report will be covered and the quality of the tests and data acquired will be evaluated. Moreover, the unimplemented features will be discussed, as well as the requirements and methods for possible implementation.
+\section{Ultrasonic Sensors}
+The rangefinders have been tested to work quite well - their detection range is reasonable for a drone and their performance speed is excellent. However, if the sensor does not get back the signal it sent out, the $NewPing$ library will return the distance as 0 $cm$ - which is logical in a sense that it lets the user know there was a problem. It should be noted, though, that due to the nature of ultrasonic sensors, receiving the returning signal can be difficult in cases where the object's surface is uneven or it otherwise distorts the soundwave. Thus, while in flight, the sensors could read 0 $cm$ quite often.
+To solve this little issue, it is possible to filter out the zero values by simply taking the previous non-zero value for use in the system, whenever a signal fails to return back to the sensor.
+
+Additionally, while the sensors can be made to function properly, they were never implemented into the final system due to lack of time. This is due to the fact that the ultrasonic sensors are supposed to communicate with the rest of the drone to determine how the drone should move in order to avoid the obstacle.
 \section{Sensor Filters}
 It was previously mentioned, that the filters designed for the accelerometer provide reasonable results. The simulated flight conditions provided reasonable data to design a filter that would suit a fully functioning prototype. 
 Still, some noise remained, despite using both an on-board filter and an additional filter designed in Matlab. This noise, although minimal, could take up some computational power, demanding recalculation of the whole system, despite no real change in stability being present.
