@@ -53,7 +53,10 @@
 \contentsline {section}{\numberline {10.1}Ultrasonic Sensors}{57}{section.10.1}
 \contentsline {section}{\numberline {10.2}Sensor Filters}{57}{section.10.2}
 \contentsline {section}{\numberline {10.3}Validity of tests}{58}{section.10.3}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {10.4}Implementation}{59}{section.10.4}
+=======
+>>>>>>> origin/master
 \contentsline {chapter}{\numberline {11}Conclusion}{60}{chapter.11}
 \contentsline {chapter}{Bibliography}{61}{chapter*.50}
 \contentsline {chapter}{\numberline {12}Appendix}{63}{chapter.12}
